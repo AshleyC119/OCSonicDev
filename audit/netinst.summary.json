@@ -1,0 +1,39 @@
+{
+  "rules_total": 244,
+  "fire": 20,
+  "no_fire": 224,
+  "emissions": 38,
+  "suppressed": 18,
+  "coverage": {
+    "oc_leaves_in_scope": 110,
+    "leaves_matched": 37,
+    "leaves_uncovered": 73
+  },
+  "by_table": {
+    "BGP_CONFIG_IPV4": 1,
+    "BGP_CONFIG_IPV6": 1,
+    "BGP_DISTANCE_IPV4": 3,
+    "BGP_DISTANCE_IPV6": 3,
+    "BGP_GLOBALCONFIG": 2,
+    "BGP_NEIGHBOR_IPV4": 4,
+    "BGP_NEIGHBOR_IPV6": 3,
+    "BGP_NETWORKS_IPV4": 8,
+    "BGP_PEER_RANGE": 6,
+    "BGP_REDISTRIBUTES_IPV4": 2,
+    "BGP_REDISTRIBUTES_IPV6": 2,
+    "DEVICE_METADATA": 1,
+    "VLAN": 2
+  },
+  "open_questions": [
+    "A1: precedence of literal instance 'global' rules (rows 383-437) over $NETWORK$ twin rows (439-492): treated as literal-wins, so 18 rows are suppressed and emit nothing. If the engine lets $NETWORK$ bind 'global' too, ~40 duplicate/|global|-suffixed keys appear (BGP_GLOBALCONFIG|global|bgpGlobal|*, BGP_VRF|global|bgp_asn, BGP_NETWORKS_IPV4|global|*). This is the single largest diff risk in this group.",
+    "A2: row 159 'unchanged' on a list leaf (relay-agent helper-address) emitted as JSON array [5 IPs]; alternative is a comma-joined string for VLAN.dhcp_servers (1 line).",
+    "A3: row 426 emits the negative cross-AFI value BGP_NEIGHBOR_IPV4|Core-IPv6|active=\"no-activate\" for an IPv6-only peer-group; faithful to CSV but asymmetric with row 425.",
+    "A4: mgt_vrf is nearly uncovered: no VRF|mgt_vrf (row 438 needs a create-hw-vrf leaf that does not exist; config/type=L3VRF and route-distinguisher are unconsumed), and the document's only static route (0.0.0.0/0 in mgt_vrf) is missed because row 493 hard-codes the 'global' instance. Recommend recording as unsupported rather than inventing rules.",
+    "A5: enum selector when the leaf value is not in the yang_value list (rows 399/403/405) is undefined by the contract; not exercised here (only KERNEL index 0).",
+    "A6: SONiC table names follow the CSV literally: BGP_NETWORKS_IPV4 / BGP_REDISTRIBUTES_IPV4 / BGP_DISTANCE_IPV4 / BGP_CONFIG_IPV4 (AFI suffix).",
+    "A7: contract section 5 line format is ambiguous for empty-FIELD ({} value) emissions because soniC keys may contain '|'; parse by ' = ' first. All 38 lines here have a non-empty FIELD.",
+    "A8: VLAN|Vlan2 is a union of my relay-agent rows 158/159 (gw_ip, dhcp_servers) and the interfaces group rows 119-130; no field conflict.",
+    "A9: DEVICE_METADATA|localhost|bgp_asn is supplied by row 383 only; the DEVICE_METADATA-spine rows have SONiC-shaped yang_keys and never match this OC document.",
+    "A10: network-instances/.../global/vlans subtree (2, vlan-id, name=PM&VM&TPC-Access) has no covering rule; VLAN.name/description comes from interfaces/interface/Vlan2 (contract open question 4)."
+  ]
+}

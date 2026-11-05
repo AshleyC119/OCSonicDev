@@ -1,0 +1,1440 @@
+=== ROW 187 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//uplink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+  sonic_value= [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+=== ROW 188 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//downlink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+  sonic_value= [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+=== ROW 189 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//threshold
+  yang_value = [['unchanged']]
+  sonic_key  = PORTCHANNEL//PortChannel$INTERFACEID$//threshold
+  sonic_value= [['unchanged']]
+=== ROW 190 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//uplink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+  sonic_value= [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+=== ROW 191 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//downlink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+  sonic_value= [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+=== ROW 192 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//config//threshold
+  yang_value = [['unchanged']]
+  sonic_key  = PORTCHANNEL//PortChannel$INTERFACEID$//threshold
+  sonic_value= [['unchanged']]
+=== ROW 193 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//uplink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORT//$INTERFACE$//updelaytime', 'PORT//$INTERFACE$//linkmode', 'PORT//$INTERFACE$//groupid', 'PORT//$INTERFACE$//option']
+  sonic_value= [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+=== ROW 194 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//downlink//config//enable
+  yang_value = [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+  sonic_key  = ['PORT//$INTERFACE$//updelaytime', 'PORT//$INTERFACE$//linkmode', 'PORT//$INTERFACE$//groupid', 'PORT//$INTERFACE$//option']
+  sonic_value= [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+=== ROW 195 | spine=system//monitor-link
+  yang_key   = system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//config//threshold
+  yang_value = [['unchanged']]
+  sonic_key  = PORT//$INTERFACE$//threshold
+  sonic_value= [['unchanged']]
+=== ROW 196 | spine=system//aaa
+  yang_key   = system//aaa//accounting//events//event//command//config//accounting-method
+  yang_value = [['default']]
+  sonic_key  = AAA//account//commands
+  sonic_value= [['tacacs+']]
+=== ROW 197 | spine=system//aaa
+  yang_key   = system//aaa//authorization//events//event//command//config//authorization-method
+  yang_value = [['default']]
+  sonic_key  = AAA//authorization//commands
+  sonic_value= [['tacacs+']]
+=== ROW 198 | spine=system//aaa
+  yang_key   = system//aaa//authentication//events//event//login//config//authentication-method
+  yang_value = [['default']]
+  sonic_key  = AAA//authentication//login
+  sonic_value= [['tacacs+,local']]
+=== ROW 199 | spine=system//aaa
+  yang_key   = system//aaa//config//fail-through
+  yang_value = [['true', 'false']]
+  sonic_key  = AAA//authentication//failthrough
+  sonic_value= [['True', 'False']]
+=== ROW 200 | spine=system//aaa
+  yang_key   = system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//config//tcp-port
+  yang_value = [['unchanged']]
+  sonic_key  = TACPLUS_SERVER//$SERVER$//tcp_port
+  sonic_value= [['unchanged']]
+=== ROW 201 | spine=system//aaa
+  yang_key   = system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//config//priority
+  yang_value = [['unchanged']]
+  sonic_key  = TACPLUS_SERVER//$SERVER$//priority
+  sonic_value= [['unchanged']]
+=== ROW 202 | spine=system//aaa
+  yang_key   = system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//tacacs//config//secret-key
+  yang_value = [['unchanged']]
+  sonic_key  = TACPLUS//global//passkey
+  sonic_value= [['unchanged']]
+=== ROW 203 | spine=system//breakout
+  yang_key   = system//breakout//interfaces//interface//$INTERFACE$//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = BREAKOUT_CFG//$INTERFACE$//brkout_mode
+  sonic_value= [['unchanged']]
+=== ROW 204 | spine=system//config
+  yang_key   = system//config//hostname
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//hostname
+  sonic_value= [['unchanged']]
+=== ROW 205 | spine=system//config
+  yang_key   = system//config//hwsku
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//hwsku
+  sonic_value= [['unchanged']]
+=== ROW 206 | spine=system//config
+  yang_key   = system//config//role
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//type
+  sonic_value= [['unchanged']]
+=== ROW 207 | spine=system//config
+  yang_key   = system//config//role
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//type
+  sonic_value= [['unchanged']]
+=== ROW 208 | spine=system//config
+  yang_key   = system//config//asic-variant
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//asic_variant
+  sonic_value= [['unchanged']]
+=== ROW 209 | spine=system//config
+  yang_key   = system//config//asic
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//asic
+  sonic_value= [['unchanged']]
+=== ROW 210 | spine=system//config
+  yang_key   = system//config//login-shell
+  yang_value = [['unchanged']]
+  sonic_key  = SHELL//passwd//passwd
+  sonic_value= [['unchanged']]
+=== ROW 211 | spine=system//config
+  yang_key   = system//config//ztp-status
+  yang_value = [['unchanged']]
+  sonic_key  = ZTP//flg//run
+  sonic_value= [['unchanged']]
+=== ROW 212 | spine=system//config
+  yang_key   = system//config//database-version
+  yang_value = [['unchanged']]
+  sonic_key  = VERSIONS//DATABASE//VERSION
+  sonic_value= [['unchanged']]
+=== ROW 213 | spine=system//config
+  yang_key   = system//config//login-timeout
+  yang_value = [['unchanged']]
+  sonic_key  = USER//timeout//value
+  sonic_value= [['unchanged']]
+=== ROW 214 | spine=system//arp
+  yang_key   = system//arp//config//arp-to-route
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//arp_to_route
+  sonic_value= [['unchanged']]
+=== ROW 215 | spine=system//nd
+  yang_key   = system//nd//config//nd-to-route
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//nd_to_route
+  sonic_value= [['unchanged']]
+=== ROW 216 | spine=system//nd
+  yang_key   = system//nd//config//ndmask-v6
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//ndmask_v6
+  sonic_value= [['unchanged']]
+=== ROW 217 | spine=system//grpc
+  yang_key   = system//grpc//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = TELEMETRY//gnmi//status
+  sonic_value= [['enable', 'disable']]
+=== ROW 218 | spine=system//grpc
+  yang_key   = system//grpc//config//gnmi-direction
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//gnmi//gnmi_direction
+  sonic_value= [['unchanged']]
+=== ROW 219 | spine=system//grpc
+  yang_key   = system//grpc//config//port
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//gnmi//port
+  sonic_value= [['unchanged']]
+=== ROW 220 | spine=system//grpc
+  yang_key   = system//grpc//config//password
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//usrpwd//password
+  sonic_value= [['unchanged']]
+=== ROW 221 | spine=system//grpc
+  yang_key   = system//grpc//config//tls-type
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//serverTls//type
+  sonic_value= [['unchanged']]
+=== ROW 222 | spine=system//grpc
+  yang_key   = system//grpc//config//username
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//usrpwd//username
+  sonic_value= [['unchanged']]
+=== ROW 223 | spine=system//grpc
+  yang_key   = system//grpc//config//channel
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//channel//client
+  sonic_value= [['unchanged']]
+=== ROW 224 | spine=system//gnoi
+  yang_key   = system//gnoi//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = TELEMETRY//gnoi//status
+  sonic_value= [['enable', 'disable']]
+=== ROW 225 | spine=system//hash
+  yang_key   = system//hash//global//config//algorithm-ecmp
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//ecmp_hash_alg
+  sonic_value= [['unchanged']]
+=== ROW 226 | spine=system//hash
+  yang_key   = system//hash//global//config//algorithm-lag
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//lag_hash_alg
+  sonic_value= [['unchanged']]
+=== ROW 227 | spine=system//hash
+  yang_key   = system//hash//global//config//ecmp-hash-seed
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//ecmp_hash_seed
+  sonic_value= [['unchanged']]
+=== ROW 228 | spine=system//hash
+  yang_key   = system//hash//global//config//lag-hash-seed
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//lag_hash_seed
+  sonic_value= [['unchanged']]
+=== ROW 229 | spine=system//hash
+  yang_key   = system//hash//global//config//lag-tunnel-hash
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//lag_tunnel_hash
+  sonic_value= [['unchanged']]
+=== ROW 230 | spine=system//hash
+  yang_key   = system//hash//global//config//ecmp-tunnel-hash
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//ecmp_tunnel_hash
+  sonic_value= [['unchanged']]
+=== ROW 231 | spine=system//hash
+  yang_key   = system//hash//global//config//ecmp-ipv4-hash-mode
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//ecmp_ipv4_hash_mode
+  sonic_value= [['unchanged']]
+=== ROW 232 | spine=system//hash
+  yang_key   = system//hash//global//config//ecmp-ipv6-hash-mode
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//ecmp_ipv6_hash_mode
+  sonic_value= [['unchanged']]
+=== ROW 233 | spine=system//hash
+  yang_key   = system//hash//global//config//lag-ipv4-hash-mode
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//lag_ipv4_hash_mode
+  sonic_value= [['unchanged']]
+=== ROW 234 | spine=system//hash
+  yang_key   = system//hash//global//config//lag-ipv6-hash-mode
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//lag_ipv6_hash_mode
+  sonic_value= [['unchanged']]
+=== ROW 235 | spine=system//hash
+  yang_key   = system//hash//global//config//hash-offset
+  yang_value = [['unchanged']]
+  sonic_key  = SWITCH//switch//hash_offset
+  sonic_value= [['unchanged']]
+=== ROW 236 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//cap-load
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//cap_load
+  sonic_value= [['unchanged']]
+=== ROW 237 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//cap-queue
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//cap_queue
+  sonic_value= [['unchanged']]
+=== ROW 238 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//load-weight
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//load_weight
+  sonic_value= [['unchanged']]
+=== ROW 239 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//queue-weight
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//queue_weight
+  sonic_value= [['unchanged']]
+=== ROW 240 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//load-min
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//load_min
+  sonic_value= [['unchanged']]
+=== ROW 241 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//load-max
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//load_max
+  sonic_value= [['unchanged']]
+=== ROW 242 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//queue-min
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//queue_min
+  sonic_value= [['unchanged']]
+=== ROW 243 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//queue-max
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//queue_max
+  sonic_value= [['unchanged']]
+=== ROW 244 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//sample-rate
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//dlb_sample_rate
+  sonic_value= [['unchanged']]
+=== ROW 245 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//ecmp-enable
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//dlb_ecmp_enable
+  sonic_value= [['unchanged']]
+=== ROW 246 | spine=system//hash
+  yang_key   = system//hash//dlb//global//config//hash-seed
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//global//dlb_hash_seed
+  sonic_value= [['unchanged']]
+=== ROW 247 | spine=system//hash
+  yang_key   = system//hash//dlb//interfaces//interface//$INTERFACE$//config//load-weight
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//$INTERFACE$//load_weight
+  sonic_value= [['unchanged']]
+=== ROW 248 | spine=system//hash
+  yang_key   = system//hash//dlb//interfaces//interface//$INTERFACE$//config//queue-size-weight
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//$INTERFACE$//queue_size_weight
+  sonic_value= [['unchanged']]
+=== ROW 249 | spine=system//hash
+  yang_key   = system//hash//dlb//interfaces//interface//$INTERFACE$//config//scaling-factor
+  yang_value = [['unchanged']]
+  sonic_key  = DLB_TABLE//$INTERFACE$//scaling_factor
+  sonic_value= [['unchanged']]
+=== ROW 250 | spine=system//hash
+  yang_key   = system//hash//dhash//groups//group//$GROUP$//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = FG_NHG//$GROUP$//fg_nhg_mode
+  sonic_value= [['unchanged']]
+=== ROW 251 | spine=system//hash
+  yang_key   = system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-age
+  yang_value = [['unchanged']]
+  sonic_key  = FG_NHG//$GROUP$//dynamic_age
+  sonic_value= [['unchanged']]
+=== ROW 252 | spine=system//hash
+  yang_key   = system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-mode
+  yang_value = [['unchanged']]
+  sonic_key  = FG_NHG//$GROUP$//dynamic_mode
+  sonic_value= [['unchanged']]
+=== ROW 253 | spine=system//hash
+  yang_key   = system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-size
+  yang_value = [['unchanged']]
+  sonic_key  = FG_NHG//$GROUP$//dynamic_size
+  sonic_value= [['unchanged']]
+=== ROW 254 | spine=system//logging
+  yang_key   = system//logging//remote-servers//remote-server//$SERVER$//config//host
+  yang_value = [[['default']], [['list_combination']]]
+  sonic_key  = ['SYSLOG_SERVER//syslog_server//level', 'SYSLOG_SERVER//syslog_server//servers']
+  sonic_value= [[['notice']], [['SERVER']]]
+=== ROW 255 | spine=system//logging
+  yang_key   = system//logging//remote-servers//remote-server//$SERVER$//selectors//selector//$SELECTOR$//config//severity
+  yang_value = [['INFORMATIONAL', 'INFO']]
+  sonic_key  = SYSLOG_SERVER//syslog_server//level
+  sonic_value= [['notice', 'info']]
+=== ROW 256 | spine=system//ntp
+  yang_key   = system//ntp//servers//server//$SERVER$//config//address
+  yang_value = [['empty_dict']]
+  sonic_key  = NTP_SERVER//$SERVER$
+  sonic_value= [['empty_dict']]
+=== ROW 257 | spine=system//snmp
+  yang_key   = system//snmp//communities//community//$COMMUNITY$//config//name
+  yang_value = [[['default']], [['combination']]]
+  sonic_key  = ['SNMP//snmp//snmp_location', 'SNMP//snmp//snmp_rocommunity']
+  sonic_value= [[['public']], [['COMMUNITY']]]
+=== ROW 258 | spine=system//snmp
+  yang_key   = system//snmp//servers//server//$SERVER$//config//port
+  yang_value = [['empty_dict']]
+  sonic_key  = SNMP_AGENT_ADDRESS_CONFIG//$SERVER$|$VALUE$|mgmt
+  sonic_value= [['empty_dict']]
+=== ROW 259 | spine=system//counter
+  yang_key   = system//counter//buffer-pool//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 260 | spine=system//counter
+  yang_key   = system//counter//buffer-pool-watermark//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL_WATERMARK//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 261 | spine=system//counter
+  yang_key   = system//counter//pg//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PG//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 262 | spine=system//counter
+  yang_key   = system//counter//queue-watermark//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE_WATERMARK//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 263 | spine=system//counter
+  yang_key   = system//counter//pg-watermark//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PG_WATERMARK//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 264 | spine=system//counter
+  yang_key   = system//counter//buffer-pool//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 265 | spine=system//counter
+  yang_key   = system//counter//pfcwd//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PFCWD//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 266 | spine=system//counter
+  yang_key   = system//counter//queue//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 267 | spine=system//counter
+  yang_key   = system//counter//port//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 268 | spine=system//counter
+  yang_key   = system//counter//port-buffer-drop//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT_BUFFER_DROP//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 269 | spine=system//counter
+  yang_key   = system//counter//port-phy//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT_PHY//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 270 | spine=system//counter
+  yang_key   = system//counter//acl//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//ACL//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 271 | spine=system//counter
+  yang_key   = system//counter//rif//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//RIF//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 272 | spine=system//counter
+  yang_key   = system//counter//policer//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//POLICER//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 273 | spine=system//counter
+  yang_key   = system//counter//policer-stat//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//POLICER_STAT_COUNTER//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 274 | spine=system//counter
+  yang_key   = system//counter//bridge//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//BRIDGE_STAT_COUNTER//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 275 | spine=system//counter
+  yang_key   = system//counter//tunnel//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//TUNNEL//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 276 | spine=system//counter
+  yang_key   = system//counter//debug//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//DEBUG//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 277 | spine=system//counter
+  yang_key   = system//counter//ebst//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE_EBST//FLEX_COUNTER_STATUS
+  sonic_value= [['enable', 'disable']]
+=== ROW 278 | spine=system//counter
+  yang_key   = system//counter//buffer-pool//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 279 | spine=system//counter
+  yang_key   = system//counter//buffer-pool-watermark//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL_WATERMARK//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 280 | spine=system//counter
+  yang_key   = system//counter//pg//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PG//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 281 | spine=system//counter
+  yang_key   = system//counter//queue-watermark//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE_WATERMARK//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 282 | spine=system//counter
+  yang_key   = system//counter//pg-watermark//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PG_WATERMARK//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 283 | spine=system//counter
+  yang_key   = system//counter//buffer-pool//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//BUFFER_POOL//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 284 | spine=system//counter
+  yang_key   = system//counter//pfcwd//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PFCWD//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 285 | spine=system//counter
+  yang_key   = system//counter//port//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 286 | spine=system//counter
+  yang_key   = system//counter//port-buffer-drop//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT_BUFFER_DROP//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 287 | spine=system//counter
+  yang_key   = system//counter//port-phy//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//PORT_PHY//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 288 | spine=system//counter
+  yang_key   = system//counter//acl//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//ACL//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 289 | spine=system//counter
+  yang_key   = system//counter//queue//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 290 | spine=system//counter
+  yang_key   = system//counter//rif//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//RIF//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 291 | spine=system//counter
+  yang_key   = system//counter//policer//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//POLICER//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 292 | spine=system//counter
+  yang_key   = system//counter//policer-stat//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//POLICER_STAT_COUNTER//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 293 | spine=system//counter
+  yang_key   = system//counter//bridge//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//BRIDGE_STAT_COUNTER//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 294 | spine=system//counter
+  yang_key   = system//counter//tunnel//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//TUNNEL//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 295 | spine=system//counter
+  yang_key   = system//counter//debug//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//DEBUG//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 296 | spine=system//counter
+  yang_key   = system//counter//ebst//config//poll-interval
+  yang_value = [['unchanged']]
+  sonic_key  = FLEX_COUNTER_TABLE//QUEUE_EBST//POLL_INTERVAL
+  sonic_value= [['unchanged']]
+=== ROW 297 | spine=system//overlay
+  yang_key   = system//overlay//global//config//enable
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//global//enable
+  sonic_value= [['unchanged']]
+=== ROW 298 | spine=system//overlay
+  yang_key   = system//overlay//global//config//role
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//global//role
+  sonic_value= [['unchanged']]
+=== ROW 299 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//listen-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//listen_ip
+  sonic_value= [['unchanged']]
+=== ROW 300 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//listen-port
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//listen_port
+  sonic_value= [['unchanged']]
+=== ROW 301 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//mgmt-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//mgmt_ip
+  sonic_value= [['unchanged']]
+=== ROW 302 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//usrname
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//usrname
+  sonic_value= [['unchanged']]
+=== ROW 303 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//password
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//password
+  sonic_value= [['unchanged']]
+=== ROW 304 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//vtep-if
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//vtep_if
+  sonic_value= [['unchanged']]
+=== ROW 305 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//vtep-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//vtep_ip
+  sonic_value= [['unchanged']]
+=== ROW 306 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//stat-interval
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//stat_interval
+  sonic_value= [['unchanged']]
+=== ROW 307 | spine=system//overlay
+  yang_key   = system//overlay//agent//config//config-restore
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//agent//config_restore
+  sonic_value= [['unchanged']]
+=== ROW 308 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = OVERLAY//fcr//fcr_enable
+  sonic_value= [['True', 'False']]
+=== ROW 309 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//listen-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//fcr//fcr_listen_ip
+  sonic_value= [['unchanged']]
+=== ROW 310 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//listen-port
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//fcr//fcr_listen_port
+  sonic_value= [['unchanged']]
+=== ROW 311 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//usrname
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//fcr//fcr_usrname
+  sonic_value= [['unchanged']]
+=== ROW 312 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//password
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//fcr//fcr_password
+  sonic_value= [['unchanged']]
+=== ROW 313 | spine=system//overlay
+  yang_key   = system//overlay//fcr//config//default-only
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//fcr//default_only
+  sonic_value= [['unchanged']]
+=== ROW 314 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//acl-entries-max
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//acl_entries_max
+  sonic_value= [['unchanged']]
+=== ROW 315 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//overlay-ecmp-max
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//overlay_ecmp_max
+  sonic_value= [['unchanged']]
+=== ROW 316 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//ipv4-route-entries-max
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//ipv4_route_entries_max
+  sonic_value= [['unchanged']]
+=== ROW 317 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//ipv6-route-entries-max
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//ipv6_route_entries_max
+  sonic_value= [['unchanged']]
+=== ROW 318 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//vxlan-l3-mac
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//vxlan_l3_mac
+  sonic_value= [['unchanged']]
+=== ROW 319 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//vxlan-nh-mac
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//vxlan_nh_mac
+  sonic_value= [['unchanged']]
+=== ROW 320 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//thrift-rpc-listen-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//thrift_rpc_listen_ip
+  sonic_value= [['unchanged']]
+=== ROW 321 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//thrift-rpc-listen-port
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//thrift_rpc_listen_port
+  sonic_value= [['unchanged']]
+=== ROW 322 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//vxlan-tunnel-entries-max
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//vxlan_tunnel_entries_max
+  sonic_value= [['unchanged']]
+=== ROW 323 | spine=system//overlay
+  yang_key   = system//overlay//sync//config//siso-filter
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//sync//siso_filter
+  sonic_value= [['unchanged']]
+=== ROW 324 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//ecmp-group
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//ecmp_group
+  sonic_value= [['unchanged']]
+=== ROW 325 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//vrf
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//vrf
+  sonic_value= [['unchanged']]
+=== ROW 326 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//vxlan-tunnel
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//vxlan_tunnel
+  sonic_value= [['unchanged']]
+=== ROW 327 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//vxlan-vni
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//vxlan_vni
+  sonic_value= [['unchanged']]
+=== ROW 328 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//ipv4-route-prefix
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//ipv4_route_prefix
+  sonic_value= [['unchanged']]
+=== ROW 329 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//overlay-acl
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//overlay_acl
+  sonic_value= [['unchanged']]
+=== ROW 330 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//overlay-arp
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//overlay_arp
+  sonic_value= [['unchanged']]
+=== ROW 331 | spine=system//overlay
+  yang_key   = system//overlay//resource-spec//config//overlay-multicast
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY//resource_spec//overlay_multicast
+  sonic_value= [['unchanged']]
+=== ROW 332 | spine=system//overlay
+  yang_key   = system//overlay//samplers//sampler//$SAMPLER$//config//sample-rate
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_SAMPLER//$SAMPLER$//SAMPLE_RATE
+  sonic_value= [['unchanged']]
+=== ROW 333 | spine=system//overlay
+  yang_key   = system//overlay//samplers//sampler//$SAMPLER$//config//destination
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_SAMPLER//$SAMPLER$//DESTINATION
+  sonic_value= [['unchanged']]
+=== ROW 334 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//in-port
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//IN_PORT
+  sonic_value= [['unchanged']]
+=== ROW 335 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//dst-ip
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//DST_IP
+  sonic_value= [['unchanged']]
+=== ROW 336 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//priority
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//PRIORITY
+  sonic_value= [['unchanged']]
+=== ROW 337 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//sample-action
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//SAMPLE_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 338 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//truncate-action
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//TRUNCATE_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 339 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//tunnel-term
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//TUNNEL_TERM
+  sonic_value= [['unchanged']]
+=== ROW 340 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//packet-action-redirect-groupid
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//PACKET_ACTION_REDIRECT_GROUPID
+  sonic_value= [['unchanged']]
+=== ROW 341 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//vlan-inner-tag-action
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//VLAN_INNER_TAG_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 342 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//vlan-outer-tag-action
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//VLAN_OUTER_TAG_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 343 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//packet-action
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//PACKET_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 344 | spine=system//overlay
+  yang_key   = system//overlay//acl-rules//acl-rule//$RULE$//config//truncate-mirror-length
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_ACL_RULE//$RULE$//TRUNCATE_MIRROR_LENGTH
+  sonic_value= [['unchanged']]
+=== ROW 345 | spine=system//overlay
+  yang_key   = system//overlay//interfaces//interface//$INTERFACE$//config//sample_enable
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_PORT//$INTERFACE$//sample_enable
+  sonic_value= [['unchanged']]
+=== ROW 346 | spine=system//overlay
+  yang_key   = system//overlay//tunnel//dscp//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_TUNNEL//dscp//mode
+  sonic_value= [['unchanged']]
+=== ROW 347 | spine=system//overlay
+  yang_key   = system//overlay//tunnel//dscp//config//value
+  yang_value = [['unchanged']]
+  sonic_key  = OVERLAY_TUNNEL//dscp//value
+  sonic_value= [['unchanged']]
+=== ROW 348 | spine=system//dns
+  yang_key   = system//dns//servers//server//$SERVER$//address
+  yang_value = [['list_combination']]
+  sonic_key  = DNS//server//ip
+  sonic_value= [['SERVER']]
+=== ROW 349 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//dst-ip
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//dst_ip
+  sonic_value= [['unchanged']]
+=== ROW 350 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//src-ip
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//src_ip
+  sonic_value= [['unchanged']]
+=== ROW 351 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//dscp
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//dscp
+  sonic_value= [['unchanged']]
+=== ROW 352 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//l4-dst-port
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//udp_dst_port
+  sonic_value= [['unchanged']]
+=== ROW 353 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//l4-src-port
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//udp_src_port
+  sonic_value= [['unchanged']]
+=== ROW 354 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//type
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//type
+  sonic_value= [['unchanged']]
+=== ROW 355 | spine=system//mirrors
+  yang_key   = system//mirrors//mirror//$MIRROR$//config//ttl
+  yang_value = [['unchanged']]
+  sonic_key  = MIRROR_SESSION//$MIRROR$//ttl
+  sonic_value= [['unchanged']]
+=== ROW 356 | spine=system//mod
+  yang_key   = system//mod//l3-miss//config//bind-mirror-id
+  yang_value = [['unchanged']]
+  sonic_key  = MOD_MIRROR//L3_MISS//mirror_session
+  sonic_value= [['unchanged']]
+=== ROW 357 | spine=system//mod
+  yang_key   = system//mod//l3-next-hop//config//bind-mirror-id
+  yang_value = [['unchanged']]
+  sonic_key  = MOD_MIRROR//L3_NEXT_HOP//mirror_session
+  sonic_value= [['unchanged']]
+=== ROW 358 | spine=system//mod
+  yang_key   = system//mod//buffer//config//bind-mirror-id
+  yang_value = [['unchanged']]
+  sonic_key  = MOD_MIRROR//BUFFER//mirror_session
+  sonic_value= [['unchanged']]
+=== ROW 359 | spine=system//fcr
+  yang_key   = system//fcr//bgp//global//config//ipv6-nexthop-prefer-global
+  yang_value = [['unchanged']]
+  sonic_key  = FCR_GLOBALCONFIG//bgp_global//ipv6_nexthop_prefer_global
+  sonic_value= [['unchanged']]
+=== ROW 360 | spine=system//fcr
+  yang_key   = system//fcr//bgp//global//network-delay//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = FCR_GLOBALCONFIG//bgp_global|network_delay//mode
+  sonic_value= [['unchanged']]
+=== ROW 361 | spine=system//fcr
+  yang_key   = system//fcr//bgp//global//network-delay//config//delay-time
+  yang_value = [['unchanged']]
+  sonic_key  = FCR_GLOBALCONFIG//bgp_global|network_delay//delay_time
+  sonic_value= [['unchanged']]
+=== ROW 362 | spine=system//fcr
+  yang_key   = system//fcr//global//ip-protocols//protocol//bgp//config//route-map
+  yang_value = [['unchanged']]
+  sonic_key  = FCR_GLOBALCONFIG//ip_protocol|bgp//route_map
+  sonic_value= [['unchanged']]
+=== ROW 363 | spine=system//fcr
+  yang_key   = system//fcr//global//config//grpc-control-interface
+  yang_value = [['unchanged']]
+  sonic_key  = FCR_GLOBALCONFIG//grpc_control_interface//interface
+  sonic_value= [['unchanged']]
+=== ROW 364 | spine=system//sampling
+  yang_key   = system//sampling//sflow//interfaces//interface//$INTERFACE$//config//sample-rate
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW_SESSION//$INTERFACE$//sample_rate
+  sonic_value= [['unchanged']]
+=== ROW 365 | spine=system//sampling
+  yang_key   = system//sampling//sflow//interfaces//interface//$INTERFACE$//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = SFLOW_SESSION//$INTERFACE$//admin_state
+  sonic_value= [['up', 'down']]
+=== ROW 366 | spine=system//sampling
+  yang_key   = system//sampling//sflow//interfaces//interface//$INTERFACE$//config//direction
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW_SESSION//$INTERFACE$//sample_stage
+  sonic_value= [['unchanged']]
+=== ROW 367 | spine=system//sampling
+  yang_key   = system//sampling//sflow//config//source-interface
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW//global//agent_id
+  sonic_value= [['unchanged']]
+=== ROW 368 | spine=system//sampling
+  yang_key   = system//sampling//sflow//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = SFLOW//global//admin_state
+  sonic_value= [['up', 'down']]
+=== ROW 369 | spine=system//sampling
+  yang_key   = system//sampling//sflow//config//datagram-size
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW//global//max_datagram_size
+  sonic_value= [['unchanged']]
+=== ROW 370 | spine=system//sampling
+  yang_key   = system//sampling//sflow//config//cpu-rate-limit
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW//global//cpu_rate_limit
+  sonic_value= [['unchanged']]
+=== ROW 371 | spine=system//sampling
+  yang_key   = system//sampling//sflow//collectors//collector//$COLLECTOR$//servers//server//$IPADDR$//config//address
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW_COLLECTOR//$COLLECTOR$//collector_ip
+  sonic_value= [['unchanged']]
+=== ROW 372 | spine=system//sampling
+  yang_key   = system//sampling//sflow//collectors//collector//$COLLECTOR$//servers//server//$IPADDR$//config//port
+  yang_value = [['unchanged']]
+  sonic_key  = SFLOW_COLLECTOR//$COLLECTOR$//collector_port
+  sonic_value= [['unchanged']]
+=== ROW 373 | spine=telemetry-system//global
+  yang_key   = telemetry-system//global//config//src-ip
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Global//src_ip
+  sonic_value= [['unchanged']]
+=== ROW 374 | spine=telemetry-system//destination-groups
+  yang_key   = telemetry-system//destination-groups//destination-group//$GROUP$//destinations//destination//$IPADDR$ $PORT$//destination-port
+  yang_value = [['string_combination']]
+  sonic_key  = TELEMETRY_CLIENT//DestinationGroup_$GROUP$//dst_addr
+  sonic_value= [['IPADDR+:+PORT']]
+=== ROW 375 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//destination-group
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//dst_group
+  sonic_value= [['unchanged']]
+=== ROW 376 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//band-direction
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//band_direction
+  sonic_value= [['unchanged']]
+=== ROW 377 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//report-interval
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//report_interval
+  sonic_value= [['unchanged']]
+=== ROW 378 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//target
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//path_target
+  sonic_value= [['unchanged']]
+=== ROW 379 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//report-type
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//report_type
+  sonic_value= [['unchanged']]
+=== ROW 380 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//value-type
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//value_type
+  sonic_value= [['unchanged']]
+=== ROW 381 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//extend-type
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//extend_type
+  sonic_value= [['unchanged']]
+=== ROW 382 | spine=telemetry-system//subscriptions
+  yang_key   = telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//sensor-paths//sensor-path//$SG$//config//path
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY_CLIENT//Subscription_$NAME$//paths
+  sonic_value= [['unchanged']]
+=== ROW 673 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//output//config//alarm-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//BUFFER_POOL//pool_share_th
+  sonic_value= [['unchanged']]
+=== ROW 674 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//input//config//limit-mode
+  yang_value = [['lowercase']]
+  sonic_key  = BUFFER_POOL//ingress_lossy_pool//mode
+  sonic_value= [['lowercase']]
+=== ROW 675 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//input//config//limit-threshold
+  yang_value = [[['unchanged']], [['default']]]
+  sonic_key  = ['BUFFER_POOL//ingress_lossy_pool//size', 'BUFFER_POOL//ingress_lossy_pool//type']
+  sonic_value= [[['unchanged']], [['ingress']]]
+=== ROW 676 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//slices//slice//sliceall//input//config//limit-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//ingress_lossy_pool//xoff
+  sonic_value= [['unchanged']]
+=== ROW 677 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//limit-threshold
+  yang_value = [[['combination']], [['compute']], [['default']]]
+  sonic_key  = ['BUFFER_QUEUE//$INTERFACE$|$QUEUEID$//profile', 'BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//dynamic_th', 'BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//pool']
+  sonic_value= [[['[BUFFER_PROFILE|egress_profile_+INTERFACE+_+QUEUEID+]']], [['log2(original)']], [['[BUFFER_POOL|egress_lossy_pool]']]]
+=== ROW 678 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//min-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//size
+  sonic_value= [['unchanged']]
+=== ROW 679 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//alarm-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//queue_share_th
+  sonic_value= [['unchanged']]
+=== ROW 680 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//profile
+  yang_value = [['combination']]
+  sonic_key  = BUFFER_PG//$INTERFACE$|$QUEUEID$//profile'
+  sonic_value= [['[BUFFER_PROFILE|ingress_profile_+INTERFACE+_+QUEUEID+]']]
+=== ROW 681 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//limit-threshold
+  yang_value = [[['combination']], [['compute']], [['default']]]
+  sonic_key  = ['BUFFER_PG//$INTERFACE$|$QUEUEID$//profile', 'BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//dynamic_th', 'BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//pool']
+  sonic_value= [[['[BUFFER_PROFILE|ingress_profile_+INTERFACE+_+QUEUEID+]']], [['log2(original)']], [['[BUFFER_POOL|ingress_lossy_pool]']]]
+=== ROW 682 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//xon-offset-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//xon_offset
+  sonic_value= [['unchanged']]
+=== ROW 683 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//min-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//size
+  sonic_value= [['unchanged']]
+=== ROW 684 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//alarm-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//pg_shared_th
+  sonic_value= [['unchanged']]
+=== ROW 685 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//limit-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//xoff
+  sonic_value= [['unchanged']]
+=== ROW 686 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//alarm-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//pg_hdrm_th
+  sonic_value= [['unchanged']]
+=== ROW 687 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//hbm//output//config//limit-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//hbm//size
+  sonic_value= [['unchanged']]
+=== ROW 688 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//hbm//output//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//hbm//type
+  sonic_value= [['unchanged']]
+=== ROW 689 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sms//output//config//limit-threshold
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//sms//size
+  sonic_value= [['unchanged']]
+=== ROW 690 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sms//output//config//mode
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//sms//type
+  sonic_value= [['unchanged']]
+=== ROW 691 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffer-monitor//config//suppress-time
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//Suppress//time
+  sonic_value= [['unchanged']]
+=== ROW 692 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//integrated-circuit//chip//buffer-monitor//config//suppress-num
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_NOTIFICATION//Suppress//number
+  sonic_value= [['unchanged']]
+=== ROW 693 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//admin-state
+  yang_value = [['true', 'false']]
+  sonic_key  = DWDM_PORT_INFO//$INTERFACE$//admin_status
+  sonic_value= [['ENABLED', 'DISABLED']]
+=== ROW 694 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//tx-laser
+  yang_value = [['unchanged']]
+  sonic_key  = DWDM_TRANSCEIVER_INFO//TRANSCEIVER-$INTERFACE$|0//tx-laser
+  sonic_value= [['unchanged']]
+=== ROW 695 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//frequency
+  yang_value = [['unchanged']]
+  sonic_key  = DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//frequency
+  sonic_value= [['unchanged']]
+=== ROW 696 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//target-output-power
+  yang_value = [['unchanged']]
+  sonic_key  = DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//target-output-power
+  sonic_value= [['unchanged']]
+=== ROW 697 | spine=components//component
+  yang_key   = components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//operational-mode
+  yang_value = [['unchanged']]
+  sonic_key  = DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//operational-mode
+  sonic_value= [['unchanged']]
+=== ROW 702 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//core_index
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//core_index
+  sonic_value= [['unchanged']]
+=== ROW 703 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//core_port_index
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//core_port_index
+  sonic_value= [['unchanged']]
+=== ROW 704 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//num_voq
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//num_voq
+  sonic_value= [['unchanged']]
+=== ROW 705 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//speed
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//speed
+  sonic_value= [['unchanged']]
+=== ROW 706 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//switch_id
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//switch_id
+  sonic_value= [['unchanged']]
+=== ROW 707 | spine=SYSTEM_PORT//SYSTEM_PORT_LIST
+  yang_key   = SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//system_port_id
+  yang_value = [['unchanged']]
+  sonic_key  = SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//system_port_id
+  sonic_value= [['unchanged']]
+=== ROW 708 | spine=BUFFER_POOL//BUFFER_POOL_LIST
+  yang_key   = BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//type
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//$NAME$//type
+  sonic_value= [['unchanged']]
+=== ROW 709 | spine=BUFFER_POOL//BUFFER_POOL_LIST
+  yang_key   = BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//mode
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//$NAME$//mode
+  sonic_value= [['unchanged']]
+=== ROW 710 | spine=BUFFER_POOL//BUFFER_POOL_LIST
+  yang_key   = BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//size
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//$NAME$//size
+  sonic_value= [['unchanged']]
+=== ROW 711 | spine=BUFFER_POOL//BUFFER_POOL_LIST
+  yang_key   = BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//xoff
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_POOL//$NAME$//xoff
+  sonic_value= [['unchanged']]
+=== ROW 712 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//hwsku
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//hwsku
+  sonic_value= [['unchanged']]
+=== ROW 713 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//default_bgp_status
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//default_bgp_status
+  sonic_value= [['unchanged']]
+=== ROW 714 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//docker_routing_config_mode
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//docker_routing_config_mode
+  sonic_value= [['unchanged']]
+=== ROW 715 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//hostname
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//hostname
+  sonic_value= [['unchanged']]
+=== ROW 716 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//platform
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//platform
+  sonic_value= [['unchanged']]
+=== ROW 717 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//asic
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//asic
+  sonic_value= [['unchanged']]
+=== ROW 718 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//mac
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//mac
+  sonic_value= [['unchanged']]
+=== ROW 719 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//arp_to_route
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//arp_to_route
+  sonic_value= [['unchanged']]
+=== ROW 720 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//nd_to_route
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//nd_to_route
+  sonic_value= [['unchanged']]
+=== ROW 721 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//default_pfcwd_status
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//default_pfcwd_status
+  sonic_value= [['unchanged']]
+=== ROW 722 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//bgp_asn
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//bgp_asn
+  sonic_value= [['unchanged']]
+=== ROW 723 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//deployment_id
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//deployment_id
+  sonic_value= [['unchanged']]
+=== ROW 724 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//type
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//type
+  sonic_value= [['unchanged']]
+=== ROW 725 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//coalesce
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//coalesce
+  sonic_value= [['unchanged']]
+=== ROW 726 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//ndmask_v6
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//ndmask_v6
+  sonic_value= [['unchanged']]
+=== ROW 727 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//asic_name
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//asic_name
+  sonic_value= [['unchanged']]
+=== ROW 728 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//max_cores
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//max_cores
+  sonic_value= [['unchanged']]
+=== ROW 729 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//switch_id
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//switch_id
+  sonic_value= [['unchanged']]
+=== ROW 730 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//switch_type
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//switch_type
+  sonic_value= [['unchanged']]
+=== ROW 731 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//vrf_leaking_route_map_v4
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//vrf_leaking_route_map_v4
+  sonic_value= [['unchanged']]
+=== ROW 732 | spine=DEVICE_METADATA//localhost
+  yang_key   = DEVICE_METADATA//localhost//vrf_leaking_route_map_v6
+  yang_value = [['unchanged']]
+  sonic_key  = DEVICE_METADATA//localhost//vrf_leaking_route_map_v6
+  sonic_value= [['unchanged']]
+=== ROW 733 | spine=YANG_VALIDATION//config
+  yang_key   = YANG_VALIDATION//config//enable
+  yang_value = [['true', 'false']]
+  sonic_key  = YANG_VALIDATION//config//enable
+  sonic_value= [['True', 'False']]
+=== ROW 734 | spine=YANG_VALIDATION//config
+  yang_key   = YANG_VALIDATION//config//intercept
+  yang_value = [['true', 'false']]
+  sonic_key  = YANG_VALIDATION//config//intercept
+  sonic_value= [['True', 'False']]
+=== ROW 735 | spine=LLDP_GLOBAL//global
+  yang_key   = LLDP_GLOBAL//global//mgmt_ip
+  yang_value = [['unchanged']]
+  sonic_key  = LLDP_GLOBAL//global//mgmt_ip
+  sonic_value= [['unchanged']]
+=== ROW 736 | spine=NTP//global
+  yang_key   = NTP//global//direction
+  yang_value = [['unchanged']]
+  sonic_key  = NTP//global//direction
+  sonic_value= [['unchanged']]
+=== ROW 737 | spine=SNMP//snmp
+  yang_key   = SNMP//snmp//direction
+  yang_value = [['unchanged']]
+  sonic_key  = SNMP//snmp//direction
+  sonic_value= [['unchanged']]
+=== ROW 738 | spine=TACPLUS//global
+  yang_key   = TACPLUS//global//src_ip
+  yang_value = [['unchanged']]
+  sonic_key  = TACPLUS//global//src_ip
+  sonic_value= [['unchanged']]
+=== ROW 739 | spine=SYSLOG_SERVER//syslog_server
+  yang_key   = SYSLOG_SERVER//syslog_server//direction
+  yang_value = [['unchanged']]
+  sonic_key  = SYSLOG_SERVER//syslog_server//direction
+  sonic_value= [['unchanged']]
+=== ROW 740 | spine=SYSLOG_SERVER//syslog_server
+  yang_key   = SYSLOG_SERVER//syslog_server//src_ip
+  yang_value = [['unchanged']]
+  sonic_key  = SYSLOG_SERVER//syslog_server//src_ip
+  sonic_value= [['unchanged']]
+=== ROW 741 | spine=TELEMETRY//gnmi
+  yang_key   = TELEMETRY//gnmi//gnmi_direction
+  yang_value = [['unchanged']]
+  sonic_key  = TELEMETRY//gnmi//gnmi_direction
+  sonic_value= [['unchanged']]
+=== ROW 742 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//static_th
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//static_th
+  sonic_value= [['unchanged']]
+=== ROW 743 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//dynamic_th
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//dynamic_th
+  sonic_value= [['unchanged']]
+=== ROW 744 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//size
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//size
+  sonic_value= [['unchanged']]
+=== ROW 745 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//pool
+  yang_value = [['combination']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//pool
+  sonic_value= [['[+value+]']]
+=== ROW 746 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xon_offset
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//xon_offset
+  sonic_value= [['unchanged']]
+=== ROW 747 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xon
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//xon
+  sonic_value= [['unchanged']]
+=== ROW 748 | spine=BUFFER_PROFILE//BUFFER_PROFILE_LIST
+  yang_key   = BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xoff
+  yang_value = [['unchanged']]
+  sonic_key  = BUFFER_PROFILE//$NAME$//xoff
+  sonic_value= [['unchanged']]
+=== ROW 749 | spine=BUFFER_QUEUE//BUFFER_QUEUE_LIST
+  yang_key   = BUFFER_QUEUE//BUFFER_QUEUE_LIST//$PORT$ $QINDEX$//profile
+  yang_value = [['combination']]
+  sonic_key  = BUFFER_QUEUE//$PORT$|$QINDEX$//profile
+  sonic_value= [['[+value+]']]
+=== ROW 750 | spine=BGP_VRF//BGP_VRF_LIST
+  yang_key   = BGP_VRF//BGP_VRF_LIST//$VRF$//bgp_asn
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF//$VRF$//bgp_asn
+  sonic_value= [['unchanged']]
+=== ROW 751 | spine=BGP_VRF//BGP_VRF_LIST
+  yang_key   = BGP_VRF//BGP_VRF_LIST//$VRF$//coalesce
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF//$VRF$//coalesce
+  sonic_value= [['unchanged']]
+=== ROW 752 | spine=BGP_VRF//BGP_VRF_LIST
+  yang_key   = BGP_VRF//BGP_VRF_LIST//$VRF$//vrf_leaking_route_map_v4
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF//$VRF$//vrf_leaking_route_map_v4
+  sonic_value= [['unchanged']]
+=== ROW 753 | spine=BGP_VRF//BGP_VRF_LIST
+  yang_key   = BGP_VRF//BGP_VRF_LIST//$VRF$//vrf_leaking_route_map_v6
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF//$VRF$//vrf_leaking_route_map_v6
+  sonic_value= [['unchanged']]
+=== ROW 754 | spine=BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST
+  yang_key   = BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST//$TARGET-VRF$ $SOURCE-VRF$//import_vrf
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF_LEAKING_IPV4//$TARGET-VRF$|$SOURCE-VRF$//import_vrf
+  sonic_value= [['unchanged']]
+=== ROW 755 | spine=BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST
+  yang_key   = BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST//$TARGET-VRF$ $SOURCE-VRF$//import_vrf
+  yang_value = [['unchanged']]
+  sonic_key  = BGP_VRF_LEAKING_IPV6//$TARGET-VRF$|$SOURCE-VRF$//import_vrf
+  sonic_value= [['unchanged']]
+=== ROW 756 | spine=PBR_NHG//PBR_NHG_LIST
+  yang_key   = PBR_NHG//PBR_NHG_LIST//$PBR-NAME$
+  yang_value = [['empty_dict']]
+  sonic_key  = PBR_NHG//$PBR-NAME$
+  sonic_value= [['empty_dict']]
+=== ROW 757 | spine=PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST
+  yang_key   = PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST//$PBR-NAME$ $NEXTHOP$ $INTF-NAME$
+  yang_value = [['empty_dict']]
+  sonic_key  = PBR_NHG_MEMBER//$PBR-NAME$|$NEXTHOP$@$INTF-NAME$
+  sonic_value= [['empty_dict']]
+=== ROW 758 | spine=PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST
+  yang_key   = PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST//$PBR-NAME$ $NEXTHOP$
+  yang_value = [['empty_dict']]
+  sonic_key  = PBR_NHG_MEMBER//$PBR-NAME$|$NEXTHOP$
+  sonic_value= [['empty_dict']]
+=== ROW 759 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//DSCP
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//DSCP
+  sonic_value= [['unchanged']]
+=== ROW 760 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//DST_IP
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//DST_IP
+  sonic_value= [['unchanged']]
+=== ROW 761 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//IN_PORT
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//IN_PORT
+  sonic_value= [['unchanged']]
+=== ROW 762 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//IP_PROTOCOL
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//IP_PROTOCOL
+  sonic_value= [['unchanged']]
+=== ROW 763 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//L4_DST_PORT
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//L4_DST_PORT
+  sonic_value= [['unchanged']]
+=== ROW 764 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//L4_SRC_PORT
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//L4_SRC_PORT
+  sonic_value= [['unchanged']]
+=== ROW 765 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//PACKET_ACTION
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//PACKET_ACTION
+  sonic_value= [['unchanged']]
+=== ROW 766 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//PRIORITY
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//PRIORITY
+  sonic_value= [['unchanged']]
+=== ROW 767 | spine=PBR_RULE//PBR_RULE_LIST
+  yang_key   = PBR_RULE//PBR_RULE_LIST//$RULE-ID$//SRC_IP
+  yang_value = [['unchanged']]
+  sonic_key  = PBR_RULE//$RULE-ID$//SRC_IP
+  sonic_value= [['unchanged']]
+=== ROW 768 | spine=BUFFER_PG//BUFFER_PG_LIST
+  yang_key   = BUFFER_PG//BUFFER_PG_LIST//$PORT$ $PG-NUM$//profile
+  yang_value = [['combination']]
+  sonic_key  = BUFFER_PG//$PORT$|$PG-NUM$//profile
+  sonic_value= [['[+value+]']]

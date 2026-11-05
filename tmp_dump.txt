@@ -1,0 +1,3202 @@
+
+===== acl//acl-sets  (68 rows) =====
+[0] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//sequence-id
+    YV: [[['default']], [['default']]]
+    SK: ['ACL_RULE//SNMP|DEFAULT_RULE//ETHER_TYPE', 'ACL_RULE//SNMP|DEFAULT_RULE//IN_PORTS']
+    SV: [[['2048']], [['ALL']]]
+[1] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//sequence-id
+    YV: [[['default']], [['default']]]
+    SK: ['ACL_RULE//SSH|DEFAULT_RULE//ETHER_TYPE', 'ACL_RULE//SSH|DEFAULT_RULE//IN_PORTS']
+    SV: [[['2048']], [['ALL']]]
+[2] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//config//sequence-id
+    YV: [['default']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//PRIORITY
+    SV: [['1']]
+[3] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//config//sequence-id
+    YV: [['compute']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//PRIORITY
+    SV: [['10000-original']]
+[4] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//config//sequence-id
+    YV: [['default']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//PRIORITY
+    SV: [['1']]
+[5] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//config//sequence-id
+    YV: [['compute']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//PRIORITY
+    SV: [['10000-original']]
+[6] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//config//sequence-id
+    YV: [['default']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//PRIORITY
+    SV: [['1']]
+[7] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//config//sequence-id
+    YV: [['compute']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//PRIORITY
+    SV: [['10000-original']]
+[8] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//config//in-ports
+    YV: [['ALL']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//IN_PORTS
+    SV: [['ALL']]
+[9] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//config//in-ports
+    YV: [['ALL']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//IN_PORTS
+    SV: [['ALL']]
+[10] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//config//in-lags
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//SRC_TRUNK
+    SV: [['unchanged']]
+[11] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//config//in-subif
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//SRC_SUBIF
+    SV: [['unchanged']]
+[12] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//PACKET_ACTION
+    SV: [['ACCEPT', 'DROP']]
+[13] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//PACKET_ACTION
+    SV: [['ACCEPT', 'DROP']]
+[14] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//PACKET_ACTION
+    SV: [['ACCEPT', 'DROP']]
+[15] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//PACKET_ACTION
+    SV: [['ACCEPT', 'DROP']]
+[16] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//PACKET_ACTION
+    SV: [['FORWARD', 'DROP']]
+[17] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//forwarding-action
+    YV: [['permit', 'deny']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//PACKET_ACTION
+    SV: [['FORWARD', 'DROP']]
+[18] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//tc-action
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//TC_ACTION
+    SV: [['unchanged']]
+[19] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//tunnel-vni
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//TUNNEL_VNI
+    SV: [['unchanged']]
+[20] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//actions//config//car-policy
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//CAR_POLICY
+    SV: [['unchanged']]
+[21] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//dscp
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//DSCP
+    SV: [['unchanged']]
+[22] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv6//config//dscp
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//DSCP
+    SV: [['unchanged']]
+[23] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//DST_IP
+    SV: [['NONE']]
+[24] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//DST_IP
+    SV: [['NONE']]
+[25] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//DST_IP
+    SV: [['NONE']]
+[26] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//DST_IP
+    SV: [['NONE']]
+[27] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//DST_IP
+    SV: [['NONE']]
+[28] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//DST_IP
+    SV: [['NONE']]
+[29] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv6//config//destination-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//DST_IPV6
+    SV: [['NONE']]
+[30] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//SRC_IP
+    SV: [['NONE']]
+[31] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//SRC_IP
+    SV: [['NONE']]
+[32] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//SRC_IP
+    SV: [['NONE']]
+[33] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//SRC_IP
+    SV: [['NONE']]
+[34] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//SRC_IP
+    SV: [['NONE']]
+[35] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//SRC_IP
+    SV: [['NONE']]
+[36] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv6//config//source-address
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//SRC_IPV6
+    SV: [['NONE']]
+[37] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//L4_SRC_PORT
+    SV: [['NONE']]
+[38] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//L4_SRC_PORT
+    SV: [['NONE']]
+[39] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//L4_SRC_PORT
+    SV: [['NONE']]
+[40] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//L4_SRC_PORT
+    SV: [['NONE']]
+[41] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//L4_SRC_PORT
+    SV: [['NONE']]
+[42] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//source-port
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//L4_SRC_PORT
+    SV: [['NONE']]
+[43] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//L4_DST_PORT
+    SV: [['NONE']]
+[44] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//L4_DST_PORT
+    SV: [['NONE']]
+[45] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//L4_DST_PORT
+    SV: [['NONE']]
+[46] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//L4_DST_PORT
+    SV: [['NONE']]
+[47] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//L4_DST_PORT
+    SV: [['NONE']]
+[48] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//transport//config//destination-port
+    YV: [['any']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//L4_DST_PORT
+    SV: [['NONE']]
+[49] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//SNMP|DEFAULT_RULE//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[50] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//SNMP|RULE_$ACL-ENTRY$//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[51] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//1000//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//SSH|DEFAULT_RULE//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[52] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//SSH|RULE_$ACL-ENTRY$//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[53] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[54] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//ipv4//config//protocol
+    YV: [['udp', 'tcp', 'ip']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//IP_PROTOCOL
+    SV: [['17', '6', 'NONE']]
+[55] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//l2//config//ether-type
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//ETHER_TYPE
+    SV: [['unchanged']]
+[56] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//1000//l2//config//outer-vlan
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|DEFAULT_RULE//OUT_VLANID
+    SV: [['unchanged']]
+[57] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//acl-entries//acl-entry//$ACL-ENTRY$//l2//config//outer-vlan
+    YV: [['unchanged']]
+    SK: ACL_RULE//$ACL-SET$|RULE_$ACL-ENTRY$//OUT_VLANID
+    SV: [['unchanged']]
+[58] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//config//name
+    YV: [[['default']], [['default']]]
+    SK: ['ACL_TABLE//SNMP//services', 'ACL_TABLE//SNMP//ports']
+    SV: [[[['SNMP']]], [[['']]]]
+[59] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//config//name
+    YV: [[['default']], [['default']]]
+    SK: ['ACL_TABLE//SSH//services', 'ACL_TABLE//SSH//ports']
+    SV: [[[['SSH']]], [[['']]]]
+[60] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//config//name
+    YV: [['default']]
+    SK: ACL_TABLE//$ACL-SET$//stage
+    SV: [['INGRESS']]
+[61] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//config//ports
+    YV: [['list_combination']]
+    SK: ACL_TABLE//$ACL-SET$//ports
+    SV: [['value']]
+[62] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//config//description
+    YV: [['SNMP-Filter', 'SSH-Filter']]
+    SK: ACL_TABLE//SNMP//policy_desc
+    SV: [['SNMP', 'SSH']]
+[63] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//config//description
+    YV: [['SNMP-Filter', 'SSH-Filter']]
+    SK: ACL_TABLE//SSH//policy_desc
+    SV: [['SNMP', 'SSH']]
+[64] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//config//description
+    YV: [['combination']]
+    SK: ACL_TABLE//$ACL-SET$//policy_desc
+    SV: [['ACL-SET']]
+[65] YK: acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//config//type
+    YV: [['ACL_IPV4', 'ACL_IPV6', 'ACL_CTRL']]
+    SK: ACL_TABLE//SNMP//type
+    SV: [['L3', 'L3V6', 'CTRLPLANE']]
+[66] YK: acl//acl-sets//acl-set//SSH-Filter ACL_CTRL//config//type
+    YV: [['ACL_IPV4', 'ACL_IPV6', 'ACL_CTRL']]
+    SK: ACL_TABLE//SSH//type
+    SV: [['L3', 'L3V6', 'CTRLPLANE']]
+[67] YK: acl//acl-sets//acl-set//$ACL-SET$ $TYPE$//config//type
+    YV: [['ACL_IPV4', 'ACL_IPV6', 'ACL_CTRL']]
+    SK: ACL_TABLE//$ACL-SET$//type
+    SV: [['L3', 'L3V6', 'CTRLPLANE']]
+
+===== interfaces//interface  (90 rows) =====
+[68] YK: interfaces//interface//BMC//bmc//config//gateway-ip
+    YV: [['ip']]
+    SK: BMC//INTERFACE//defgw
+    SV: [['ip']]
+[69] YK: interfaces//interface//BMC//config//enabled
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[70] YK: interfaces//interface//BMC//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['combination']]
+    SK: BMC//INTERFACE//ipmask
+    SV: [['ADDRESS+/+value']]
+[71] YK: interfaces//interface//eth0//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'network-instances//network-instance//mgt_vrf//protocols//protocol//STATIC STATIC//static-routes//static//0.0.0.0/0//next-hops//next-hop//1//config//next-hop'], ['ocvalue']]
+    SK: MGMT_INTERFACE//eth0|$ADDRESS$/$VALUE$//gwaddr
+    SV: [['ocvalue']]
+[72] YK: interfaces//interface//eth0//subinterfaces//subinterface//$SUBINTERFACE$//config//vrf
+    YV: [['default']]
+    SK: MGMT_VRF_CONFIG//vrf_global//mgmtVrfEnabled
+    SV: [['true']]
+[73] YK: interfaces//interface//eth0//config//enabled-dci
+    YV: [['true', 'false']]
+    SK: MGMT_PORT//eth0//admin_status
+    SV: [['up', 'down']]
+[74] YK: interfaces//interface//eth0//config//enabled
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[75] YK: interfaces//interface//eth0//config//alias
+    YV: [['unchanged']]
+    SK: MGMT_PORT//eth0//alias
+    SV: [['unchanged']]
+[76] YK: interfaces//interface//eth0//config//description
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[77] YK: interfaces//interface//GigabitEthernet0//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'network-instances//network-instance//mgt_vrf//protocols//protocol//STATIC STATIC//static-routes//static//0.0.0.0/0//next-hops//next-hop//1//config//next-hop'], ['ocvalue']]
+    SK: MGMT_INTERFACE//eth0|$ADDRESS$/$VALUE$//gwaddr
+    SV: [['ocvalue']]
+[78] YK: interfaces//interface//GigabitEthernet0//config//enabled
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[79] YK: interfaces//interface//GigabitEthernet0//config//description
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[80] YK: interfaces//interface//Netsense//tunnel//config//src
+    YV: [['unchanged']]
+    SK: IPINIP_TUNNEL//IpinIpTunnel0//src_ip
+    SV: [['unchanged']]
+[81] YK: interfaces//interface//Netsense//tunnel//config//dst
+    YV: [['unchanged']]
+    SK: IPINIP_TUNNEL//IpinIpTunnel0//dst_ip
+    SV: [['unchanged']]
+[82] YK: interfaces//interface//LoopBack$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['empty_dict']]
+    SK: LOOPBACK_INTERFACE//Loopback$INTERFACEID$|$ADDRESS$/$VALUE$
+    SV: [['empty_dict']]
+[83] YK: interfaces//interface//LoopBack$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv6//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['empty_dict']]
+    SK: LOOPBACK_INTERFACE//Loopback$INTERFACEID$|$ADDRESS$/$VALUE$
+    SV: [['empty_dict']]
+[84] YK: interfaces//interface//LoopBack$INTERFACEID$//config//enabled
+    YV: [['true', 'false']]
+    SK: LOOPBACK//Loopback$INTERFACEID$//admin_status
+    SV: [['up', 'down']]
+[85] YK: interfaces//interface//Loopback$INTERFACEID$//config//enabled
+    YV: [['true', 'false']]
+    SK: LOOPBACK//Loopback$INTERFACEID$//admin_status
+    SV: [['up', 'down']]
+[86] YK: interfaces//interface//LoopBack$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//config//vrf
+    YV: [['unchanged']]
+    SK: LOOPBACK_INTERFACE//Loopback$INTERFACEID$//vrf_name
+    SV: [['unchanged']]
+[87] YK: interfaces//interface//Loopback$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//config//vrf
+    YV: [['unchanged']]
+    SK: LOOPBACK_INTERFACE//Loopback$INTERFACEID$//vrf_name
+    SV: [['unchanged']]
+[88] YK: interfaces//interface//Loopback$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [[['ockey', 'interfaces//interface//Loopback$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']], [['ockey', 'interfaces//config//config//vrf-enable-prev'], ['empty_dict', 'ockey_default']]]
+    SK: ['LOOPBACK_INTERFACE//Loopback$INTERFACEID$|$ADDRESS$/$VALUE$//type', 'LOOPBACK_INTERFACE//Loopback$INTERFACEID$']
+    SV: [[['primary', 'secondary', 'primary']], [['empty_dict', 'NONE']]]
+[89] YK: interfaces//interface//Loopback$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv6//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [[['ockey', 'interfaces//interface//Loopback$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv6//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']], [['ockey', 'interfaces//config//config//vrf-enable-prev'], ['empty_dict', 'ockey_default']]]
+    SK: ['LOOPBACK_INTERFACE//Loopback$INTERFACEID$|$ADDRESS$/$VALUE$//type', 'LOOPBACK_INTERFACE//Loopback$INTERFACEID$']
+    SV: [[['primary', 'secondary', 'primary']], [['empty_dict', 'NONE']]]
+[90] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//description
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//description
+    SV: [['unchanged']]
+[91] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//enabled
+    YV: [['true', 'false']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//admin_status
+    SV: [['up', 'down']]
+[92] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//mtu
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//mtu
+    SV: [['unchanged']]
+[93] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//broadcast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//broadcast_flood
+    SV: [['unchanged']]
+[94] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//multicast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//multicast_flood
+    SV: [['unchanged']]
+[95] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//unicast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//unicast_flood
+    SV: [['unchanged']]
+[96] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//config//lag-type
+    YV: [['STATIC','LACP']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//mode
+    SV: [['static','NONE']]
+[97] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//config//min-links
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//min_links
+    SV: [['unchanged']]
+[98] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//switched-vlan//config//trunk-vlans
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['tagged']], [['PortChannel+INTERFACEID']]]
+[99] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//switched-vlan//config//native-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['PortChannel+INTERFACEID']]]
+[100] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//switched-vlan//config//access-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['PortChannel+INTERFACEID']]]
+[101] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//aggregation//switched-vlan//config//interface-mode
+    YV: [['ACCESS', 'TRUNK', 'route']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//switchmode
+    SV: [['access', 'trunk', 'none']]
+[102] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'interfaces//interface//Bridge-Aggregation$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']]
+    SK: PORTCHANNEL_INTERFACE//PortChannel$INTERFACEID$|$ADDRESS$/$VALUE$//type
+    SV: [['primary', 'secondary', 'primary']]
+[103] YK: interfaces//interface//Bridge-Aggregation$INTERFACEID$//routed-vlan//config//virtual-mac-address
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//hwaddr
+    SV: [['unchanged']]
+[104] YK: interfaces//interface//port-channel$INTERFACEID$//config//description
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//description
+    SV: [['unchanged']]
+[105] YK: interfaces//interface//port-channel$INTERFACEID$//config//enabled
+    YV: [['true', 'false']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//admin_status
+    SV: [['up', 'down']]
+[106] YK: interfaces//interface//port-channel$INTERFACEID$//config//mtu
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//mtu
+    SV: [['unchanged']]
+[107] YK: interfaces//interface//port-channel$INTERFACEID$//config//broadcast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//broadcast_flood
+    SV: [['unchanged']]
+[108] YK: interfaces//interface//port-channel$INTERFACEID$//config//multicast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//multicast_flood
+    SV: [['unchanged']]
+[109] YK: interfaces//interface//port-channel$INTERFACEID$//config//unicast-suppression
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//unicast_flood
+    SV: [['unchanged']]
+[110] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//config//lag-type
+    YV: [['STATIC','LACP']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//mode
+    SV: [['static','NONE']]
+[111] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//config//min-links
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//min_links
+    SV: [['unchanged']]
+[112] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//switched-vlan//config//trunk-vlans
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['tagged']], [['PortChannel+INTERFACEID']]]
+[113] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//switched-vlan//config//native-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['PortChannel+INTERFACEID']]]
+[114] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//switched-vlan//config//access-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|PortChannel$INTERFACEID$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['PortChannel+INTERFACEID']]]
+[115] YK: interfaces//interface//port-channel$INTERFACEID$//aggregation//switched-vlan//config//interface-mode
+    YV: [['ACCESS', 'TRUNK', 'route']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//switchmode
+    SV: [['access', 'trunk', 'none']]
+[116] YK: interfaces//interface//port-channel$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'interfaces//interface//port-channel$INTERFACEID$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']]
+    SK: PORTCHANNEL_INTERFACE//PortChannel$INTERFACEID$|$ADDRESS$/$VALUE$//type
+    SV: [['primary', 'secondary', 'primary']]
+[117] YK: interfaces//interface//port-channel$INTERFACEID$//routed-vlan//config//virtual-mac-address
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//hwaddr
+    SV: [['unchanged']]
+[118] YK: interfaces//interface//Vlan$INTERFACEID$//config//enabled
+    YV: [['NONE']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['NONE']]
+[119] YK: interfaces//interface//Vlan$INTERFACEID$//config//description
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//description
+    SV: [['unchanged']]
+[120] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//ipv$IPVERSION$//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'interfaces//interface//Vlan$INTERFACEID$//routed-vlan//ipv$IPVERSION$//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']]
+    SK: VLAN_INTERFACE//Vlan$INTERFACEID$|$ADDRESS$/$VALUE$//type
+    SV: [['primary', 'secondary', 'primary']]
+[121] YK: interfaces//interface//Vlan$INTERFACEID$//name
+    YV: [['combination']]
+    SK: VLAN//Vlan$INTERFACEID$//vlanid
+    SV: [['INTERFACEID']]
+[122] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//ipv4//proxy-arp//config//mode
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//arp_proxy
+    SV: [['unchanged']]
+[123] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//ipv6//proxy-nd//config//enable
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//nd_proxy
+    SV: [['unchanged']]
+[124] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//config//arp-aging-timer
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//aging_arp
+    SV: [['unchanged']]
+[125] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//config//nd-aging-timer
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//aging_ipv6
+    SV: [['unchanged']]
+[126] YK: interfaces//interface//Vlan$INTERFACEID$//routed-vlan//config//virtual-mac-address
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//mac
+    SV: [['unchanged']]
+[127] YK: interfaces//interface//Vlan$INTERFACEID$//config//bcast-flooding-ctrl
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//bcast_flooding_ctrl
+    SV: [['unchanged']]
+[128] YK: interfaces//interface//Vlan$INTERFACEID$//config//mcast-flooding-ctrl
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//mcast_flooding_ctrl
+    SV: [['unchanged']]
+[129] YK: interfaces//interface//Vlan$INTERFACEID$//config//ucast-flooding-ctrl
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//ucast_flooding_ctrl
+    SV: [['unchanged']]
+[130] YK: interfaces//interface//Vlan$INTERFACEID$//config//mac-learning-ctrl
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//mac_learning_ctrl
+    SV: [['unchanged']]
+[131] YK: interfaces//interface//Vlan$INTERFACEID$//subinterfaces//subinterface//0//config//vrf
+    YV: [['unchanged']]
+    SK: VLAN_INTERFACE//Vlan$INTERFACEID$//vrf_name
+    SV: [['unchanged']]
+[132] YK: interfaces//interface//$INTERFACE$//routed-vlan//ipv4//arp-to-route//config//enable
+    YV: [['unchanged']]
+    SK: VLAN//$INTERFACE$//arp_to_route
+    SV: [['unchanged']]
+[133] YK: interfaces//interface//$INTERFACE$//routed-vlan//ipv6//nd-to-route//config//enable
+    YV: [['unchanged']]
+    SK: VLAN//$INTERFACE$//nd_to_route
+    SV: [['unchanged']]
+[134] YK: interfaces//interface//$INTERFACE$//config//description
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//description
+    SV: [['unchanged']]
+[135] YK: interfaces//interface//$INTERFACE$//config//enabled
+    YV: [['true', 'false']]
+    SK: PORT//$INTERFACE$//admin_status
+    SV: [['up', 'down']]
+[136] YK: interfaces//interface//$INTERFACE$//config//mtu
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//mtu
+    SV: [['unchanged']]
+[137] YK: interfaces//interface//$INTERFACE$//ethernet//config//auto-negotiate
+    YV: [['true']]
+    SK: PORT//$INTERFACE$//autoneg
+    SV: [['1']]
+[138] YK: interfaces//interface//$INTERFACE$//ethernet//config//port-speed
+    YV: [['compute']]
+    SK: PORT//$INTERFACE$//speed
+    SV: [['original//1000']]
+[139] YK: interfaces//interface//$INTERFACE$//ethernet//config//src-eq-dst-l3-action
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//source_equal_dest_intf_l3_action
+    SV: [['unchanged']]
+[140] YK: interfaces//interface//$INTERFACE$//ethernet//storm-control//broadcast
+    YV: [['unchanged']]
+    SK: PORT_STORM_CONTROL//$INTERFACE$|broadcast//kbps
+    SV: [['unchanged']]
+[141] YK: interfaces//interface//$INTERFACE$//ethernet//storm-control//unknown-multicast
+    YV: [['unchanged']]
+    SK: PORT_STORM_CONTROL//$INTERFACE$|unknown-multicast//kbps
+    SV: [['unchanged']]
+[142] YK: interfaces//interface//$INTERFACE$//ethernet//storm-control//unknown-unicast
+    YV: [['unchanged']]
+    SK: PORT_STORM_CONTROL//$INTERFACE$|unknown-unicast//kbps
+    SV: [['unchanged']]
+[143] YK: interfaces//interface//$INTERFACE$//ethernet//fec//config//mode
+    YV: [['none', 'fec', 'rs-fec']]
+    SK: PORT//$INTERFACE$//fec
+    SV: [['none', 'fc', 'rs']]
+[144] YK: interfaces//interface//$INTERFACE$//hold-time//config//up
+    YV: [['compute']]
+    SK: PORT//$INTERFACE$//up_delay_interval
+    SV: [['original//1000']]
+[145] YK: interfaces//interface//$INTERFACE$//config//broadcast-suppression
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//broadcast_flood
+    SV: [['unchanged']]
+[146] YK: interfaces//interface//$INTERFACE$//config//multicast-suppression
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//multicast_flood
+    SV: [['unchanged']]
+[147] YK: interfaces//interface//$INTERFACE$//config//unicast-suppression
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//unicast_flood
+    SV: [['unchanged']]
+[148] YK: interfaces//interface//$INTERFACE$//config//alias
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//alias
+    SV: [['unchanged']]
+[149] YK: interfaces//interface//$INTERFACE$//config//index
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//index
+    SV: [['unchanged']]
+[150] YK: interfaces//interface//$INTERFACE$//ethernet//switched-vlan//config//trunk-vlans
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|$INTERFACE$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['tagged']], [['INTERFACE']]]
+[151] YK: interfaces//interface//$INTERFACE$//ethernet//switched-vlan//config//native-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|$INTERFACE$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['INTERFACE']]]
+[152] YK: interfaces//interface//$INTERFACE$//ethernet//switched-vlan//config//access-vlan
+    YV: [[['default']], [['list_combination']]]
+    SK: ['VLAN_MEMBER//Vlan$VALUE_LIST$|$INTERFACE$//tagging_mode', 'VLAN//Vlan$VALUE_LIST$//members']
+    SV: [[['untagged']], [['INTERFACE']]]
+[153] YK: interfaces//interface//$INTERFACE$//ethernet//switched-vlan//config//interface-mode
+    YV: [['ACCESS', 'TRUNK', 'route']]
+    SK: PORT//$INTERFACE$//switchmode
+    SV: [['access', 'trunk', 'none']]
+[154] YK: interfaces//interface//$INTERFACE$//subinterfaces//subinterface//0//$IPVERSION$//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'interfaces//interface//$INTERFACE$//subinterfaces//subinterface//0//ipv4//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']]
+    SK: INTERFACE//$INTERFACE$|$ADDRESS$/$VALUE$//type
+    SV: [['primary', 'secondary', 'primary']]
+[155] YK: interfaces//interface//$INTERFACE$//subinterfaces//subinterface//$SUBINTERFACE$//$IPVERSION$//addresses//address//$ADDRESS$//config//prefix-length
+    YV: [['ockey', 'interfaces//interface//$INTERFACE$//subinterfaces//subinterface//$SUBINTERFACE$//ipv4//addresses//address//$ADDRESS$//config//index'], ['0', '1', 'ockey_default']]
+    SK: VLAN_SUB_INTERFACE//$INTERFACE$.$SUBINTERFACE$|$ADDRESS$/$VALUE$//type
+    SV: [['primary', 'secondary', 'primary']]
+[156] YK: interfaces//interface//$INTERFACE$//subinterfaces//subinterface//0//config//vrf
+    YV: [['NONE']]
+    SK: VLAN_SUB_INTERFACE//$INTERFACE$.$SUBINTERFACE$//admin_status
+    SV: [['NONE']]
+[157] YK: interfaces//interface//$INTERFACE$//subinterfaces//subinterface//$SUBINTERFACE$//config//vrf
+    YV: [[['unchanged']], [['combination']], [['default']]]
+    SK: ['VLAN_SUB_INTERFACE//$INTERFACE$.$SUBINTERFACE$//vrf_name', 'VLAN_SUB_INTERFACE//$INTERFACE$.$SUBINTERFACE$//vlan', 'VLAN_SUB_INTERFACE//$INTERFACE$.$SUBINTERFACE$//admin_status']
+    SV: [[['unchanged']], [['SUBINTERFACE']], [['up']]]
+
+===== relay-agent//dhcp  (2 rows) =====
+[158] YK: relay-agent//dhcp//interfaces//interface//Vlan-interface$INTERFACEID$//config//relay-gateway
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//gw_ip
+    SV: [['unchanged']]
+[159] YK: relay-agent//dhcp//interfaces//interface//Vlan-interface$INTERFACEID$//config//helper-address
+    YV: [['unchanged']]
+    SK: VLAN//Vlan$INTERFACEID$//dhcp_servers
+    SV: [['unchanged']]
+
+===== lacp//interfaces  (8 rows) =====
+[160] YK: lacp//interfaces//interface//Bridge-Aggregation$INTERFACEID$//members//member//$MEMBER$//interface
+    YV: [['empty_dict']]
+    SK: PORTCHANNEL_MEMBER//PortChannel$INTERFACEID$|$MEMBER$
+    SV: [['empty_dict']]
+[161] YK: lacp//interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//interval
+    YV: [['FAST', 'SLOW']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//fast_rate
+    SV: [['true', 'false']]
+[162] YK: lacp//interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//edge-port
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//fallback
+    SV: [['unchanged']]
+[163] YK: lacp//interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//system-number
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//port_id_basic
+    SV: [['unchanged']]
+[164] YK: lacp//interfaces//interface//port-channel$INTERFACEID$//members//member//$MEMBER$//interface
+    YV: [['empty_dict']]
+    SK: PORTCHANNEL_MEMBER//PortChannel$INTERFACEID$|$MEMBER$
+    SV: [['empty_dict']]
+[165] YK: lacp//interfaces//interface//port-channel$INTERFACEID$//config//interval
+    YV: [['FAST', 'SLOW']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//fast_rate
+    SV: [['true', 'false']]
+[166] YK: lacp//interfaces//interface//port-channel$INTERFACEID$//config//edge-port
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//fallback
+    SV: [['unchanged']]
+[167] YK: lacp//interfaces//interface//port-channel$INTERFACEID$//config//system-number
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//port_id_basic
+    SV: [['unchanged']]
+
+===== multicast//l2-mc-groups  (3 rows) =====
+[168] YK: multicast//l2-mc-groups//l2-mc-group//$NAME$//config//name
+    YV: [['unchanged']]
+    SK: L2_MC_GROUP//$NAME$//name
+    SV: [['unchanged']]
+[169] YK: multicast//l2-mc-groups//l2-mc-group//$NAME$//members//member//Bridge-Aggregation$INTERFACEID$//config//name
+    YV: [['empty_dict']]
+    SK: L2_MC_GROUP_MEMBER//$NAME$|PortChannel$INTERFACEID$
+    SV: [['empty_dict']]
+[170] YK: multicast//l2-mc-groups//l2-mc-group//$NAME$//members//member//$MEMBER$//config//name
+    YV: [['empty_dict']]
+    SK: L2_MC_GROUP_MEMBER//$NAME$|$MEMBER$
+    SV: [['empty_dict']]
+
+===== multicast//traffic  (12 rows) =====
+[171] YK: multicast//traffic//behaviors//behavior//$NAME$//config//redirect-interface
+    YV: [['unchanged']]
+    SK: TRAFFIC_BEHAVIOR//$NAME$//redirect
+    SV: [['unchanged']]
+[172] YK: multicast//traffic//behaviors//behavior//$NAME$//config//name
+    YV: [['unchanged']]
+    SK: TRAFFIC_BEHAVIOR//$NAME$//behavior_name
+    SV: [['unchanged']]
+[173] YK: multicast//traffic//behaviors//behavior//$NAME$//config//add-outer-vlan
+    YV: [['unchanged']]
+    SK: TRAFFIC_BEHAVIOR//$NAME$//add_outer_vlan
+    SV: [['unchanged']]
+[174] YK: multicast//traffic//classifiers//classifier//$NAME$//config//name
+    YV: [['unchanged']]
+    SK: TRAFFIC_CLASSIFIER//$NAME$//traffic_name
+    SV: [['unchanged']]
+[175] YK: multicast//traffic//classifiers//classifier//$NAME$//config//match-any
+    YV: [['unchanged']]
+    SK: TRAFFIC_CLASSIFIER//$NAME$//match_any
+    SV: [['unchanged']]
+[176] YK: multicast//traffic//policys//policy//$NAME$//config//name
+    YV: [['unchanged']]
+    SK: POLICY//$NAME$//policy_name
+    SV: [['unchanged']]
+[177] YK: multicast//traffic//policys//policy//$NAME$//config//behavior-name
+    YV: [['unchanged']]
+    SK: POLICY//$NAME$//behavior_name
+    SV: [['unchanged']]
+[178] YK: multicast//traffic//policys//policy//$NAME$//config//classifier-name
+    YV: [['unchanged']]
+    SK: POLICY//$NAME$//classifier_name
+    SV: [['unchanged']]
+[179] YK: multicast//traffic//policys//policy//$NAME$//apply-interface//config//inband
+    YV: [['unchanged']]
+    SK: POLICY//$NAME$//inband
+    SV: [['unchanged']]
+[180] YK: multicast//traffic//policys//policy//$NAME$//apply-interface//config//outband
+    YV: [['unchanged']]
+    SK: POLICY//$NAME$//outband
+    SV: [['unchanged']]
+[181] YK: multicast//traffic//classifiers//classifier//$NAME$//config//match-vlan
+    YV: [['unchanged']]
+    SK: TRAFFIC_CLASSIFIER//$NAME$//match_vlan
+    SV: [['unchanged']]
+[182] YK: multicast//traffic//classifiers//classifier//$NAME$//config//match-acl
+    YV: [['unchanged']]
+    SK: TRAFFIC_CLASSIFIER//$NAME$//match_acl
+    SV: [['unchanged']]
+
+===== mqc-acl//acl-sets  (4 rows) =====
+[183] YK: mqc-acl//acl-sets//acl-set//$NAME$//config//type
+    YV: [['unchanged']]
+    SK: ACCESS_LIST_TABLE//$NAME$//type
+    SV: [['unchanged']]
+[184] YK: mqc-acl//acl-sets//acl-set//$NAME$//acl-entries//acl-entry//$ID$//config//action
+    YV: [['unchanged']]
+    SK: ACCESS_LIST_RULE//$NAME$|RULE_$ID$//action
+    SV: [['unchanged']]
+[185] YK: mqc-acl//acl-sets//acl-set//$NAME$//acl-entries//acl-entry//$ID$//config//priority
+    YV: [['unchanged']]
+    SK: ACCESS_LIST_RULE//$NAME$|RULE_$ID$//priority
+    SV: [['unchanged']]
+[186] YK: mqc-acl//acl-sets//acl-set//$NAME$//acl-entries//acl-entry//$ID$//config//vlan
+    YV: [['unchanged']]
+    SK: ACCESS_LIST_RULE//$NAME$|RULE_$ID$//vlan
+    SV: [['unchanged']]
+
+===== system//monitor-link  (9 rows) =====
+[187] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//uplink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+    SV: [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+[188] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//downlink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+    SV: [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+[189] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//Bridge-Aggregation$INTERFACEID$//config//threshold
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//threshold
+    SV: [['unchanged']]
+[190] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//uplink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+    SV: [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+[191] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//downlink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORTCHANNEL//PortChannel$INTERFACEID$//updelaytime', 'PORTCHANNEL//PortChannel$INTERFACEID$//linkmode', 'PORTCHANNEL//PortChannel$INTERFACEID$//groupid', 'PORTCHANNEL//PortChannel$INTERFACEID$//option']
+    SV: [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+[192] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//port-channel$INTERFACEID$//config//threshold
+    YV: [['unchanged']]
+    SK: PORTCHANNEL//PortChannel$INTERFACEID$//threshold
+    SV: [['unchanged']]
+[193] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//uplink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORT//$INTERFACE$//updelaytime', 'PORT//$INTERFACE$//linkmode', 'PORT//$INTERFACE$//groupid', 'PORT//$INTERFACE$//option']
+    SV: [[['ocvalue']], [['uplink']], [['GROUP']], [['add']]]
+[194] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//downlink//config//enable
+    YV: [[['ockey', 'system//monitor-link//groups//group//$GROUP$//downlink//config//up-delay'], ['ocvalue']], [['default']], [['combination']], [['default']]]
+    SK: ['PORT//$INTERFACE$//updelaytime', 'PORT//$INTERFACE$//linkmode', 'PORT//$INTERFACE$//groupid', 'PORT//$INTERFACE$//option']
+    SV: [[['ocvalue']], [['downlink']], [['GROUP']], [['add']]]
+[195] YK: system//monitor-link//groups//group//$GROUP$//interfaces//interface//$INTERFACE$//config//threshold
+    YV: [['unchanged']]
+    SK: PORT//$INTERFACE$//threshold
+    SV: [['unchanged']]
+
+===== system//aaa  (7 rows) =====
+[196] YK: system//aaa//accounting//events//event//command//config//accounting-method
+    YV: [['default']]
+    SK: AAA//account//commands
+    SV: [['tacacs+']]
+[197] YK: system//aaa//authorization//events//event//command//config//authorization-method
+    YV: [['default']]
+    SK: AAA//authorization//commands
+    SV: [['tacacs+']]
+[198] YK: system//aaa//authentication//events//event//login//config//authentication-method
+    YV: [['default']]
+    SK: AAA//authentication//login
+    SV: [['tacacs+,local']]
+[199] YK: system//aaa//config//fail-through
+    YV: [['true', 'false']]
+    SK: AAA//authentication//failthrough
+    SV: [['True', 'False']]
+[200] YK: system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//config//tcp-port
+    YV: [['unchanged']]
+    SK: TACPLUS_SERVER//$SERVER$//tcp_port
+    SV: [['unchanged']]
+[201] YK: system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//config//priority
+    YV: [['unchanged']]
+    SK: TACPLUS_SERVER//$SERVER$//priority
+    SV: [['unchanged']]
+[202] YK: system//aaa//server-groups//server-group//$GROUP$//servers//server//$SERVER$//tacacs//config//secret-key
+    YV: [['unchanged']]
+    SK: TACPLUS//global//passkey
+    SV: [['unchanged']]
+
+===== system//breakout  (1 rows) =====
+[203] YK: system//breakout//interfaces//interface//$INTERFACE$//config//mode
+    YV: [['unchanged']]
+    SK: BREAKOUT_CFG//$INTERFACE$//brkout_mode
+    SV: [['unchanged']]
+
+===== system//config  (10 rows) =====
+[204] YK: system//config//hostname
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//hostname
+    SV: [['unchanged']]
+[205] YK: system//config//hwsku
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//hwsku
+    SV: [['unchanged']]
+[206] YK: system//config//role
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//type
+    SV: [['unchanged']]
+[207] YK: system//config//role
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//type
+    SV: [['unchanged']]
+[208] YK: system//config//asic-variant
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//asic_variant
+    SV: [['unchanged']]
+[209] YK: system//config//asic
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//asic
+    SV: [['unchanged']]
+[210] YK: system//config//login-shell
+    YV: [['unchanged']]
+    SK: SHELL//passwd//passwd
+    SV: [['unchanged']]
+[211] YK: system//config//ztp-status
+    YV: [['unchanged']]
+    SK: ZTP//flg//run
+    SV: [['unchanged']]
+[212] YK: system//config//database-version
+    YV: [['unchanged']]
+    SK: VERSIONS//DATABASE//VERSION
+    SV: [['unchanged']]
+[213] YK: system//config//login-timeout
+    YV: [['unchanged']]
+    SK: USER//timeout//value
+    SV: [['unchanged']]
+
+===== system//arp  (1 rows) =====
+[214] YK: system//arp//config//arp-to-route
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//arp_to_route
+    SV: [['unchanged']]
+
+===== system//nd  (2 rows) =====
+[215] YK: system//nd//config//nd-to-route
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//nd_to_route
+    SV: [['unchanged']]
+[216] YK: system//nd//config//ndmask-v6
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//ndmask_v6
+    SV: [['unchanged']]
+
+===== system//grpc  (7 rows) =====
+[217] YK: system//grpc//config//enable
+    YV: [['true', 'false']]
+    SK: TELEMETRY//gnmi//status
+    SV: [['enable', 'disable']]
+[218] YK: system//grpc//config//gnmi-direction
+    YV: [['unchanged']]
+    SK: TELEMETRY//gnmi//gnmi_direction
+    SV: [['unchanged']]
+[219] YK: system//grpc//config//port
+    YV: [['unchanged']]
+    SK: TELEMETRY//gnmi//port
+    SV: [['unchanged']]
+[220] YK: system//grpc//config//password
+    YV: [['unchanged']]
+    SK: TELEMETRY//usrpwd//password
+    SV: [['unchanged']]
+[221] YK: system//grpc//config//tls-type
+    YV: [['unchanged']]
+    SK: TELEMETRY//serverTls//type
+    SV: [['unchanged']]
+[222] YK: system//grpc//config//username
+    YV: [['unchanged']]
+    SK: TELEMETRY//usrpwd//username
+    SV: [['unchanged']]
+[223] YK: system//grpc//config//channel
+    YV: [['unchanged']]
+    SK: TELEMETRY//channel//client
+    SV: [['unchanged']]
+
+===== system//gnoi  (1 rows) =====
+[224] YK: system//gnoi//config//enable
+    YV: [['true', 'false']]
+    SK: TELEMETRY//gnoi//status
+    SV: [['enable', 'disable']]
+
+===== system//hash  (29 rows) =====
+[225] YK: system//hash//global//config//algorithm-ecmp
+    YV: [['unchanged']]
+    SK: SWITCH//switch//ecmp_hash_alg
+    SV: [['unchanged']]
+[226] YK: system//hash//global//config//algorithm-lag
+    YV: [['unchanged']]
+    SK: SWITCH//switch//lag_hash_alg
+    SV: [['unchanged']]
+[227] YK: system//hash//global//config//ecmp-hash-seed
+    YV: [['unchanged']]
+    SK: SWITCH//switch//ecmp_hash_seed
+    SV: [['unchanged']]
+[228] YK: system//hash//global//config//lag-hash-seed
+    YV: [['unchanged']]
+    SK: SWITCH//switch//lag_hash_seed
+    SV: [['unchanged']]
+[229] YK: system//hash//global//config//lag-tunnel-hash
+    YV: [['unchanged']]
+    SK: SWITCH//switch//lag_tunnel_hash
+    SV: [['unchanged']]
+[230] YK: system//hash//global//config//ecmp-tunnel-hash
+    YV: [['unchanged']]
+    SK: SWITCH//switch//ecmp_tunnel_hash
+    SV: [['unchanged']]
+[231] YK: system//hash//global//config//ecmp-ipv4-hash-mode
+    YV: [['unchanged']]
+    SK: SWITCH//switch//ecmp_ipv4_hash_mode
+    SV: [['unchanged']]
+[232] YK: system//hash//global//config//ecmp-ipv6-hash-mode
+    YV: [['unchanged']]
+    SK: SWITCH//switch//ecmp_ipv6_hash_mode
+    SV: [['unchanged']]
+[233] YK: system//hash//global//config//lag-ipv4-hash-mode
+    YV: [['unchanged']]
+    SK: SWITCH//switch//lag_ipv4_hash_mode
+    SV: [['unchanged']]
+[234] YK: system//hash//global//config//lag-ipv6-hash-mode
+    YV: [['unchanged']]
+    SK: SWITCH//switch//lag_ipv6_hash_mode
+    SV: [['unchanged']]
+[235] YK: system//hash//global//config//hash-offset
+    YV: [['unchanged']]
+    SK: SWITCH//switch//hash_offset
+    SV: [['unchanged']]
+[236] YK: system//hash//dlb//global//config//cap-load
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//cap_load
+    SV: [['unchanged']]
+[237] YK: system//hash//dlb//global//config//cap-queue
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//cap_queue
+    SV: [['unchanged']]
+[238] YK: system//hash//dlb//global//config//load-weight
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//load_weight
+    SV: [['unchanged']]
+[239] YK: system//hash//dlb//global//config//queue-weight
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//queue_weight
+    SV: [['unchanged']]
+[240] YK: system//hash//dlb//global//config//load-min
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//load_min
+    SV: [['unchanged']]
+[241] YK: system//hash//dlb//global//config//load-max
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//load_max
+    SV: [['unchanged']]
+[242] YK: system//hash//dlb//global//config//queue-min
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//queue_min
+    SV: [['unchanged']]
+[243] YK: system//hash//dlb//global//config//queue-max
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//queue_max
+    SV: [['unchanged']]
+[244] YK: system//hash//dlb//global//config//sample-rate
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//dlb_sample_rate
+    SV: [['unchanged']]
+[245] YK: system//hash//dlb//global//config//ecmp-enable
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//dlb_ecmp_enable
+    SV: [['unchanged']]
+[246] YK: system//hash//dlb//global//config//hash-seed
+    YV: [['unchanged']]
+    SK: DLB_TABLE//global//dlb_hash_seed
+    SV: [['unchanged']]
+[247] YK: system//hash//dlb//interfaces//interface//$INTERFACE$//config//load-weight
+    YV: [['unchanged']]
+    SK: DLB_TABLE//$INTERFACE$//load_weight
+    SV: [['unchanged']]
+[248] YK: system//hash//dlb//interfaces//interface//$INTERFACE$//config//queue-size-weight
+    YV: [['unchanged']]
+    SK: DLB_TABLE//$INTERFACE$//queue_size_weight
+    SV: [['unchanged']]
+[249] YK: system//hash//dlb//interfaces//interface//$INTERFACE$//config//scaling-factor
+    YV: [['unchanged']]
+    SK: DLB_TABLE//$INTERFACE$//scaling_factor
+    SV: [['unchanged']]
+[250] YK: system//hash//dhash//groups//group//$GROUP$//config//mode
+    YV: [['unchanged']]
+    SK: FG_NHG//$GROUP$//fg_nhg_mode
+    SV: [['unchanged']]
+[251] YK: system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-age
+    YV: [['unchanged']]
+    SK: FG_NHG//$GROUP$//dynamic_age
+    SV: [['unchanged']]
+[252] YK: system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-mode
+    YV: [['unchanged']]
+    SK: FG_NHG//$GROUP$//dynamic_mode
+    SV: [['unchanged']]
+[253] YK: system//hash//dhash//groups//group//$GROUP$//dlb//config//dynamic-size
+    YV: [['unchanged']]
+    SK: FG_NHG//$GROUP$//dynamic_size
+    SV: [['unchanged']]
+
+===== system//logging  (2 rows) =====
+[254] YK: system//logging//remote-servers//remote-server//$SERVER$//config//host
+    YV: [[['default']], [['list_combination']]]
+    SK: ['SYSLOG_SERVER//syslog_server//level', 'SYSLOG_SERVER//syslog_server//servers']
+    SV: [[['notice']], [['SERVER']]]
+[255] YK: system//logging//remote-servers//remote-server//$SERVER$//selectors//selector//$SELECTOR$//config//severity
+    YV: [['INFORMATIONAL', 'INFO']]
+    SK: SYSLOG_SERVER//syslog_server//level
+    SV: [['notice', 'info']]
+
+===== system//ntp  (1 rows) =====
+[256] YK: system//ntp//servers//server//$SERVER$//config//address
+    YV: [['empty_dict']]
+    SK: NTP_SERVER//$SERVER$
+    SV: [['empty_dict']]
+
+===== system//snmp  (2 rows) =====
+[257] YK: system//snmp//communities//community//$COMMUNITY$//config//name
+    YV: [[['default']], [['combination']]]
+    SK: ['SNMP//snmp//snmp_location', 'SNMP//snmp//snmp_rocommunity']
+    SV: [[['public']], [['COMMUNITY']]]
+[258] YK: system//snmp//servers//server//$SERVER$//config//port
+    YV: [['empty_dict']]
+    SK: SNMP_AGENT_ADDRESS_CONFIG//$SERVER$|$VALUE$|mgmt
+    SV: [['empty_dict']]
+
+===== system//counter  (38 rows) =====
+[259] YK: system//counter//buffer-pool//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[260] YK: system//counter//buffer-pool-watermark//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL_WATERMARK//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[261] YK: system//counter//pg//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PG//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[262] YK: system//counter//queue-watermark//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//QUEUE_WATERMARK//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[263] YK: system//counter//pg-watermark//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PG_WATERMARK//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[264] YK: system//counter//buffer-pool//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[265] YK: system//counter//pfcwd//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PFCWD//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[266] YK: system//counter//queue//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//QUEUE//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[267] YK: system//counter//port//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PORT//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[268] YK: system//counter//port-buffer-drop//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PORT_BUFFER_DROP//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[269] YK: system//counter//port-phy//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//PORT_PHY//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[270] YK: system//counter//acl//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//ACL//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[271] YK: system//counter//rif//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//RIF//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[272] YK: system//counter//policer//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//POLICER//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[273] YK: system//counter//policer-stat//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//POLICER_STAT_COUNTER//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[274] YK: system//counter//bridge//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//BRIDGE_STAT_COUNTER//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[275] YK: system//counter//tunnel//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//TUNNEL//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[276] YK: system//counter//debug//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//DEBUG//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[277] YK: system//counter//ebst//config//enable
+    YV: [['true', 'false']]
+    SK: FLEX_COUNTER_TABLE//QUEUE_EBST//FLEX_COUNTER_STATUS
+    SV: [['enable', 'disable']]
+[278] YK: system//counter//buffer-pool//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL//POLL_INTERVAL
+    SV: [['unchanged']]
+[279] YK: system//counter//buffer-pool-watermark//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL_WATERMARK//POLL_INTERVAL
+    SV: [['unchanged']]
+[280] YK: system//counter//pg//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PG//POLL_INTERVAL
+    SV: [['unchanged']]
+[281] YK: system//counter//queue-watermark//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//QUEUE_WATERMARK//POLL_INTERVAL
+    SV: [['unchanged']]
+[282] YK: system//counter//pg-watermark//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PG_WATERMARK//POLL_INTERVAL
+    SV: [['unchanged']]
+[283] YK: system//counter//buffer-pool//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//BUFFER_POOL//POLL_INTERVAL
+    SV: [['unchanged']]
+[284] YK: system//counter//pfcwd//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PFCWD//POLL_INTERVAL
+    SV: [['unchanged']]
+[285] YK: system//counter//port//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PORT//POLL_INTERVAL
+    SV: [['unchanged']]
+[286] YK: system//counter//port-buffer-drop//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PORT_BUFFER_DROP//POLL_INTERVAL
+    SV: [['unchanged']]
+[287] YK: system//counter//port-phy//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//PORT_PHY//POLL_INTERVAL
+    SV: [['unchanged']]
+[288] YK: system//counter//acl//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//ACL//POLL_INTERVAL
+    SV: [['unchanged']]
+[289] YK: system//counter//queue//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//QUEUE//POLL_INTERVAL
+    SV: [['unchanged']]
+[290] YK: system//counter//rif//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//RIF//POLL_INTERVAL
+    SV: [['unchanged']]
+[291] YK: system//counter//policer//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//POLICER//POLL_INTERVAL
+    SV: [['unchanged']]
+[292] YK: system//counter//policer-stat//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//POLICER_STAT_COUNTER//POLL_INTERVAL
+    SV: [['unchanged']]
+[293] YK: system//counter//bridge//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//BRIDGE_STAT_COUNTER//POLL_INTERVAL
+    SV: [['unchanged']]
+[294] YK: system//counter//tunnel//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//TUNNEL//POLL_INTERVAL
+    SV: [['unchanged']]
+[295] YK: system//counter//debug//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//DEBUG//POLL_INTERVAL
+    SV: [['unchanged']]
+[296] YK: system//counter//ebst//config//poll-interval
+    YV: [['unchanged']]
+    SK: FLEX_COUNTER_TABLE//QUEUE_EBST//POLL_INTERVAL
+    SV: [['unchanged']]
+
+===== system//overlay  (51 rows) =====
+[297] YK: system//overlay//global//config//enable
+    YV: [['unchanged']]
+    SK: OVERLAY//global//enable
+    SV: [['unchanged']]
+[298] YK: system//overlay//global//config//role
+    YV: [['unchanged']]
+    SK: OVERLAY//global//role
+    SV: [['unchanged']]
+[299] YK: system//overlay//agent//config//listen-ip
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//listen_ip
+    SV: [['unchanged']]
+[300] YK: system//overlay//agent//config//listen-port
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//listen_port
+    SV: [['unchanged']]
+[301] YK: system//overlay//agent//config//mgmt-ip
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//mgmt_ip
+    SV: [['unchanged']]
+[302] YK: system//overlay//agent//config//usrname
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//usrname
+    SV: [['unchanged']]
+[303] YK: system//overlay//agent//config//password
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//password
+    SV: [['unchanged']]
+[304] YK: system//overlay//agent//config//vtep-if
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//vtep_if
+    SV: [['unchanged']]
+[305] YK: system//overlay//agent//config//vtep-ip
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//vtep_ip
+    SV: [['unchanged']]
+[306] YK: system//overlay//agent//config//stat-interval
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//stat_interval
+    SV: [['unchanged']]
+[307] YK: system//overlay//agent//config//config-restore
+    YV: [['unchanged']]
+    SK: OVERLAY//agent//config_restore
+    SV: [['unchanged']]
+[308] YK: system//overlay//fcr//config//enable
+    YV: [['true', 'false']]
+    SK: OVERLAY//fcr//fcr_enable
+    SV: [['True', 'False']]
+[309] YK: system//overlay//fcr//config//listen-ip
+    YV: [['unchanged']]
+    SK: OVERLAY//fcr//fcr_listen_ip
+    SV: [['unchanged']]
+[310] YK: system//overlay//fcr//config//listen-port
+    YV: [['unchanged']]
+    SK: OVERLAY//fcr//fcr_listen_port
+    SV: [['unchanged']]
+[311] YK: system//overlay//fcr//config//usrname
+    YV: [['unchanged']]
+    SK: OVERLAY//fcr//fcr_usrname
+    SV: [['unchanged']]
+[312] YK: system//overlay//fcr//config//password
+    YV: [['unchanged']]
+    SK: OVERLAY//fcr//fcr_password
+    SV: [['unchanged']]
+[313] YK: system//overlay//fcr//config//default-only
+    YV: [['unchanged']]
+    SK: OVERLAY//fcr//default_only
+    SV: [['unchanged']]
+[314] YK: system//overlay//sync//config//acl-entries-max
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//acl_entries_max
+    SV: [['unchanged']]
+[315] YK: system//overlay//sync//config//overlay-ecmp-max
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//overlay_ecmp_max
+    SV: [['unchanged']]
+[316] YK: system//overlay//sync//config//ipv4-route-entries-max
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//ipv4_route_entries_max
+    SV: [['unchanged']]
+[317] YK: system//overlay//sync//config//ipv6-route-entries-max
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//ipv6_route_entries_max
+    SV: [['unchanged']]
+[318] YK: system//overlay//sync//config//vxlan-l3-mac
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//vxlan_l3_mac
+    SV: [['unchanged']]
+[319] YK: system//overlay//sync//config//vxlan-nh-mac
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//vxlan_nh_mac
+    SV: [['unchanged']]
+[320] YK: system//overlay//sync//config//thrift-rpc-listen-ip
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//thrift_rpc_listen_ip
+    SV: [['unchanged']]
+[321] YK: system//overlay//sync//config//thrift-rpc-listen-port
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//thrift_rpc_listen_port
+    SV: [['unchanged']]
+[322] YK: system//overlay//sync//config//vxlan-tunnel-entries-max
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//vxlan_tunnel_entries_max
+    SV: [['unchanged']]
+[323] YK: system//overlay//sync//config//siso-filter
+    YV: [['unchanged']]
+    SK: OVERLAY//sync//siso_filter
+    SV: [['unchanged']]
+[324] YK: system//overlay//resource-spec//config//ecmp-group
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//ecmp_group
+    SV: [['unchanged']]
+[325] YK: system//overlay//resource-spec//config//vrf
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//vrf
+    SV: [['unchanged']]
+[326] YK: system//overlay//resource-spec//config//vxlan-tunnel
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//vxlan_tunnel
+    SV: [['unchanged']]
+[327] YK: system//overlay//resource-spec//config//vxlan-vni
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//vxlan_vni
+    SV: [['unchanged']]
+[328] YK: system//overlay//resource-spec//config//ipv4-route-prefix
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//ipv4_route_prefix
+    SV: [['unchanged']]
+[329] YK: system//overlay//resource-spec//config//overlay-acl
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//overlay_acl
+    SV: [['unchanged']]
+[330] YK: system//overlay//resource-spec//config//overlay-arp
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//overlay_arp
+    SV: [['unchanged']]
+[331] YK: system//overlay//resource-spec//config//overlay-multicast
+    YV: [['unchanged']]
+    SK: OVERLAY//resource_spec//overlay_multicast
+    SV: [['unchanged']]
+[332] YK: system//overlay//samplers//sampler//$SAMPLER$//config//sample-rate
+    YV: [['unchanged']]
+    SK: OVERLAY_SAMPLER//$SAMPLER$//SAMPLE_RATE
+    SV: [['unchanged']]
+[333] YK: system//overlay//samplers//sampler//$SAMPLER$//config//destination
+    YV: [['unchanged']]
+    SK: OVERLAY_SAMPLER//$SAMPLER$//DESTINATION
+    SV: [['unchanged']]
+[334] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//in-port
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//IN_PORT
+    SV: [['unchanged']]
+[335] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//dst-ip
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//DST_IP
+    SV: [['unchanged']]
+[336] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//priority
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//PRIORITY
+    SV: [['unchanged']]
+[337] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//sample-action
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//SAMPLE_ACTION
+    SV: [['unchanged']]
+[338] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//truncate-action
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//TRUNCATE_ACTION
+    SV: [['unchanged']]
+[339] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//tunnel-term
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//TUNNEL_TERM
+    SV: [['unchanged']]
+[340] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//packet-action-redirect-groupid
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//PACKET_ACTION_REDIRECT_GROUPID
+    SV: [['unchanged']]
+[341] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//vlan-inner-tag-action
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//VLAN_INNER_TAG_ACTION
+    SV: [['unchanged']]
+[342] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//vlan-outer-tag-action
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//VLAN_OUTER_TAG_ACTION
+    SV: [['unchanged']]
+[343] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//packet-action
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//PACKET_ACTION
+    SV: [['unchanged']]
+[344] YK: system//overlay//acl-rules//acl-rule//$RULE$//config//truncate-mirror-length
+    YV: [['unchanged']]
+    SK: OVERLAY_ACL_RULE//$RULE$//TRUNCATE_MIRROR_LENGTH
+    SV: [['unchanged']]
+[345] YK: system//overlay//interfaces//interface//$INTERFACE$//config//sample_enable
+    YV: [['unchanged']]
+    SK: OVERLAY_PORT//$INTERFACE$//sample_enable
+    SV: [['unchanged']]
+[346] YK: system//overlay//tunnel//dscp//config//mode
+    YV: [['unchanged']]
+    SK: OVERLAY_TUNNEL//dscp//mode
+    SV: [['unchanged']]
+[347] YK: system//overlay//tunnel//dscp//config//value
+    YV: [['unchanged']]
+    SK: OVERLAY_TUNNEL//dscp//value
+    SV: [['unchanged']]
+
+===== system//dns  (1 rows) =====
+[348] YK: system//dns//servers//server//$SERVER$//address
+    YV: [['list_combination']]
+    SK: DNS//server//ip
+    SV: [['SERVER']]
+
+===== system//mirrors  (7 rows) =====
+[349] YK: system//mirrors//mirror//$MIRROR$//config//dst-ip
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//dst_ip
+    SV: [['unchanged']]
+[350] YK: system//mirrors//mirror//$MIRROR$//config//src-ip
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//src_ip
+    SV: [['unchanged']]
+[351] YK: system//mirrors//mirror//$MIRROR$//config//dscp
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//dscp
+    SV: [['unchanged']]
+[352] YK: system//mirrors//mirror//$MIRROR$//config//l4-dst-port
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//udp_dst_port
+    SV: [['unchanged']]
+[353] YK: system//mirrors//mirror//$MIRROR$//config//l4-src-port
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//udp_src_port
+    SV: [['unchanged']]
+[354] YK: system//mirrors//mirror//$MIRROR$//config//type
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//type
+    SV: [['unchanged']]
+[355] YK: system//mirrors//mirror//$MIRROR$//config//ttl
+    YV: [['unchanged']]
+    SK: MIRROR_SESSION//$MIRROR$//ttl
+    SV: [['unchanged']]
+
+===== system//mod  (3 rows) =====
+[356] YK: system//mod//l3-miss//config//bind-mirror-id
+    YV: [['unchanged']]
+    SK: MOD_MIRROR//L3_MISS//mirror_session
+    SV: [['unchanged']]
+[357] YK: system//mod//l3-next-hop//config//bind-mirror-id
+    YV: [['unchanged']]
+    SK: MOD_MIRROR//L3_NEXT_HOP//mirror_session
+    SV: [['unchanged']]
+[358] YK: system//mod//buffer//config//bind-mirror-id
+    YV: [['unchanged']]
+    SK: MOD_MIRROR//BUFFER//mirror_session
+    SV: [['unchanged']]
+
+===== system//fcr  (5 rows) =====
+[359] YK: system//fcr//bgp//global//config//ipv6-nexthop-prefer-global
+    YV: [['unchanged']]
+    SK: FCR_GLOBALCONFIG//bgp_global//ipv6_nexthop_prefer_global
+    SV: [['unchanged']]
+[360] YK: system//fcr//bgp//global//network-delay//config//mode
+    YV: [['unchanged']]
+    SK: FCR_GLOBALCONFIG//bgp_global|network_delay//mode
+    SV: [['unchanged']]
+[361] YK: system//fcr//bgp//global//network-delay//config//delay-time
+    YV: [['unchanged']]
+    SK: FCR_GLOBALCONFIG//bgp_global|network_delay//delay_time
+    SV: [['unchanged']]
+[362] YK: system//fcr//global//ip-protocols//protocol//bgp//config//route-map
+    YV: [['unchanged']]
+    SK: FCR_GLOBALCONFIG//ip_protocol|bgp//route_map
+    SV: [['unchanged']]
+[363] YK: system//fcr//global//config//grpc-control-interface
+    YV: [['unchanged']]
+    SK: FCR_GLOBALCONFIG//grpc_control_interface//interface
+    SV: [['unchanged']]
+
+===== system//sampling  (9 rows) =====
+[364] YK: system//sampling//sflow//interfaces//interface//$INTERFACE$//config//sample-rate
+    YV: [['unchanged']]
+    SK: SFLOW_SESSION//$INTERFACE$//sample_rate
+    SV: [['unchanged']]
+[365] YK: system//sampling//sflow//interfaces//interface//$INTERFACE$//config//enable
+    YV: [['true', 'false']]
+    SK: SFLOW_SESSION//$INTERFACE$//admin_state
+    SV: [['up', 'down']]
+[366] YK: system//sampling//sflow//interfaces//interface//$INTERFACE$//config//direction
+    YV: [['unchanged']]
+    SK: SFLOW_SESSION//$INTERFACE$//sample_stage
+    SV: [['unchanged']]
+[367] YK: system//sampling//sflow//config//source-interface
+    YV: [['unchanged']]
+    SK: SFLOW//global//agent_id
+    SV: [['unchanged']]
+[368] YK: system//sampling//sflow//config//enable
+    YV: [['true', 'false']]
+    SK: SFLOW//global//admin_state
+    SV: [['up', 'down']]
+[369] YK: system//sampling//sflow//config//datagram-size
+    YV: [['unchanged']]
+    SK: SFLOW//global//max_datagram_size
+    SV: [['unchanged']]
+[370] YK: system//sampling//sflow//config//cpu-rate-limit
+    YV: [['unchanged']]
+    SK: SFLOW//global//cpu_rate_limit
+    SV: [['unchanged']]
+[371] YK: system//sampling//sflow//collectors//collector//$COLLECTOR$//servers//server//$IPADDR$//config//address
+    YV: [['unchanged']]
+    SK: SFLOW_COLLECTOR//$COLLECTOR$//collector_ip
+    SV: [['unchanged']]
+[372] YK: system//sampling//sflow//collectors//collector//$COLLECTOR$//servers//server//$IPADDR$//config//port
+    YV: [['unchanged']]
+    SK: SFLOW_COLLECTOR//$COLLECTOR$//collector_port
+    SV: [['unchanged']]
+
+===== telemetry-system//global  (1 rows) =====
+[373] YK: telemetry-system//global//config//src-ip
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Global//src_ip
+    SV: [['unchanged']]
+
+===== telemetry-system//destination-groups  (1 rows) =====
+[374] YK: telemetry-system//destination-groups//destination-group//$GROUP$//destinations//destination//$IPADDR$ $PORT$//destination-port
+    YV: [['string_combination']]
+    SK: TELEMETRY_CLIENT//DestinationGroup_$GROUP$//dst_addr
+    SV: [['IPADDR+:+PORT']]
+
+===== telemetry-system//subscriptions  (8 rows) =====
+[375] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//destination-group
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//dst_group
+    SV: [['unchanged']]
+[376] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//band-direction
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//band_direction
+    SV: [['unchanged']]
+[377] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//report-interval
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//report_interval
+    SV: [['unchanged']]
+[378] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//target
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//path_target
+    SV: [['unchanged']]
+[379] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//report-type
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//report_type
+    SV: [['unchanged']]
+[380] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//value-type
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//value_type
+    SV: [['unchanged']]
+[381] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//config//extend-type
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//extend_type
+    SV: [['unchanged']]
+[382] YK: telemetry-system//subscriptions//tencent-subscriptions//tencent-subscription//$NAME$//sensor-paths//sensor-path//$SG$//config//path
+    YV: [['unchanged']]
+    SK: TELEMETRY_CLIENT//Subscription_$NAME$//paths
+    SV: [['unchanged']]
+
+===== network-instances//network-instance  (227 rows) =====
+[383] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//config//as
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//bgp_asn
+    SV: [['unchanged']]
+[384] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//config//router-id
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//routeId
+    SV: [['unchanged']]
+[385] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//config//use-4byte-as
+    YV: [['true', 'false']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//Fbit
+    SV: [['1', '0']]
+[386] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//config//default-ipv4
+    YV: [['true', 'false']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//default_ipv4
+    SV: [['True', 'False']]
+[387] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//config//keepalive-and-holdtime
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//keepalive_and_holdtime
+    SV: [['unchanged']]
+[388] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//advertise-delay//config//time
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//advertise_delay_value
+    SV: [['unchanged']]
+[389] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//startup-max-med//config//time
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//start_value
+    SV: [['unchanged']]
+[390] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//startup-max-med//config//max-med
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//startMed_value
+    SV: [['unchanged']]
+[391] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//route-selection-options//config//as-path-multipath-relax
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//as_path_multipath_relax
+    SV: [['unchanged']]
+[392] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//graceful-restart//config//enabled
+    YV: [['true', 'false']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//gr
+    SV: [['1', '0']]
+[393] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//graceful-restart//config//restart-time
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//dfer_time
+    SV: [['unchanged']]
+[394] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//advertise-routes//advertise-route//$IPADDR$/$IPMASK$//config//prefix
+    YV: [['unchanged']]
+    SK: BGP_NETWORKS_IPV$VERSION1$//$IPADDR$/$IPMASK$//subnet
+    SV: [['unchanged']]
+[395] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//advertise-routes//advertise-route//$IPADDR$/$IPMASK$//config//policy
+    YV: [['unchanged']]
+    SK: BGP_NETWORKS_IPV$VERSION1$//$IPADDR$/$IPMASK$//routemap
+    SV: [['unchanged']]
+[396] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//prefix
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$IPADDR$/$IPMASK$//subnet
+    SV: [['unchanged']]
+[397] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//policy
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$IPADDR$/$IPMASK$//routemap
+    SV: [['unchanged']]
+[398] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//summary-only
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$IPADDR$/$IPMASK$//summary-only
+    SV: [['unchanged']]
+[399] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//DIRECTLY_CONNECTED//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//connected//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[400] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//DIRECTLY_CONNECTED//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//connected//routemap
+    SV: [['list_value']]
+[401] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//KERNEL//config//protocol
+    YV: [['KERNEL', 'OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//kernel//protocol
+    SV: [['kernel', 'ospf', 'ospf6', 'connected']]
+[402] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//KERNEL//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//kernel//routemap
+    SV: [['list_value']]
+[403] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//ospf//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[404] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//ospf//routemap
+    SV: [['list_value']]
+[405] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF6//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//ospf6//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[406] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF6//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//ospf6//routemap
+    SV: [['list_value']]
+[407] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//use-multiple-paths//ebgp//config//maximum-paths
+    YV: [['unchanged']]
+    SK: BGP_CONFIG_IPV$VERSION$//bgp_ipv$VERSION$//ebgp_balance
+    SV: [['unchanged']]
+[408] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//external-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//bgp_ipv$VERSION$//ebgpdistance
+    SV: [['unchanged']]
+[409] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//internal-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//bgp_ipv$VERSION$//ibgpdistance
+    SV: [['unchanged']]
+[410] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//local-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//bgp_ipv$VERSION$//localdistance
+    SV: [['unchanged']]
+[411] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//global//route-selection-options//config//always-compare-med
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//bgpGlobal//always_compare_med
+    SV: [['unchanged']]
+[412] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//description
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//description
+    SV: [['unchanged']]
+[413] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//enabled
+    YV: [['true', 'false']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//admin_status
+    SV: [['up', 'down']]
+[414] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//peer-as
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//asn
+    SV: [['unchanged']]
+[415] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//asn
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//asn
+    SV: [['unchanged']]
+[416] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//auth-password
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//password
+    SV: [['unchanged']]
+[417] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//update-source
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//source
+    SV: [['unchanged']]
+[418] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//peer-group
+    YV: [[['unchanged']], [['list_combination']]]
+    SK: ['BGP_NEIGHBOR//$NEIGHBOR$//group', 'BGP_PEER_RANGE//$VALUE$//ip_range']
+    SV: [[['unchanged']], [['NEIGHBOR']]]
+[419] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//enabled
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_NEIGHBOR//$NEIGHBOR$//bfd', 'BGP_NEIGHBOR//$NEIGHBOR$//bfd_echo']
+    SV: [[['bfd']], [['0']]]
+[420] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//detection-multiplier
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//bfd_multi
+    SV: [['unchanged']]
+[421] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//required-minimum-receive
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//bfd_rx
+    SV: [['unchanged']]
+[422] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//desired-minimum-tx-interval
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NEIGHBOR$//bfd_tx
+    SV: [['unchanged']]
+[423] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV$VERSION$_UNICAST//apply-policy//config//export-policy
+    YV: [['list_value']]
+    SK: BGP_NEIGHBOR_IPV$VERSION$//$GROUP$//routemapout
+    SV: [['list_value']]
+[424] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV$VERSION$_UNICAST//apply-policy//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_NEIGHBOR_IPV$VERSION$//$GROUP$//routemapin
+    SV: [['list_value']]
+[425] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV4_UNICAST//afi-safi-name
+    YV: [['default']]
+    SK: BGP_NEIGHBOR_IPV4//$GROUP$//active
+    SV: [['activate']]
+[426] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV6_UNICAST//afi-safi-name
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_NEIGHBOR_IPV6//$GROUP$//active', 'BGP_NEIGHBOR_IPV4//$GROUP$//active']
+    SV: [[['activate']], [['no-activate']]]
+[427] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//next-hop-option//config//set-local
+    YV: [['true']]
+    SK: BGP_NEIGHBOR_IPV4//$GROUP$//next-hop-self
+    SV: [['enable']]
+[428] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//peer-group-name
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//name
+    SV: [['unchanged']]
+[429] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//auth-password
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//password
+    SV: [['unchanged']]
+[430] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//transport//config//local-interface
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//source
+    SV: [['unchanged']]
+[431] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//peer-as
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//remote_as
+    SV: [['unchanged']]
+[432] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//enabled
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_PEER_RANGE//$GROUP$//bfd', 'BGP_PEER_RANGE//$GROUP$//bfd_echo']
+    SV: [[['bfd']], [['0']]]
+[433] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//detection-multiplier
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//bfd_multi
+    SV: [['unchanged']]
+[434] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//required-minimum-receive
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//bfd_rx
+    SV: [['unchanged']]
+[435] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//desired-minimum-tx-interval
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$GROUP$//bfd_tx
+    SV: [['unchanged']]
+[436] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//addpath-tx-all-paths
+    YV: [['true', 'false']]
+    SK: BGP_NEIGHBOR_IPV4//$GROUP$//addpath-tx-all-paths
+    SV: [['enable', 'disable']]
+[437] YK: network-instances//network-instance//global//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//route-reflector//config//route-reflector-client
+    YV: [['true', 'false']]
+    SK: BGP_NEIGHBOR_IPV4//$GROUP$//route_reflector
+    SV: [['enable', 'disable']]
+[438] YK: network-instances//network-instance//$NETWORK$//config//create-hw-vrf
+    YV: [['empty_dict']]
+    SK: VRF//$NETWORK$
+    SV: [['empty_dict']]
+[439] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//peer-group-name
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//name
+    SV: [['unchanged']]
+[440] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//auth-password
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//password
+    SV: [['unchanged']]
+[441] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//config//peer-as
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//remote_as
+    SV: [['unchanged']]
+[442] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV4_UNICAST//afi-safi-name
+    YV: [['default']]
+    SK: BGP_NEIGHBOR_IPV4//$NETWORK$|$GROUP$//active
+    SV: [['activate']]
+[443] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV6_UNICAST//afi-safi-name
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_NEIGHBOR_IPV6//$NETWORK$|$GROUP$//active', 'BGP_NEIGHBOR_IPV4//$NETWORK$|$GROUP$//active']
+    SV: [[['activate']], [['no-activate']]]
+[444] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV$VERSION$_UNICAST//apply-policy//config//export-policy
+    YV: [['list_value']]
+    SK: BGP_NEIGHBOR_IPV$VERSION$//$NETWORK$|$GROUP$//routemapout
+    SV: [['list_value']]
+[445] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV$VERSION$_UNICAST//apply-policy//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_NEIGHBOR_IPV$VERSION$//$NETWORK$|$GROUP$//routemapin
+    SV: [['list_value']]
+[446] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//config//as
+    YV: [['unchanged']]
+    SK: BGP_VRF//$NETWORK$//bgp_asn
+    SV: [['unchanged']]
+[447] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//config//router-id
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//routeId
+    SV: [['unchanged']]
+[448] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//config//default-ipv4
+    YV: [['true', 'false']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//default_ipv4
+    SV: [['True', 'False']]
+[449] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//config//keepalive-and-holdtime
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//keepalive_and_holdtime
+    SV: [['unchanged']]
+[450] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//route-selection-options//config//always-compare-med
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//always_compare_med
+    SV: [['unchanged']]
+[451] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//advertise-delay//config//time
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//advertise_delay_value
+    SV: [['unchanged']]
+[452] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//advertise-delay//config//advertise-delay
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//advertise_delay
+    SV: [['unchanged']]
+[453] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//startup-max-med//config//time
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//start_value
+    SV: [['unchanged']]
+[454] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//startup-max-med//config//max-med
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//startMed_value
+    SV: [['unchanged']]
+[455] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//description
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//description
+    SV: [['unchanged']]
+[456] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//enabled
+    YV: [['true', 'false']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//admin_status
+    SV: [['up', 'down']]
+[457] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//peer-as
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//remote_as
+    SV: [['unchanged']]
+[458] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//asn
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//asn
+    SV: [['unchanged']]
+[459] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//auth-password
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//password
+    SV: [['unchanged']]
+[460] YK: network-instances//network-instance//underlay//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//peer-group
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//underlay|$NEIGHBOR$//group
+    SV: [['unchanged']]
+[461] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//peer-group
+    YV: [[['unchanged']], [['list_combination']]]
+    SK: ['BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//group', 'BGP_PEER_RANGE//$NETWORK$|$VALUE$//ip_range']
+    SV: [[['unchanged']], [['NEIGHBOR']]]
+[462] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//enabled
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//bfd', 'BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//bfd_echo']
+    SV: [[['bfd']], [['0']]]
+[463] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//detection-multiplier
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//bfd_multi
+    SV: [['unchanged']]
+[464] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//required-minimum-receive
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//bfd_rx
+    SV: [['unchanged']]
+[465] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//enable-bfd//config//desired-minimum-tx-interval
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//bfd_tx
+    SV: [['unchanged']]
+[466] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//advertise-routes//advertise-route//$IPADDR$/$IPMASK$//config//prefix
+    YV: [['unchanged']]
+    SK: BGP_NETWORKS_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//subnet
+    SV: [['unchanged']]
+[467] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//advertise-routes//advertise-route//$IPADDR$/$IPMASK$//config//policy
+    YV: [['unchanged']]
+    SK: BGP_NETWORKS_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//routemap
+    SV: [['unchanged']]
+[468] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//prefix
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//subnet
+    SV: [['unchanged']]
+[469] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//policy
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//routemap
+    SV: [['unchanged']]
+[470] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//aggregate-routes//aggregate-route//$IPADDR$/$IPMASK$//config//summary-only
+    YV: [['unchanged']]
+    SK: BGP_AGGREGATES_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//summary-only
+    SV: [['unchanged']]
+[471] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//DIRECTLY_CONNECTED//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|connected//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[472] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//DIRECTLY_CONNECTED//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|connected//routemap
+    SV: [['list_value']]
+[473] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//KERNEL//config//protocol
+    YV: [['KERNEL', 'OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|kernel//protocol
+    SV: [['kernel', 'ospf', 'ospf6', 'connected']]
+[474] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//KERNEL//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|kernel//routemap
+    SV: [['list_value']]
+[475] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|ospf//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[476] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|ospf//routemap
+    SV: [['list_value']]
+[477] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF6//config//protocol
+    YV: [['OSPF', 'OSPF6', 'default']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|ospf6//protocol
+    SV: [['ospf', 'ospf6', 'connected']]
+[478] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//redistribute-routes//redistribute-route//OSPF6//config//import-policy
+    YV: [['list_value']]
+    SK: BGP_REDISTRIBUTES_IPV$VERSION1$//$NETWORK$|ospf6//routemap
+    SV: [['list_value']]
+[479] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//use-multiple-paths//ebgp//config//maximum-paths
+    YV: [['unchanged']]
+    SK: BGP_CONFIG_IPV$VERSION$//$NETWORK$|bgp_ipv$VERSION$//ebgp_balance
+    SV: [['unchanged']]
+[480] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//external-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//$NETWORK$|bgp_ipv$VERSION$//ebgpdistance
+    SV: [['unchanged']]
+[481] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//internal-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//$NETWORK$|bgp_ipv$VERSION$//ibgpdistance
+    SV: [['unchanged']]
+[482] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION$_UNICAST//default-route-distance//config//local-route-distance
+    YV: [['unchanged']]
+    SK: BGP_DISTANCE_IPV$VERSION$//$NETWORK$|bgp_ipv$VERSION$//localdistance
+    SV: [['unchanged']]
+[483] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//offline-disable
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//offline_disable
+    SV: [['unchanged']]
+[484] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//neighbors//neighbor//$NEIGHBOR$//config//advertise-delay
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR//$NETWORK$|$NEIGHBOR$//advertise_delay
+    SV: [['unchanged']]
+[485] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//afi-safis//afi-safi//IPV$VERSION$_UNICAST//config//soft-reconfiguration-inbound
+    YV: [['unchanged']]
+    SK: BGP_NEIGHBOR_IPV$VERSION$//$NETWORK$|$GROUP$//soft_reconfiguration_inbound
+    SV: [['unchanged']]
+[486] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//enabled
+    YV: [[['default']], [['default']]]
+    SK: ['BGP_PEER_RANGE//$NETWORK$|$GROUP$//bfd', 'BGP_PEER_RANGE//$NETWORK$|$GROUP$//bfd_echo']
+    SV: [[['bfd']], [['0']]]
+[487] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//detection-multiplier
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//bfd_multi
+    SV: [['unchanged']]
+[488] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//required-minimum-receive
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//bfd_rx
+    SV: [['unchanged']]
+[489] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//peer-groups//peer-group//$GROUP$//enable-bfd//config//desired-minimum-tx-interval
+    YV: [['unchanged']]
+    SK: BGP_PEER_RANGE//$NETWORK$|$GROUP$//bfd_tx
+    SV: [['unchanged']]
+[490] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//route-selection-options//config//as-path-multipath-relax
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//as_path_multipath_relax
+    SV: [['unchanged']]
+[491] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//config//network-import-check
+    YV: [['unchanged']]
+    SK: BGP_GLOBALCONFIG//$NETWORK$|bgpGlobal//network_import_check
+    SV: [['unchanged']]
+[492] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//BGP BGP//bgp//global//afi-safis//afi-safi//IPV$VERSION1$_UNICAST//ipv$VERSION2$-unicast//advertise-routes//advertise-route//$IPADDR$/$IPMASK$//config//delay-annouce
+    YV: [['unchanged']]
+    SK: BGP_NETWORKS_IPV$VERSION1$//$NETWORK$|$IPADDR$/$IPMASK$//delay_announce
+    SV: [['unchanged']]
+[493] YK: network-instances//network-instance//global//protocols//protocol//STATIC STATIC//static-routes//static//$IPADDR$/$IPMASK$//next-hops//next-hop//$HOP$//config//next-hop
+    YV: [['ockey', 'network-instances//network-instance//global//protocols//protocol//STATIC STATIC//static-routes//static//$IPADDR$/$IPMASK$//config//description'], ['ocvalue']]
+    SK: STATIC_ROUTES//$IPADDR$/$IPMASK$|$VALUE${|ockey=network-instances//network-instance//global//protocols//protocol//STATIC STATIC//static-routes//static//$IPADDR$/$IPMASK$//next-hops//next-hop//$HOP$//interface-ref//config//interface}//description
+    SV: [['ocvalue']]
+[494] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//id
+    YV: [['combination']]
+    SK: OSPF_INTF//$INTERFACE$|all|area|0//area
+    SV: [['AREA']]
+[495] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//authentication-enable
+    YV: [['empty_dict']]
+    SK: OSPF_INTF//$INTERFACE$|all|auth_enable
+    SV: [['empty_dict']]
+[496] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//authentication-md5key
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|auth_key|1//md5key
+    SV: [['unchanged']]
+[497] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//cost
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|cost//cost
+    SV: [['unchanged']]
+[498] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//mtu-ignore
+    YV: [['empty_dict']]
+    SK: OSPF_INTF//$INTERFACE$|all|mtu_ignore
+    SV: [['empty_dict']]
+[499] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//priority
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|priority//priority
+    SV: [['unchanged']]
+[500] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//hello-multiplier
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|hello_interval//hello_multiplier
+    SV: [['unchanged']]
+[501] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//hello-interval
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|hello_interval//interval
+    SV: [['unchanged']]
+[502] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//dead-multiplier
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|dead_interval//hello_multiplier
+    SV: [['unchanged']]
+[503] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//dead-interval
+    YV: [['unchanged']]
+    SK: OSPF_INTF//$INTERFACE$|all|dead_interval//interval
+    SV: [['unchanged']]
+[504] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//config//enable
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|- -|router
+    SV: [['empty_dict']]
+[505] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//config//router-id
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|router_id//id
+    SV: [['unchanged']]
+[506] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//config//default-metric
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|def_metric//metric
+    SV: [['unchanged']]
+[507] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//config//loop-detect
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|- -|loop_detect
+    SV: [['empty_dict']]
+[508] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//config//reference-bandwidth
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|auto_cost//reference_bandwidth
+    SV: [['unchanged']]
+[509] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//increased-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_lsa//tm_incr
+    SV: [['unchanged']]
+[510] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_lsa//tm_max
+    SV: [['unchanged']]
+[511] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//minimum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_lsa//tm_min
+    SV: [['unchanged']]
+[512] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//delay-interval
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_spf//tm_delay
+    SV: [['unchanged']]
+[513] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//initial-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_spf//tm_init
+    SV: [['unchanged']]
+[514] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|timer_spf//tm_max
+    SV: [['unchanged']]
+[515] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//always
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|def_route//always
+    SV: [['unchanged']]
+[516] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//metric-type
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|def_route//metric_type
+    SV: [['unchanged']]
+[517] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//metric
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|def_route//metric
+    SV: [['unchanged']]
+[518] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//route-map
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|def_route//route_map
+    SV: [['unchanged']]
+[519] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//distance
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|distance//distance
+    SV: [['unchanged']]
+[520] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//external
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|distance_ospf//external
+    SV: [['unchanged']]
+[521] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//inter-area
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|distance_ospf//inter_area
+    SV: [['unchanged']]
+[522] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//intra-area
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|- -|distance_ospf//intra_area
+    SV: [['unchanged']]
+[523] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//global//networks//network//$IPADDR$/$IPMASK$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|- -|network|$IPADDR$/$IPMASK$|$VALUE$
+    SV: [['empty_dict']]
+[524] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv2//interfaces//interface//$INTERFACE$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|- -|intf_area|$INTERFACE$|$VALUE$
+    SV: [['empty_dict']]
+[525] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//config//enable
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|$NETWORK$|router
+    SV: [['empty_dict']]
+[526] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//config//router-id
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|router_id//id
+    SV: [['unchanged']]
+[527] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//config//default-metric
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|def_metric//metric
+    SV: [['unchanged']]
+[528] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//config//loop-detect
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|$NETWORK$|loop_detect
+    SV: [['empty_dict']]
+[529] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//config//reference-bandwidth
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|auto_cost//reference_bandwidth
+    SV: [['unchanged']]
+[530] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//increased-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_lsa//tm_incr
+    SV: [['unchanged']]
+[531] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_lsa//tm_max
+    SV: [['unchanged']]
+[532] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//lsa-generation//config//minimum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_lsa//tm_min
+    SV: [['unchanged']]
+[533] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//delay-interval
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_spf//tm_delay
+    SV: [['unchanged']]
+[534] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//initial-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_spf//tm_init
+    SV: [['unchanged']]
+[535] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//timers//spf//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|timer_spf//tm_max
+    SV: [['unchanged']]
+[536] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//always
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|def_route//always
+    SV: [['unchanged']]
+[537] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//metric-type
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|def_route//metric_type
+    SV: [['unchanged']]
+[538] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//metric
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|def_route//metric
+    SV: [['unchanged']]
+[539] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//default-route//config//route-map
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|def_route//route_map
+    SV: [['unchanged']]
+[540] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//distance
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|distance//distance
+    SV: [['unchanged']]
+[541] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//external
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|distance_ospf//external
+    SV: [['unchanged']]
+[542] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//inter-area
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|distance_ospf//inter_area
+    SV: [['unchanged']]
+[543] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//distance//config//intra-area
+    YV: [['unchanged']]
+    SK: OSPF_ROUTER//0|$NETWORK$|distance_ospf//intra_area
+    SV: [['unchanged']]
+[544] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//global//networks//network//$IPADDR$/$IPMASK$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|$NETWORK$|network|$IPADDR$/$IPMASK$|$VALUE$
+    SV: [['empty_dict']]
+[545] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv2//interfaces//interface//$INTERFACE$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF_ROUTER//0|$NETWORK$|intf_area|$INTERFACE$|$VALUE$
+    SV: [['empty_dict']]
+[546] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//id
+    YV: [['combination']]
+    SK: OSPF6_INTF//$INTERFACE$|all|area|0//area
+    SV: [['AREA']]
+[547] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//authentication-enable
+    YV: [['empty_dict']]
+    SK: OSPF6_INTF//$INTERFACE$|auth_enable
+    SV: [['empty_dict']]
+[548] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//authentication-md5key
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|auth_key|1//md5key
+    SV: [['unchanged']]
+[549] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//cost
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|cost//cost
+    SV: [['unchanged']]
+[550] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//mtu-ignore
+    YV: [['empty_dict']]
+    SK: OSPF6_INTF//$INTERFACE$|mtu_ignore
+    SV: [['empty_dict']]
+[551] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//config//priority
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|priority//priority
+    SV: [['unchanged']]
+[552] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//hello-multiplier
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|hello_interval//hello_multiplier
+    SV: [['unchanged']]
+[553] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//hello-interval
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|hello_interval//interval
+    SV: [['unchanged']]
+[554] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//dead-multiplier
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|dead_interval//hello_multiplier
+    SV: [['unchanged']]
+[555] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//areas//area//$AREA$//interfaces//interface//$INTERFACE$//timers//config//dead-interval
+    YV: [['unchanged']]
+    SK: OSPF6_INTF//$INTERFACE$|dead_interval//interval
+    SV: [['unchanged']]
+[556] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//config//enable
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|- -|router
+    SV: [['empty_dict']]
+[557] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//config//router-id
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|router_id//id
+    SV: [['unchanged']]
+[558] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//config//default-metric
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|def_metric6//metric
+    SV: [['unchanged']]
+[559] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//config//loop-detect
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|- -|loop_detect
+    SV: [['empty_dict']]
+[560] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//config//reference-bandwidth
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|auto_cost//reference_bandwidth
+    SV: [['unchanged']]
+[561] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//increased-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_lsa//tm_incr
+    SV: [['unchanged']]
+[562] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_lsa//tm_max
+    SV: [['unchanged']]
+[563] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//minimum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_lsa//tm_min
+    SV: [['unchanged']]
+[564] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//delay-interval
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_spf//tm_delay
+    SV: [['unchanged']]
+[565] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//initial-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_spf//tm_init
+    SV: [['unchanged']]
+[566] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|timer_spf//tm_max
+    SV: [['unchanged']]
+[567] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//always
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|def_route6//always
+    SV: [['unchanged']]
+[568] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//metric-type
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|def_route6//metric_type
+    SV: [['unchanged']]
+[569] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//metric
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|def_route6//metric
+    SV: [['unchanged']]
+[570] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//route-map
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|def_route6//route_map
+    SV: [['unchanged']]
+[571] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//distance
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|distance//distance
+    SV: [['unchanged']]
+[572] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//external
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|distance_ospf6//external
+    SV: [['unchanged']]
+[573] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//inter-area
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|distance_ospf6//inter_area
+    SV: [['unchanged']]
+[574] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//intra-area
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|- -|distance_ospf6//intra_area
+    SV: [['unchanged']]
+[575] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//global//networks//network//$IPADDR$/$IPMASK$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|- -|network|$IPADDR$/$IPMASK$|$VALUE$
+    SV: [['empty_dict']]
+[576] YK: network-instances//network-instance//global//protocols//protocol//OSPF OSPF//ospfv3//interfaces//interface//$INTERFACE$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|- -|intf_area|$INTERFACE$|$VALUE$
+    SV: [['empty_dict']]
+[577] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//config//enable
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|router
+    SV: [['empty_dict']]
+[578] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//config//router-id
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|router_id//id
+    SV: [['unchanged']]
+[579] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//config//default-metric
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|def_metric6//metric
+    SV: [['unchanged']]
+[580] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//config//loop-detect
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|loop_detect
+    SV: [['empty_dict']]
+[581] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//config//reference-bandwidth
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|auto_cost//reference_bandwidth
+    SV: [['unchanged']]
+[582] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//increased-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_lsa//tm_incr
+    SV: [['unchanged']]
+[583] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_lsa//tm_max
+    SV: [['unchanged']]
+[584] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//lsa-generation//config//minimum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_lsa//tm_min
+    SV: [['unchanged']]
+[585] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//delay-interval
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_spf//tm_delay
+    SV: [['unchanged']]
+[586] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//initial-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_spf//tm_init
+    SV: [['unchanged']]
+[587] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//timers//spf//config//maximum-delay
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|timer_spf//tm_max
+    SV: [['unchanged']]
+[588] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//always
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|def_route6//always
+    SV: [['unchanged']]
+[589] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//metric-type
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|def_route6//metric_type
+    SV: [['unchanged']]
+[590] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//metric
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|def_route6//metric
+    SV: [['unchanged']]
+[591] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//default-route//config//route-map
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|def_route6//route_map
+    SV: [['unchanged']]
+[592] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//distance
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|distance//distance
+    SV: [['unchanged']]
+[593] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//external
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|distance_ospf6//external
+    SV: [['unchanged']]
+[594] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//inter-area
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|distance_ospf6//inter_area
+    SV: [['unchanged']]
+[595] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//distance//config//intra-area
+    YV: [['unchanged']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|distance_ospf6//intra_area
+    SV: [['unchanged']]
+[596] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//global//networks//network//$IPADDR$/$IPMASK$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|network|$IPADDR$/$IPMASK$|$VALUE$
+    SV: [['empty_dict']]
+[597] YK: network-instances//network-instance//$NETWORK$//protocols//protocol//OSPF OSPF//ospfv3//interfaces//interface//$INTERFACE$//config//area
+    YV: [['empty_dict']]
+    SK: OSPF6_ROUTER//0|$NETWORK$|intf_area|$INTERFACE$|$VALUE$
+    SV: [['empty_dict']]
+[598] YK: network-instances//network-instance//global//global//prefix-limit//config//number
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ip//number
+    SV: [['unchanged']]
+[599] YK: network-instances//network-instance//global//global//prefix-limit//config//simply-alert
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ip//simply_alert
+    SV: [['unchanged']]
+[600] YK: network-instances//network-instance//global//global//prefix-limit//config//warn-threshold
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ip//warn_threshold
+    SV: [['unchanged']]
+[601] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit//config//number
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ip//number
+    SV: [['unchanged']]
+[602] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit//config//simply-alert
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ip//simply_alert
+    SV: [['unchanged']]
+[603] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit//config//warn-threshold
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ip//warn_threshold
+    SV: [['unchanged']]
+[604] YK: network-instances//network-instance//global//global//prefix-limit-v6//config//number
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ipv6//number
+    SV: [['unchanged']]
+[605] YK: network-instances//network-instance//global//global//prefix-limit-v6//config//simply-alert
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ipv6//simply_alert
+    SV: [['unchanged']]
+[606] YK: network-instances//network-instance//global//global//prefix-limit-v6//config//warn-threshold
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//ipv6//warn_threshold
+    SV: [['unchanged']]
+[607] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit-v6//config//number
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ipv6//number
+    SV: [['unchanged']]
+[608] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit-v6//config//simply-alert
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ipv6//simply_alert
+    SV: [['unchanged']]
+[609] YK: network-instances//network-instance//$NETWORK$//global//prefix-limit-v6//config//warn-threshold
+    YV: [['unchanged']]
+    SK: VRF_PREFIX_LIMIT//$NETWORK$|ipv6//warn_threshold
+    SV: [['unchanged']]
+
+===== qos//scheduler-policies  (6 rows) =====
+[610] YK: qos//scheduler-policies//scheduler-policy//dscp-tc//schedulers//scheduler//$SCHEDULER$//config//priority//local-priority
+    YV: [['unchanged']]
+    SK: DSCP_TO_TC_MAP//global-dscp2tc-profile//$SCHEDULER$
+    SV: [['unchanged']]
+[611] YK: qos//scheduler-policies//scheduler-policy//tc-queue//schedulers//scheduler//$SCHEDULER$//config//qid
+    YV: [['unchanged']]
+    SK: TC_TO_QUEUE_MAP//global-tc2queue-profile//$SCHEDULER$
+    SV: [['unchanged']]
+[629] YK: qos//scheduler-policies//scheduler-policy//$POLICY$//schedulers//scheduler//$SCHEDULAR$//output//config//scheduling-algorithm
+    YV: [['unchanged']]
+    SK: SCHEDULER//scheduler.$POLICY$.$SCHEDULAR$//type
+    SV: [['unchanged']]
+[630] YK: qos//scheduler-policies//scheduler-policy//$POLICY$//schedulers//scheduler//$SCHEDULAR$//output//config//weight
+    YV: [['unchanged']]
+    SK: SCHEDULER//scheduler.$POLICY$.$SCHEDULAR$//weight
+    SV: [['unchanged']]
+[631] YK: qos//scheduler-policies//scheduler-policy//$POLICY$//schedulers//scheduler//$SCHEDULAR$//two-rate-three-color//config//bc
+    YV: [['unchanged']]
+    SK: SCHEDULER//scheduler.$POLICY$.$SCHEDULAR$//pbs
+    SV: [['unchanged']]
+[632] YK: qos//scheduler-policies//scheduler-policy//$POLICY$//schedulers//scheduler//$SCHEDULAR$//two-rate-three-color//config//pir
+    YV: [['unchanged']]
+    SK: SCHEDULER//scheduler.$POLICY$.$SCHEDULAR$//pir
+    SV: [['unchanged']]
+
+===== qos//interfaces  (6 rows) =====
+[612] YK: qos//interfaces//interface//$INTERFACE$//config//trust-dscp
+    YV: [[['true']], [['true']]]
+    SK: ['PORT_QOS_MAP//$INTERFACE$//dscp_to_tc_map', 'PORT_QOS_MAP//$INTERFACE$//tc_to_queue_map']
+    SV: [[['[DSCP_TO_TC_MAP|global-dscp2tc-profile]', '[DSCP_TO_TC_MAP|default]']], [['[TC_TO_QUEUE_MAP|global-tc2queue-profile]', '[TC_TO_QUEUE_MAP|default]']]]
+[613] YK: qos//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//wred-policy//config//name
+    YV: [['combination']]
+    SK: QUEUE//$INTERFACE$|$QUEUEID$//wred_profile
+    SV: [['[WRED_PROFILE|+value+]']]
+[614] YK: qos//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//scheduler-policy//schedulers//scheduler//$SCHEDULER$//sequence
+    YV: [['ockey', 'qos//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//scheduler-policy//config//name'], ['combination_ocvalue']]
+    SK: QUEUE//$INTERFACE$|$QUEUEID$//scheduler
+    SV: [['[SCHEDULER|scheduler.+ocvalue+.+value+]']]
+[615] YK: qos//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//pfc-deadlock//config//enable
+    YV: [['string_combination']]
+    SK: PFC_WD_TABLE//$INTERFACE$//pri_enable
+    SV: [['value']]
+[616] YK: qos//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//pfc//config//enable
+    YV: [['string_combination']]
+    SK: PORT_QOS_MAP//$INTERFACE$//pfc_enable
+    SV: [['value']]
+[617] YK: qos//interfaces//interface//$INTERFACE$//ebst//queues//queue//queue$QUEUEID$//ebst-policy//config//name
+    YV: [['combination']]
+    SK: QUEUE//$INTERFACE$|$QUEUEID$//ebst_profile
+    SV: [['[EBST_PROFILE|+value+]']]
+
+===== qos//global  (11 rows) =====
+[618] YK: qos//global//pfc-deadlock//config//poll-interval
+    YV: [['unchanged']]
+    SK: PFC_WD_TABLE//GLOBAL//poll_interval
+    SV: [['unchanged']]
+[619] YK: qos//global//pfc-deadlock//config//restoration-action
+    YV: [['unchanged']]
+    SK: PFC_WD_TABLE//GLOBAL//action
+    SV: [['unchanged']]
+[620] YK: qos//global//pfc-deadlock//priorities//priority//$PRIORITY$//config//restoration-time
+    YV: [['unchanged']]
+    SK: PFC_WD_TABLE//GLOBAL//restoration_time$PRIORITY$
+    SV: [['unchanged']]
+[621] YK: qos//global//pfc-deadlock//priorities//priority//$PRIORITY$//config//detection-time
+    YV: [['unchanged']]
+    SK: PFC_WD_TABLE//GLOBAL//detection_time$PRIORITY$
+    SV: [['unchanged']]
+[622] YK: qos//global//pfc//counter//config//poll-interval
+    YV: [['unchanged']]
+    SK: PFC_WARNING_CONFIG_TABLE//CONFIG//poll_time
+    SV: [['unchanged']]
+[623] YK: qos//global//pfc//log//config//speed-threshold
+    YV: [['unchanged']]
+    SK: PFC_WARNING_CONFIG_TABLE//CONFIG//speed_threshold
+    SV: [['unchanged']]
+[624] YK: qos//global//pfc//log//config//suppress-time
+    YV: [['unchanged']]
+    SK: PFC_WARNING_CONFIG_TABLE//CONFIG//suppression_time
+    SV: [['unchanged']]
+[625] YK: qos//global//pfc//log//config//suppress-num
+    YV: [['unchanged']]
+    SK: PFC_WARNING_CONFIG_TABLE//CONFIG//suppression_num
+    SV: [['unchanged']]
+[626] YK: qos//global//ebst//config//enable
+    YV: [['unchanged']]
+    SK: EBST_MONITOR//config//enable
+    SV: [['unchanged']]
+[627] YK: qos//global//ebst//config//poll-interval
+    YV: [['unchanged']]
+    SK: EBST_MONITOR//config//interval
+    SV: [['unchanged']]
+[628] YK: qos//global//ebst//config//number
+    YV: [['unchanged']]
+    SK: EBST_MONITOR//config//number
+    SV: [['unchanged']]
+
+===== qos//wred-policies  (10 rows) =====
+[633] YK: qos//wred-policies//wred-policy//$POLICY$//config//ecn
+    YV: [['true']]
+    SK: WRED_PROFILE//$POLICY$//ecn
+    SV: [['ecn_all']]
+[634] YK: qos//wred-policies//wred-policy//$POLICY$//config//red-min
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//red_min_threshold
+    SV: [['unchanged']]
+[635] YK: qos//wred-policies//wred-policy//$POLICY$//config//red-maxth
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//red_max_threshold
+    SV: [['unchanged']]
+[636] YK: qos//wred-policies//wred-policy//$POLICY$//config//red-probability
+    YV: [[['unchanged']], [['default']]]
+    SK: ['WRED_PROFILE//$POLICY$//red_drop_probability', 'WRED_PROFILE//$POLICY$//wred_red_enable']
+    SV: [[['unchanged']], [['true']]]
+[637] YK: qos//wred-policies//wred-policy//$POLICY$//config//yellow-min
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//yellow_min_threshold
+    SV: [['unchanged']]
+[638] YK: qos//wred-policies//wred-policy//$POLICY$//config//yellow-maxth
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//yellow_max_threshold
+    SV: [['unchanged']]
+[639] YK: qos//wred-policies//wred-policy//$POLICY$//config//yellow-probability
+    YV: [[['unchanged']], [['default']]]
+    SK: ['WRED_PROFILE//$POLICY$//yellow_drop_probability', 'WRED_PROFILE//$POLICY$//wred_yellow_enable']
+    SV: [[['unchanged']], [['true']]]
+[640] YK: qos//wred-policies//wred-policy//$POLICY$//config//green-minth
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//green_min_threshold
+    SV: [['unchanged']]
+[641] YK: qos//wred-policies//wred-policy//$POLICY$//config//green-maxth
+    YV: [['unchanged']]
+    SK: WRED_PROFILE//$POLICY$//green_max_threshold
+    SV: [['unchanged']]
+[642] YK: qos//wred-policies//wred-policy//$POLICY$//config//green-probability
+    YV: [[['unchanged']], [['default']]]
+    SK: ['WRED_PROFILE//$POLICY$//green_drop_probability', 'WRED_PROFILE//$POLICY$//wred_green_enable']
+    SV: [[['unchanged']], [['true']]]
+
+===== qos//ebst-policies  (2 rows) =====
+[643] YK: qos//ebst-policies//ebst-policy//$POLICY$//config//start-threshold
+    YV: [['unchanged']]
+    SK: EBST_PROFILE//$POLICY$//start_threshold
+    SV: [['unchanged']]
+[644] YK: qos//ebst-policies//ebst-policy//$POLICY$//config//stop-threshold
+    YV: [['unchanged']]
+    SK: EBST_PROFILE//$POLICY$//stop_threshold
+    SV: [['unchanged']]
+
+===== qos//car-policies  (4 rows) =====
+[645] YK: qos//car-policies//car-policy//$CAR-POLICY$//config//cir
+    YV: [['unchanged']]
+    SK: CAR_POLICY//$CAR-POLICY$//CIR
+    SV: [['unchanged']]
+[646] YK: qos//car-policies//car-policy//$CAR-POLICY$//config//cbs
+    YV: [['unchanged']]
+    SK: CAR_POLICY//$CAR-POLICY$//CBS
+    SV: [['unchanged']]
+[647] YK: qos//car-policies//car-policy//$CAR-POLICY$//config//pir
+    YV: [['unchanged']]
+    SK: CAR_POLICY//$CAR-POLICY$//PIR
+    SV: [['unchanged']]
+[648] YK: qos//car-policies//car-policy//$CAR-POLICY$//config//pbs
+    YV: [['unchanged']]
+    SK: CAR_POLICY//$CAR-POLICY$//PBS
+    SV: [['unchanged']]
+
+===== routing-policy//defined-sets  (7 rows) =====
+[649] YK: routing-policy//defined-sets//bgp-defined-sets//community-sets//community-set//$COMMUNITY$//config//community-member
+    YV: [[['combination']], [['ockey', 'routing-policy//defined-sets//bgp-defined-sets//community-sets//community-set//$COMMUNITY$//config//community-set-name'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//bgp-defined-sets//community-sets//community-set//$COMMUNITY$//config//forwarding-action'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//bgp-defined-sets//community-sets//community-set//$COMMUNITY$//community-set-name'], ['default']]]
+    SK: ['BGP_COMMS//$COMMUNITY$|permit|$VALUE_LIST$//comm_number', 'BGP_COMMS//$COMMUNITY$|permit|$VALUE_LIST$//list_number', 'BGP_COMMS//$COMMUNITY$|permit|$VALUE_LIST$//opt_type', 'BGP_COMMS//$COMMUNITY$|permit|$VALUE_LIST$//mode']
+    SV: [[['VALUE_LIST']], [['ocvalue']], [['ocvalue']], [['standard']]]
+[666] YK: routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//sequence-id
+    YV: [[['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//sequence-id'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//actions//config//policy-result'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//ip-prefix'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//name'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//config//mode'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//masklength-range'], ['ocvalue_range_ge']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$IPv6//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//masklength-range'], ['ocvalue_range_le']]]
+    SK: ['BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//seqnumber', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//opttype', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//prefix', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//name', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//afm', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//ge', 'BGP_IPPREFIXLIST//$SET$IPv6|$VALUE$|ipv6//le']
+    SV: [[['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue_range_ge']], [['ocvalue_range_le']]]
+[667] YK: routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//sequence-id
+    YV: [[['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//sequence-id'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//actions//config//policy-result'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//ip-prefix'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//name'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//config//mode'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//masklength-range'], ['ocvalue_range_ge']], [['ockey', 'routing-policy//defined-sets//prefix-sets//prefix-set//$SET$//prefixes//prefix//$IP$/$MASK$ $RANGE$//config//masklength-range'], ['ocvalue_range_le']]]
+    SK: ['BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//seqnumber', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//opttype', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//prefix', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//name', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//afm', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//ge', 'BGP_IPPREFIXLIST//$SET$|$VALUE$|ipv4//le']
+    SV: [[['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue']], [['ocvalue_range_ge']], [['ocvalue_range_le']]]
+[668] YK: routing-policy//defined-sets//bgp-access-lists//bgp-access-list//$PREFIX$//prefixes//prefix//$IP$ $MASK$//config//policy-result
+    YV: [[['ockey', 'routing-policy//defined-sets//bgp-access-lists//bgp-access-list//$PREFIX$//prefixes//prefix//$IP$ $MASK$//config//policy-result'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//bgp-access-lists//bgp-access-list//$PREFIX$//prefixes//prefix//$IP$ $MASK$//ip-prefix,dot-mask'], ['combination_ocvalue']], [['ockey', 'routing-policy//defined-sets//bgp-access-lists//bgp-access-list//$PREFIX$//prefixes//prefix//$IP$ $MASK$//ip-prefix'], ['ocvalue']], [['ockey', 'routing-policy//defined-sets//bgp-access-lists//bgp-access-list//$PREFIX$//prefixes//prefix//$IP$ $MASK$//dot-mask'], ['ocvalue']]]
+    SK: ['BGP_ACCESSLIST//$PREFIX$|$VALUE$|$IP$|$MASK$//opt_type', 'BGP_ACCESSLIST//$PREFIX$|$VALUE$|$IP$|$MASK$//list_number', 'BGP_ACCESSLIST//$PREFIX$|$VALUE$|$IP$|$MASK$//address', 'BGP_ACCESSLIST//$PREFIX$|$VALUE$|$IP$|$MASK$//address_mask']
+    SV: [[['ocvalue']], [['PREFIX']], [['ocvalue']], [['ocvalue']]]
+[669] YK: routing-policy//defined-sets//zebra-access-lists//zebra-access-list//$ZEBRA$//rules//rule//$RULE$//ipv$IPVERSION$//config//prefix
+    YV: [['unchanged']]
+    SK: ZEBRA_IPACCESSLIST//$ZEBRA$|$RULE$|ipv$IPVERSION$//prefix
+    SV: [['unchanged']]
+[670] YK: routing-policy//defined-sets//zebra-access-lists//zebra-access-list//$ZEBRA$//rules//rule//$RULE$//ipv$IPVERSION$//config//policy-result
+    YV: [['unchanged']]
+    SK: ZEBRA_IPACCESSLIST//$ZEBRA$|$RULE$|ipv$IPVERSION$//opt-type
+    SV: [['unchanged']]
+[671] YK: routing-policy//defined-sets//zebra-access-lists//zebra-access-list//$ZEBRA$//rules//rule//$RULE$//ipv$IPVERSION$//config//exact
+    YV: [['unchanged']]
+    SK: ZEBRA_IPACCESSLIST//$ZEBRA$|$RULE$|ipv$IPVERSION$//exact
+    SV: [['unchanged']]
+
+===== routing-policy//policy-definitions  (16 rows) =====
+[650] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//config//set-med
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//applycost
+    SV: [['unchanged']]
+[651] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//config//set-src
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//setsrc
+    SV: [['unchanged']]
+[652] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//config//set-local-pref
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//setlocalpre
+    SV: [['unchanged']]
+[653] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//config//set-weight
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//weight
+    SV: [['unchanged']]
+[654] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//set-as-path-replace//config//asn
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//aspath_replace
+    SV: [['unchanged']]
+[655] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//set-as-path-prepend//config//asn
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//aspath_prepend
+    SV: [['unchanged']]
+[656] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//set-community//inline//config//communities
+    YV: [['list_2_string']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//comm_range
+    SV: [['list_2_string']]
+[657] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//bgp-actions//del-community//inline//config//communities
+    YV: [['list_2_string']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//comm_list_del
+    SV: [['list_2_string']]
+[658] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//actions//config//policy-result
+    YV: [['ACCEPT_ROUTE', 'REJECT_ROUTE']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//opttype
+    SV: [['permit', 'deny']]
+[659] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//config//name
+    YV: [[['unchanged']], [['combination']]]
+    SK: ['BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//seqnumber', 'BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//name']
+    SV: [[['unchanged']], [['DEFINITION']]]
+[660] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//bgp-conditions//config//community-set
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//matchcommunity
+    SV: [['unchanged']]
+[661] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//match-prefix-set//config//prefix-set-ipv6
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//v6prefix_name
+    SV: [['unchanged']]
+[662] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//match-prefix-set//config//prefix-set
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//prefix_name
+    SV: [['unchanged']]
+[663] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//match-source-prefix-set//config//source-prefix-set
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//source_prefix_name
+    SV: [['unchanged']]
+[664] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//config//call-policy-ipv6
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//v6_acl_name
+    SV: [['unchanged']]
+[665] YK: routing-policy//policy-definitions//policy-definition//$DEFINITION$//statements//statement//$STATEMENT$//conditions//config//call-policy
+    YV: [['unchanged']]
+    SK: BGP_ROUTEMAPS//$DEFINITION$|$STATEMENT$//acl_name
+    SV: [['unchanged']]
+
+===== lldp//interfaces  (1 rows) =====
+[672] YK: lldp//interfaces//interface//$INTERFACE$//config//admin-status
+    YV: [['rx', 'tx', 'all', 'none']]
+    SK: PORT//$INTERFACE$//lldp_status
+    SV: [['rx-only', 'tx-only', 'rx-and-tx', 'disabled']]
+
+===== components//component  (25 rows) =====
+[673] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//output//config//alarm-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//BUFFER_POOL//pool_share_th
+    SV: [['unchanged']]
+[674] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//input//config//limit-mode
+    YV: [['lowercase']]
+    SK: BUFFER_POOL//ingress_lossy_pool//mode
+    SV: [['lowercase']]
+[675] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sliceall//input//config//limit-threshold
+    YV: [[['unchanged']], [['default']]]
+    SK: ['BUFFER_POOL//ingress_lossy_pool//size', 'BUFFER_POOL//ingress_lossy_pool//type']
+    SV: [[['unchanged']], [['ingress']]]
+[676] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//slices//slice//sliceall//input//config//limit-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//ingress_lossy_pool//xoff
+    SV: [['unchanged']]
+[677] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//limit-threshold
+    YV: [[['combination']], [['compute']], [['default']]]
+    SK: ['BUFFER_QUEUE//$INTERFACE$|$QUEUEID$//profile', 'BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//dynamic_th', 'BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//pool']
+    SV: [[['[BUFFER_PROFILE|egress_profile_+INTERFACE+_+QUEUEID+]']], [['log2(original)']], [['[BUFFER_POOL|egress_lossy_pool]']]]
+[678] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//min-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//egress_profile_$INTERFACE$_$QUEUEID$//size
+    SV: [['unchanged']]
+[679] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//output//queues//queue//queue$QUEUEID$//config//alarm-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//queue_share_th
+    SV: [['unchanged']]
+[680] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//profile
+    YV: [['combination']]
+    SK: BUFFER_PG//$INTERFACE$|$QUEUEID$//profile'
+    SV: [['[BUFFER_PROFILE|ingress_profile_+INTERFACE+_+QUEUEID+]']]
+[681] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//limit-threshold
+    YV: [[['combination']], [['compute']], [['default']]]
+    SK: ['BUFFER_PG//$INTERFACE$|$QUEUEID$//profile', 'BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//dynamic_th', 'BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//pool']
+    SV: [[['[BUFFER_PROFILE|ingress_profile_+INTERFACE+_+QUEUEID+]']], [['log2(original)']], [['[BUFFER_POOL|ingress_lossy_pool]']]]
+[682] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//xon-offset-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//xon_offset
+    SV: [['unchanged']]
+[683] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//min-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//size
+    SV: [['unchanged']]
+[684] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//alarm-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//pg_shared_th
+    SV: [['unchanged']]
+[685] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//limit-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//ingress_profile_$INTERFACE$_$QUEUEID$//xoff
+    SV: [['unchanged']]
+[686] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//HEADROOM//interfaces//interface//$INTERFACE$//input//queues//queue//queue$QUEUEID$//config//alarm-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//$INTERFACE$|$QUEUEID$//pg_hdrm_th
+    SV: [['unchanged']]
+[687] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//hbm//output//config//limit-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//hbm//size
+    SV: [['unchanged']]
+[688] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//hbm//output//config//mode
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//hbm//type
+    SV: [['unchanged']]
+[689] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sms//output//config//limit-threshold
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//sms//size
+    SV: [['unchanged']]
+[690] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffers//buffer//SHARED_BUFFER//slices//slice//sms//output//config//mode
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//sms//type
+    SV: [['unchanged']]
+[691] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffer-monitor//config//suppress-time
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//Suppress//time
+    SV: [['unchanged']]
+[692] YK: components//component//$COMPONENT$//integrated-circuit//chip//buffer-monitor//config//suppress-num
+    YV: [['unchanged']]
+    SK: BUFFER_NOTIFICATION//Suppress//number
+    SV: [['unchanged']]
+[693] YK: components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//admin-state
+    YV: [['true', 'false']]
+    SK: DWDM_PORT_INFO//$INTERFACE$//admin_status
+    SV: [['ENABLED', 'DISABLED']]
+[694] YK: components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//tx-laser
+    YV: [['unchanged']]
+    SK: DWDM_TRANSCEIVER_INFO//TRANSCEIVER-$INTERFACE$|0//tx-laser
+    SV: [['unchanged']]
+[695] YK: components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//frequency
+    YV: [['unchanged']]
+    SK: DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//frequency
+    SV: [['unchanged']]
+[696] YK: components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//target-output-power
+    YV: [['unchanged']]
+    SK: DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//target-output-power
+    SV: [['unchanged']]
+[697] YK: components//component//$COMPONENT$//dwdm//interfaces//interface//$INTERFACE$//config//operational-mode
+    YV: [['unchanged']]
+    SK: DWDM_OPTICAL_CHANNEL_INFO//OCH-$INTERFACE$//operational-mode
+    SV: [['unchanged']]
+
+===== int//interfaces  (2 rows) =====
+[698] YK: int//interfaces//interface//$INTERFACE$//config//insert-md-cloud
+    YV: [[['default']], [['default']], [['default']], [['string_combination']], [['default']], [['default']], [['default']], [['default']]]
+    SK: ['ACL_RULE//IFA_INGRESS|RULE_1001//IFA_VERSION', 'ACL_RULE//IFA_INGRESS|RULE_1001//PRIORITY', 'ACL_RULE//IFA_INGRESS|RULE_1001//PACKET_ACTION', 'ACL_RULE//IFA_INGRESS|RULE_1001//IN_PORTS', 'ACL_TABLE//IFA_INGRESS//policy_desc', 'ACL_TABLE//IFA_INGRESS//stage', 'ACL_TABLE//IFA_INGRESS//type', 'ACL_TABLE//IFA_INGRESS//ports']
+    SV: [[['2']], [['10000']], [['INTINGRESSPASS2']], [['INTERFACE']], [['IFA_INGRESS']], [['INGRESS']], [['L3']], [[['PORTS']]]]
+[699] YK: int//interfaces//interface//$INTERFACE$//config//insert-md
+    YV: [[['default']], [['default']], [['default']], [['string_combination']], [['default']], [['default']], [['default']], [['default']]]
+    SK: ['ACL_RULE//IFA_INGRESS|RULE_1001//IFA_VERSION', 'ACL_RULE//IFA_INGRESS|RULE_1001//PRIORITY', 'ACL_RULE//IFA_INGRESS|RULE_1001//PACKET_ACTION', 'ACL_RULE//IFA_INGRESS|RULE_1001//IN_PORTS', 'ACL_TABLE//IFA_INGRESS//policy_desc', 'ACL_TABLE//IFA_INGRESS//stage', 'ACL_TABLE//IFA_INGRESS//type', 'ACL_TABLE//IFA_INGRESS//ports']
+    SV: [[['2']], [['8999']], [['INTINGRESSPASS2']], [['INTERFACE']], [['IFA_INGRESS']], [['INGRESS']], [['L3']], [[['PORTS']]]]
+
+===== vxlan//evpn  (1 rows) =====
+[700] YK: vxlan//evpn//config//source-vtep
+    YV: [['unchanged']]
+    SK: VXLAN_EVPN_NVO//$VALUE$//source_vtep
+    SV: [['unchanged']]
+
+===== vxlan//tunnels  (1 rows) =====
+[701] YK: vxlan//tunnels//tunnel//$TUNNEL$//config//src-ip
+    YV: [['unchanged']]
+    SK: VXLAN_TUNNEL//$TUNNEL$//src_ip
+    SV: [['unchanged']]
+
+===== SYSTEM_PORT//SYSTEM_PORT_LIST  (6 rows) =====
+[702] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//core_index
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//core_index
+    SV: [['unchanged']]
+[703] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//core_port_index
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//core_port_index
+    SV: [['unchanged']]
+[704] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//num_voq
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//num_voq
+    SV: [['unchanged']]
+[705] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//speed
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//speed
+    SV: [['unchanged']]
+[706] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//switch_id
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//switch_id
+    SV: [['unchanged']]
+[707] YK: SYSTEM_PORT//SYSTEM_PORT_LIST//$NAME$ $ASIC$ $PORT$//system_port_id
+    YV: [['unchanged']]
+    SK: SYSTEM_PORT//$NAME$|$ASIC$|$PORT$//system_port_id
+    SV: [['unchanged']]
+
+===== BUFFER_POOL//BUFFER_POOL_LIST  (4 rows) =====
+[708] YK: BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//type
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//$NAME$//type
+    SV: [['unchanged']]
+[709] YK: BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//mode
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//$NAME$//mode
+    SV: [['unchanged']]
+[710] YK: BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//size
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//$NAME$//size
+    SV: [['unchanged']]
+[711] YK: BUFFER_POOL//BUFFER_POOL_LIST//$NAME$//xoff
+    YV: [['unchanged']]
+    SK: BUFFER_POOL//$NAME$//xoff
+    SV: [['unchanged']]
+
+===== DEVICE_METADATA//localhost  (21 rows) =====
+[712] YK: DEVICE_METADATA//localhost//hwsku
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//hwsku
+    SV: [['unchanged']]
+[713] YK: DEVICE_METADATA//localhost//default_bgp_status
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//default_bgp_status
+    SV: [['unchanged']]
+[714] YK: DEVICE_METADATA//localhost//docker_routing_config_mode
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//docker_routing_config_mode
+    SV: [['unchanged']]
+[715] YK: DEVICE_METADATA//localhost//hostname
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//hostname
+    SV: [['unchanged']]
+[716] YK: DEVICE_METADATA//localhost//platform
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//platform
+    SV: [['unchanged']]
+[717] YK: DEVICE_METADATA//localhost//asic
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//asic
+    SV: [['unchanged']]
+[718] YK: DEVICE_METADATA//localhost//mac
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//mac
+    SV: [['unchanged']]
+[719] YK: DEVICE_METADATA//localhost//arp_to_route
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//arp_to_route
+    SV: [['unchanged']]
+[720] YK: DEVICE_METADATA//localhost//nd_to_route
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//nd_to_route
+    SV: [['unchanged']]
+[721] YK: DEVICE_METADATA//localhost//default_pfcwd_status
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//default_pfcwd_status
+    SV: [['unchanged']]
+[722] YK: DEVICE_METADATA//localhost//bgp_asn
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//bgp_asn
+    SV: [['unchanged']]
+[723] YK: DEVICE_METADATA//localhost//deployment_id
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//deployment_id
+    SV: [['unchanged']]
+[724] YK: DEVICE_METADATA//localhost//type
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//type
+    SV: [['unchanged']]
+[725] YK: DEVICE_METADATA//localhost//coalesce
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//coalesce
+    SV: [['unchanged']]
+[726] YK: DEVICE_METADATA//localhost//ndmask_v6
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//ndmask_v6
+    SV: [['unchanged']]
+[727] YK: DEVICE_METADATA//localhost//asic_name
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//asic_name
+    SV: [['unchanged']]
+[728] YK: DEVICE_METADATA//localhost//max_cores
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//max_cores
+    SV: [['unchanged']]
+[729] YK: DEVICE_METADATA//localhost//switch_id
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//switch_id
+    SV: [['unchanged']]
+[730] YK: DEVICE_METADATA//localhost//switch_type
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//switch_type
+    SV: [['unchanged']]
+[731] YK: DEVICE_METADATA//localhost//vrf_leaking_route_map_v4
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//vrf_leaking_route_map_v4
+    SV: [['unchanged']]
+[732] YK: DEVICE_METADATA//localhost//vrf_leaking_route_map_v6
+    YV: [['unchanged']]
+    SK: DEVICE_METADATA//localhost//vrf_leaking_route_map_v6
+    SV: [['unchanged']]
+
+===== YANG_VALIDATION//config  (2 rows) =====
+[733] YK: YANG_VALIDATION//config//enable
+    YV: [['true', 'false']]
+    SK: YANG_VALIDATION//config//enable
+    SV: [['True', 'False']]
+[734] YK: YANG_VALIDATION//config//intercept
+    YV: [['true', 'false']]
+    SK: YANG_VALIDATION//config//intercept
+    SV: [['True', 'False']]
+
+===== LLDP_GLOBAL//global  (1 rows) =====
+[735] YK: LLDP_GLOBAL//global//mgmt_ip
+    YV: [['unchanged']]
+    SK: LLDP_GLOBAL//global//mgmt_ip
+    SV: [['unchanged']]
+
+===== NTP//global  (1 rows) =====
+[736] YK: NTP//global//direction
+    YV: [['unchanged']]
+    SK: NTP//global//direction
+    SV: [['unchanged']]
+
+===== SNMP//snmp  (1 rows) =====
+[737] YK: SNMP//snmp//direction
+    YV: [['unchanged']]
+    SK: SNMP//snmp//direction
+    SV: [['unchanged']]
+
+===== TACPLUS//global  (1 rows) =====
+[738] YK: TACPLUS//global//src_ip
+    YV: [['unchanged']]
+    SK: TACPLUS//global//src_ip
+    SV: [['unchanged']]
+
+===== SYSLOG_SERVER//syslog_server  (2 rows) =====
+[739] YK: SYSLOG_SERVER//syslog_server//direction
+    YV: [['unchanged']]
+    SK: SYSLOG_SERVER//syslog_server//direction
+    SV: [['unchanged']]
+[740] YK: SYSLOG_SERVER//syslog_server//src_ip
+    YV: [['unchanged']]
+    SK: SYSLOG_SERVER//syslog_server//src_ip
+    SV: [['unchanged']]
+
+===== TELEMETRY//gnmi  (1 rows) =====
+[741] YK: TELEMETRY//gnmi//gnmi_direction
+    YV: [['unchanged']]
+    SK: TELEMETRY//gnmi//gnmi_direction
+    SV: [['unchanged']]
+
+===== BUFFER_PROFILE//BUFFER_PROFILE_LIST  (7 rows) =====
+[742] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//static_th
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//static_th
+    SV: [['unchanged']]
+[743] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//dynamic_th
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//dynamic_th
+    SV: [['unchanged']]
+[744] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//size
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//size
+    SV: [['unchanged']]
+[745] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//pool
+    YV: [['combination']]
+    SK: BUFFER_PROFILE//$NAME$//pool
+    SV: [['[+value+]']]
+[746] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xon_offset
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//xon_offset
+    SV: [['unchanged']]
+[747] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xon
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//xon
+    SV: [['unchanged']]
+[748] YK: BUFFER_PROFILE//BUFFER_PROFILE_LIST//$NAME$//xoff
+    YV: [['unchanged']]
+    SK: BUFFER_PROFILE//$NAME$//xoff
+    SV: [['unchanged']]
+
+===== BUFFER_QUEUE//BUFFER_QUEUE_LIST  (1 rows) =====
+[749] YK: BUFFER_QUEUE//BUFFER_QUEUE_LIST//$PORT$ $QINDEX$//profile
+    YV: [['combination']]
+    SK: BUFFER_QUEUE//$PORT$|$QINDEX$//profile
+    SV: [['[+value+]']]
+
+===== BGP_VRF//BGP_VRF_LIST  (4 rows) =====
+[750] YK: BGP_VRF//BGP_VRF_LIST//$VRF$//bgp_asn
+    YV: [['unchanged']]
+    SK: BGP_VRF//$VRF$//bgp_asn
+    SV: [['unchanged']]
+[751] YK: BGP_VRF//BGP_VRF_LIST//$VRF$//coalesce
+    YV: [['unchanged']]
+    SK: BGP_VRF//$VRF$//coalesce
+    SV: [['unchanged']]
+[752] YK: BGP_VRF//BGP_VRF_LIST//$VRF$//vrf_leaking_route_map_v4
+    YV: [['unchanged']]
+    SK: BGP_VRF//$VRF$//vrf_leaking_route_map_v4
+    SV: [['unchanged']]
+[753] YK: BGP_VRF//BGP_VRF_LIST//$VRF$//vrf_leaking_route_map_v6
+    YV: [['unchanged']]
+    SK: BGP_VRF//$VRF$//vrf_leaking_route_map_v6
+    SV: [['unchanged']]
+
+===== BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST  (1 rows) =====
+[754] YK: BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST//$TARGET-VRF$ $SOURCE-VRF$//import_vrf
+    YV: [['unchanged']]
+    SK: BGP_VRF_LEAKING_IPV4//$TARGET-VRF$|$SOURCE-VRF$//import_vrf
+    SV: [['unchanged']]
+
+===== BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST  (1 rows) =====
+[755] YK: BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST//$TARGET-VRF$ $SOURCE-VRF$//import_vrf
+    YV: [['unchanged']]
+    SK: BGP_VRF_LEAKING_IPV6//$TARGET-VRF$|$SOURCE-VRF$//import_vrf
+    SV: [['unchanged']]
+
+===== PBR_NHG//PBR_NHG_LIST  (1 rows) =====
+[756] YK: PBR_NHG//PBR_NHG_LIST//$PBR-NAME$
+    YV: [['empty_dict']]
+    SK: PBR_NHG//$PBR-NAME$
+    SV: [['empty_dict']]
+
+===== PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST  (1 rows) =====
+[757] YK: PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST//$PBR-NAME$ $NEXTHOP$ $INTF-NAME$
+    YV: [['empty_dict']]
+    SK: PBR_NHG_MEMBER//$PBR-NAME$|$NEXTHOP$@$INTF-NAME$
+    SV: [['empty_dict']]
+
+===== PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST  (1 rows) =====
+[758] YK: PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST//$PBR-NAME$ $NEXTHOP$
+    YV: [['empty_dict']]
+    SK: PBR_NHG_MEMBER//$PBR-NAME$|$NEXTHOP$
+    SV: [['empty_dict']]
+
+===== PBR_RULE//PBR_RULE_LIST  (9 rows) =====
+[759] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//DSCP
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//DSCP
+    SV: [['unchanged']]
+[760] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//DST_IP
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//DST_IP
+    SV: [['unchanged']]
+[761] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//IN_PORT
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//IN_PORT
+    SV: [['unchanged']]
+[762] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//IP_PROTOCOL
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//IP_PROTOCOL
+    SV: [['unchanged']]
+[763] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//L4_DST_PORT
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//L4_DST_PORT
+    SV: [['unchanged']]
+[764] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//L4_SRC_PORT
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//L4_SRC_PORT
+    SV: [['unchanged']]
+[765] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//PACKET_ACTION
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//PACKET_ACTION
+    SV: [['unchanged']]
+[766] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//PRIORITY
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//PRIORITY
+    SV: [['unchanged']]
+[767] YK: PBR_RULE//PBR_RULE_LIST//$RULE-ID$//SRC_IP
+    YV: [['unchanged']]
+    SK: PBR_RULE//$RULE-ID$//SRC_IP
+    SV: [['unchanged']]
+
+===== BUFFER_PG//BUFFER_PG_LIST  (1 rows) =====
+[768] YK: BUFFER_PG//BUFFER_PG_LIST//$PORT$ $PG-NUM$//profile
+    YV: [['combination']]
+    SK: BUFFER_PG//$PORT$|$PG-NUM$//profile
+    SV: [['[+value+]']]

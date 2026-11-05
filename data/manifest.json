@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "updated_on": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "task": "OC-style JSON to SONiC-style configuration JSON translator",
+  "materials": "Supplier rules CSV and the OC document that will be used for final evaluation",
+  "evaluation": "After development, generated configuration JSON for this OC will be compared with a standard configuration JSON by the evaluator",
+  "files": [
+    {
+      "side": "rules",
+      "path": "references/raw/yang2sonic_maptable(1).csv",
+      "original_filename": "yang2sonic_maptable(1).csv",
+      "bytes": 164322,
+      "sha256": "185821bee5fd1bf4d24ffd80bc531a96f37fd97eacb7f581cb7b6500e91054eb",
+      "data_rows": 769,
+      "columns": [
+        "yang_key",
+        "yang_value",
+        "sonic_key",
+        "sonic_value",
+        "spine"
+      ]
+    },
+    {
+      "side": "oc",
+      "path": "data/raw/oc/CQ-JLDC-2203-D05-TCS84R-LA200G-019.txt",
+      "original_filename": "CQ-JLDC-2203-D05-TCS84R-LA200G-019.txt",
+      "bytes": 151466,
+      "sha256": "0b5227b874caf7c38910dad32b6f4076a0ad341b8cf41079eda14164f59ddf76",
+      "format": "single JSON object, UTF-8",
+      "root_count": 15
+    }
+  ]
+}

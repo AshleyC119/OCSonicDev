@@ -1,0 +1,52 @@
+# Hand-derived expected emissions for the `network-instances//network-instance` spine
+# (rows 383-609), `relay-agent//dhcp` (rows 158-159) and `multicast//*` (rows 168-182)
+# of references/raw/yang2sonic_maptable(1).csv, applied to
+# data/raw/oc/CQ-JLDC-2203-D05-TCS84R-LA200G-019.txt.
+#
+# Format is docs/ENGINE_CONTRACT.md section 5:
+#   TABLE|KEY|FIELD = <json-encoded value>  # row=<CSV data-row index, 0-based> path=<OC leaf>
+# Lines are sorted lexicographically on the whole "TABLE|KEY|FIELD = value" text
+# (the trailing comment is not part of the sort key; strip it before parsing).
+# All 38 lines below have a non-empty FIELD, so the empty-FIELD/{} ambiguity of the
+# contract example does not arise here.
+#
+# Totals: 244 group rules -> 20 fire, 18 suppressed by more-specific literal rules,
+# 206 cannot match this document at all; 38 emissions.
+BGP_CONFIG_IPV4|bgp_ipv4|ebgp_balance = "64"  # row=407 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/use-multiple-paths/ebgp/config/maximum-paths
+BGP_CONFIG_IPV6|bgp_ipv6|ebgp_balance = "64"  # row=407 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/use-multiple-paths/ebgp/config/maximum-paths
+BGP_DISTANCE_IPV4|bgp_ipv4|ebgpdistance = "10"  # row=408 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/default-route-distance/config/external-route-distance
+BGP_DISTANCE_IPV4|bgp_ipv4|ibgpdistance = "100"  # row=409 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/default-route-distance/config/internal-route-distance
+BGP_DISTANCE_IPV4|bgp_ipv4|localdistance = "100"  # row=410 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/default-route-distance/config/local-route-distance
+BGP_DISTANCE_IPV6|bgp_ipv6|ebgpdistance = "10"  # row=408 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/default-route-distance/config/external-route-distance
+BGP_DISTANCE_IPV6|bgp_ipv6|ibgpdistance = "100"  # row=409 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/default-route-distance/config/internal-route-distance
+BGP_DISTANCE_IPV6|bgp_ipv6|localdistance = "100"  # row=410 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/default-route-distance/config/local-route-distance
+BGP_GLOBALCONFIG|bgpGlobal|advertise_delay_value = "120"  # row=388 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/advertise-delay/config/time
+BGP_GLOBALCONFIG|bgpGlobal|routeId = "22.156.39.15"  # row=384 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/config/router-id
+BGP_NEIGHBOR_IPV4|Core-IPv6|active = "no-activate"  # row=426 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/afi-safis/afi-safi/IPV6_UNICAST/afi-safi-name (2nd target)
+BGP_NEIGHBOR_IPV4|Core|active = "activate"  # row=425 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/afi-safis/afi-safi/IPV4_UNICAST/afi-safi-name
+BGP_NEIGHBOR_IPV4|Core|routemapin = ["From-Core"]  # row=424 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/afi-safis/afi-safi/IPV4_UNICAST/apply-policy/config/import-policy
+BGP_NEIGHBOR_IPV4|Core|routemapout = ["To-Core"]  # row=423 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/afi-safis/afi-safi/IPV4_UNICAST/apply-policy/config/export-policy
+BGP_NEIGHBOR_IPV6|Core-IPv6|active = "activate"  # row=426 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/afi-safis/afi-safi/IPV6_UNICAST/afi-safi-name (1st target)
+BGP_NEIGHBOR_IPV6|Core-IPv6|routemapin = ["From-Core-IPv6"]  # row=424 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/afi-safis/afi-safi/IPV6_UNICAST/apply-policy/config/import-policy
+BGP_NEIGHBOR_IPV6|Core-IPv6|routemapout = ["To-Core-IPv6"]  # row=423 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/afi-safis/afi-safi/IPV6_UNICAST/apply-policy/config/export-policy
+BGP_NETWORKS_IPV4|22.141.134.164/32|routemap = "SetComm-1/4"  # row=395 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.141.134.164/32/config/policy
+BGP_NETWORKS_IPV4|22.141.134.164/32|subnet = "22.141.134.164/32"  # row=394 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.141.134.164/32/config/prefix
+BGP_NETWORKS_IPV4|22.215.242.64/26|routemap = "SetComm-1/1"  # row=395 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.215.242.64/26/config/policy
+BGP_NETWORKS_IPV4|22.215.242.64/26|subnet = "22.215.242.64/26"  # row=394 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.215.242.64/26/config/prefix
+BGP_NETWORKS_IPV4|22.215.246.64/26|routemap = "SetComm-1/1"  # row=395 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.215.246.64/26/config/policy
+BGP_NETWORKS_IPV4|22.215.246.64/26|subnet = "22.215.246.64/26"  # row=394 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.215.246.64/26/config/prefix
+BGP_NETWORKS_IPV4|22.247.246.0/24|routemap = "SetComm-1/1"  # row=395 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.247.246.0/24/config/policy
+BGP_NETWORKS_IPV4|22.247.246.0/24|subnet = "22.247.246.0/24"  # row=394 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/advertise-routes/advertise-route/22.247.246.0/24/config/prefix
+BGP_PEER_RANGE|Core-IPv6|name = "Core-IPv6"  # row=428 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/config/peer-group-name
+BGP_PEER_RANGE|Core-IPv6|password = "hellotencent"  # row=429 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/config/auth-password
+BGP_PEER_RANGE|Core-IPv6|remote_as = "103"  # row=431 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core-IPv6/config/peer-as
+BGP_PEER_RANGE|Core|name = "Core"  # row=428 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/config/peer-group-name
+BGP_PEER_RANGE|Core|password = "hellotencent"  # row=429 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/config/auth-password
+BGP_PEER_RANGE|Core|remote_as = "103"  # row=431 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/peer-groups/peer-group/Core/config/peer-as
+BGP_REDISTRIBUTES_IPV4|kernel|protocol = "kernel"  # row=401 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/redistribute-routes/redistribute-route/KERNEL/config/protocol
+BGP_REDISTRIBUTES_IPV4|kernel|routemap = ["From-Direct"]  # row=402 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV4_UNICAST/ipv4-unicast/redistribute-routes/redistribute-route/KERNEL/config/import-policy
+BGP_REDISTRIBUTES_IPV6|kernel|protocol = "kernel"  # row=401 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/ipv6-unicast/redistribute-routes/redistribute-route/KERNEL/config/protocol
+BGP_REDISTRIBUTES_IPV6|kernel|routemap = ["From-Direct-IPv6"]  # row=402 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/afi-safis/afi-safi/IPV6_UNICAST/ipv6-unicast/redistribute-routes/redistribute-route/KERNEL/config/import-policy
+DEVICE_METADATA|localhost|bgp_asn = "3219"  # row=383 path=network-instances/network-instance/global/protocols/protocol/BGP BGP/bgp/global/config/as
+VLAN|Vlan2|dhcp_servers = ["28.231.67.5", "28.231.67.6", "28.231.67.7", "28.231.67.69", "28.231.67.70"]  # row=159 path=relay-agent/dhcp/interfaces/interface/Vlan-interface2/config/helper-address
+VLAN|Vlan2|gw_ip = "22.215.246.65"  # row=158 path=relay-agent/dhcp/interfaces/interface/Vlan-interface2/config/relay-gateway

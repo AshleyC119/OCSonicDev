@@ -1,0 +1,3703 @@
+{
+  "ACL_RULE": {
+    "SNMP|DEFAULT_RULE": {
+      "ETHER_TYPE": "2048",
+      "IN_PORTS": "ALL",
+      "PRIORITY": "1",
+      "PACKET_ACTION": "DROP"
+    },
+    "SSH|DEFAULT_RULE": {
+      "ETHER_TYPE": "2048",
+      "IN_PORTS": "ALL",
+      "PRIORITY": "1",
+      "PACKET_ACTION": "DROP"
+    },
+    "SNMP|RULE_10": {
+      "PRIORITY": "9990",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_20": {
+      "PRIORITY": "9980",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_30": {
+      "PRIORITY": "9970",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_40": {
+      "PRIORITY": "9960",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_50": {
+      "PRIORITY": "9950",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_60": {
+      "PRIORITY": "9940",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_70": {
+      "PRIORITY": "9930",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_80": {
+      "PRIORITY": "9920",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_90": {
+      "PRIORITY": "9910",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_100": {
+      "PRIORITY": "9900",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_110": {
+      "PRIORITY": "9890",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_120": {
+      "PRIORITY": "9880",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_130": {
+      "PRIORITY": "9870",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_140": {
+      "PRIORITY": "9860",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_150": {
+      "PRIORITY": "9850",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_160": {
+      "PRIORITY": "9840",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SNMP|RULE_170": {
+      "PRIORITY": "9830",
+      "PACKET_ACTION": "ACCEPT",
+      "IP_PROTOCOL": "17"
+    },
+    "SSH|RULE_10": {
+      "PRIORITY": "9990",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_20": {
+      "PRIORITY": "9980",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_30": {
+      "PRIORITY": "9970",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_40": {
+      "PRIORITY": "9960",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_50": {
+      "PRIORITY": "9950",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_60": {
+      "PRIORITY": "9940",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_70": {
+      "PRIORITY": "9930",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_80": {
+      "PRIORITY": "9920",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_90": {
+      "PRIORITY": "9910",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_100": {
+      "PRIORITY": "9900",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_110": {
+      "PRIORITY": "9890",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_120": {
+      "PRIORITY": "9880",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_130": {
+      "PRIORITY": "9870",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_140": {
+      "PRIORITY": "9860",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_150": {
+      "PRIORITY": "9850",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_160": {
+      "PRIORITY": "9840",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_170": {
+      "PRIORITY": "9830",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "SSH|RULE_180": {
+      "PRIORITY": "9820",
+      "PACKET_ACTION": "ACCEPT"
+    },
+    "2000_IVLAN|DEFAULT_RULE": {
+      "PRIORITY": "1",
+      "PACKET_ACTION": "DROP",
+      "ETHER_TYPE": "2048",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_10": {
+      "PRIORITY": "9990",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_20": {
+      "PRIORITY": "9980",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_30": {
+      "PRIORITY": "9970",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_40": {
+      "PRIORITY": "9960",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_50": {
+      "PRIORITY": "9950",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_60": {
+      "PRIORITY": "9940",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_70": {
+      "PRIORITY": "9930",
+      "PACKET_ACTION": "FORWARD",
+      "IP_PROTOCOL": "17",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_80": {
+      "PRIORITY": "9920",
+      "PACKET_ACTION": "FORWARD",
+      "IP_PROTOCOL": "17",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_90": {
+      "PRIORITY": "9910",
+      "PACKET_ACTION": "FORWARD",
+      "IP_PROTOCOL": "17",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_100": {
+      "PRIORITY": "9900",
+      "PACKET_ACTION": "FORWARD",
+      "IP_PROTOCOL": "17",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_110": {
+      "PRIORITY": "9890",
+      "PACKET_ACTION": "DROP",
+      "OUT_VLANID": "Vlan2"
+    },
+    "2000_IVLAN|RULE_500": {
+      "PRIORITY": "9500",
+      "PACKET_ACTION": "FORWARD",
+      "OUT_VLANID": "Vlan2"
+    },
+    "IFA_INGRESS|RULE_1001": {
+      "IFA_VERSION": "2",
+      "PRIORITY": "8999",
+      "PACKET_ACTION": "INTINGRESSPASS2",
+      "IN_PORTS": "Eth400GE27,Eth400GE28,Eth400GE25,Eth400GE26,Eth200GE6,Eth200GE5,Eth200GE4,Eth200GE3,Eth200GE24,Eth200GE2,Eth200GE1,Eth200GE23,Eth200GE20,Eth200GE22,Eth200GE21,Eth400GE32,Eth400GE30,Eth200GE9,Eth400GE31,Eth200GE8,Eth200GE7,Eth200GE17,Eth200GE16,Eth200GE19,Eth200GE18,Eth200GE13,Eth200GE12,Eth200GE15,Eth200GE14,Eth200GE11,Eth400GE29,Eth200GE10"
+    }
+  },
+  "ACL_TABLE": {
+    "SNMP": {
+      "services": [
+        "SNMP"
+      ],
+      "ports": [
+        ""
+      ],
+      "policy_desc": "SNMP",
+      "type": "CTRLPLANE"
+    },
+    "SSH": {
+      "services": [
+        "SSH"
+      ],
+      "ports": [
+        ""
+      ],
+      "policy_desc": "SSH",
+      "type": "CTRLPLANE"
+    },
+    "2000_IVLAN": {
+      "stage": "INGRESS",
+      "ports": [
+        "VLAN"
+      ],
+      "policy_desc": "2000_IVLAN",
+      "type": "L3"
+    },
+    "IFA_INGRESS": {
+      "policy_desc": "IFA_INGRESS",
+      "stage": "INGRESS",
+      "type": "L3",
+      "ports": [
+        "PORTS"
+      ]
+    }
+  },
+  "BMC": {
+    "INTERFACE": {
+      "defgw": "28.239.79.65",
+      "ipmask": "28.239.79.69/26"
+    }
+  },
+  "MGMT_INTERFACE": {
+    "eth0|22.156.39.15/26": {
+      "gwaddr": "22.156.39.1"
+    }
+  },
+  "LOOPBACK": {
+    "Loopback0": {
+      "admin_status": "up"
+    }
+  },
+  "LOOPBACK_INTERFACE": {
+    "Loopback0|22.141.134.164/32": {
+      "type": "primary"
+    }
+  },
+  "PORTCHANNEL": {
+    "PortChannel13": {
+      "description": "SE13",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel14": {
+      "description": "SE14",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel15": {
+      "description": "SE15",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel16": {
+      "description": "SE16",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel1": {
+      "description": "SE1",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel4": {
+      "description": "SE4",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel5": {
+      "description": "SE5",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel2": {
+      "description": "SE2",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel3": {
+      "description": "SE3",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel8": {
+      "description": "SE8",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel9": {
+      "description": "SE9",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel6": {
+      "description": "SE6",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel7": {
+      "description": "SE7",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel10": {
+      "description": "SE10",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel11": {
+      "description": "SE11",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    },
+    "PortChannel12": {
+      "description": "SE12",
+      "admin_status": "up",
+      "mtu": "9100",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "hwaddr": "00:00:5e:00:01:09",
+      "fast_rate": "true",
+      "fallback": "true",
+      "port_id_basic": "1",
+      "updelaytime": "120",
+      "linkmode": "downlink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0"
+    }
+  },
+  "VLAN_MEMBER": {
+    "Vlan2|PortChannel13": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel14": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel15": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel16": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel1": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel4": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel5": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel2": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel3": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel8": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel9": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel6": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel7": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel10": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel11": {
+      "tagging_mode": "untagged"
+    },
+    "Vlan2|PortChannel12": {
+      "tagging_mode": "untagged"
+    }
+  },
+  "VLAN": {
+    "Vlan2": {
+      "members": [
+        "PortChannel13",
+        "PortChannel14",
+        "PortChannel15",
+        "PortChannel16",
+        "PortChannel1",
+        "PortChannel4",
+        "PortChannel5",
+        "PortChannel2",
+        "PortChannel3",
+        "PortChannel8",
+        "PortChannel9",
+        "PortChannel6",
+        "PortChannel7",
+        "PortChannel10",
+        "PortChannel11",
+        "PortChannel12"
+      ],
+      "description": "PM&VM-Access",
+      "vlanid": "2",
+      "arp_proxy": "true",
+      "nd_proxy": "true",
+      "mac": "00:00:5e:00:01:09",
+      "gw_ip": "22.215.246.65",
+      "dhcp_servers": [
+        "28.231.67.5",
+        "28.231.67.6",
+        "28.231.67.7",
+        "28.231.67.69",
+        "28.231.67.70"
+      ]
+    }
+  },
+  "VLAN_INTERFACE": {
+    "Vlan2|22.215.242.65/26": {
+      "type": "primary"
+    },
+    "Vlan2|22.215.246.65/26": {
+      "type": "secondary"
+    },
+    "Vlan2|22.247.246.1/24": {
+      "type": "secondary"
+    }
+  },
+  "PORT": {
+    "Eth400GE27": {
+      "description": "CQ-JLDC-2202-B02-TCS94R-LC-011-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE28": {
+      "description": "CQ-JLDC-2203-B02-TCS94R-LC-012-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE25": {
+      "description": "CQ-JLDC-2202-A02-TCS94R-LC-009-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE26": {
+      "description": "CQ-JLDC-2203-A02-TCS94R-LC-010-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE6": {
+      "description": "SE6",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE5": {
+      "description": "SE5",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE4": {
+      "description": "SE4",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE3": {
+      "description": "SE3",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE24": {
+      "description": "CQ-JLDC-2203-D01-TCS94R-LC-008-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE2": {
+      "description": "SE2",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE23": {
+      "description": "CQ-JLDC-2202-D01-TCS94R-LC-007-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE1": {
+      "description": "SE1",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE20": {
+      "description": "CQ-JLDC-2203-B01-TCS94R-LC-004-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE22": {
+      "description": "CQ-JLDC-2203-C01-TCS94R-LC-006-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE21": {
+      "description": "CQ-JLDC-2202-C01-TCS94R-LC-005-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE32": {
+      "description": "CQ-JLDC-2203-D02-TCS94R-LC-016-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE30": {
+      "description": "CQ-JLDC-2203-C02-TCS94R-LC-014-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth400GE31": {
+      "description": "CQ-JLDC-2202-D02-TCS94R-LC-015-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE9": {
+      "description": "SE9",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE8": {
+      "description": "SE8",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE7": {
+      "description": "SE7",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE17": {
+      "description": "CQ-JLDC-2202-A01-TCS94R-LC-001-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE16": {
+      "description": "SE16",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE19": {
+      "description": "CQ-JLDC-2202-B01-TCS94R-LC-003-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE18": {
+      "description": "CQ-JLDC-2203-A01-TCS94R-LC-002-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE13": {
+      "description": "SE13",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE12": {
+      "description": "SE12",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE15": {
+      "description": "SE15",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE14": {
+      "description": "SE14",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth200GE11": {
+      "description": "SE11",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    },
+    "Eth400GE29": {
+      "description": "CQ-JLDC-2202-C02-TCS94R-LC-013-TH69",
+      "admin_status": "up",
+      "mtu": "9100",
+      "speed": "200000",
+      "source_equal_dest_intf_l3_action": "drop",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "switchmode": "none",
+      "updelaytime": "120",
+      "linkmode": "uplink",
+      "groupid": "1",
+      "option": "add",
+      "threshold": "0",
+      "lldp_status": "rx-and-tx"
+    },
+    "Eth200GE10": {
+      "description": "SE10",
+      "admin_status": "down",
+      "mtu": "9100",
+      "autoneg": "1",
+      "speed": "200000",
+      "fec": "rs",
+      "up_delay_interval": "2",
+      "broadcast_flood": "0",
+      "multicast_flood": "0",
+      "unicast_flood": "0",
+      "lldp_status": "rx-only"
+    }
+  },
+  "PORTCHANNEL_MEMBER": {
+    "PortChannel13|Eth200GE13": {},
+    "PortChannel1|Eth200GE1": {},
+    "PortChannel14|Eth200GE14": {},
+    "PortChannel15|Eth200GE15": {},
+    "PortChannel16|Eth200GE16": {},
+    "PortChannel4|Eth200GE4": {},
+    "PortChannel5|Eth200GE5": {},
+    "PortChannel2|Eth200GE2": {},
+    "PortChannel3|Eth200GE3": {},
+    "PortChannel8|Eth200GE8": {},
+    "PortChannel9|Eth200GE9": {},
+    "PortChannel6|Eth200GE6": {},
+    "PortChannel7|Eth200GE7": {},
+    "PortChannel10|Eth200GE10": {},
+    "PortChannel11|Eth200GE11": {},
+    "PortChannel12|Eth200GE12": {}
+  },
+  "AAA": {
+    "account": {
+      "commands": "tacacs+"
+    },
+    "authorization": {
+      "commands": "tacacs+"
+    },
+    "authentication": {
+      "login": "tacacs+,local"
+    }
+  },
+  "TACPLUS_SERVER": {
+    "172.16.0.196": {
+      "tcp_port": "49",
+      "priority": "50"
+    },
+    "10.12.220.198": {
+      "tcp_port": "49",
+      "priority": "60"
+    }
+  },
+  "TACPLUS": {
+    "global": {
+      "passkey": "tcnw"
+    }
+  },
+  "DEVICE_METADATA": {
+    "localhost": {
+      "hostname": "CQ-JLDC-2203-D05-TCS84R-LA200G-019",
+      "hwsku": "TCS8400-24CC8CD",
+      "type": "LA",
+      "arp_to_route": "true",
+      "nd_to_route": "true",
+      "ndmask_v6": "64",
+      "bgp_asn": "3219"
+    }
+  },
+  "SHELL": {
+    "passwd": {
+      "passwd": "10CENT.com"
+    }
+  },
+  "ZTP": {
+    "flg": {
+      "run": "ok"
+    }
+  },
+  "TELEMETRY": {
+    "gnmi": {
+      "status": "enable"
+    },
+    "usrpwd": {
+      "password": "10DOLLAR.com",
+      "username": "tencent"
+    },
+    "serverTls": {
+      "type": "without-ca"
+    }
+  },
+  "SWITCH": {
+    "switch": {
+      "ecmp_hash_alg": "9",
+      "ecmp_hash_seed": "20",
+      "lag_hash_seed": "20"
+    }
+  },
+  "SYSLOG_SERVER": {
+    "syslog_server": {
+      "level": "info",
+      "servers": [
+        "22.144.124.133",
+        "22.144.126.133",
+        "22.144.125.133",
+        "172.16.0.203"
+      ]
+    }
+  },
+  "NTP_SERVER": {
+    "172.16.0.203": {}
+  },
+  "SNMP": {
+    "snmp": {
+      "snmp_location": "public",
+      "snmp_rocommunity": "tcnw"
+    }
+  },
+  "FLEX_COUNTER_TABLE": {
+    "BUFFER_POOL": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "BUFFER_POOL_WATERMARK": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "PG": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "QUEUE_WATERMARK": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "PG_WATERMARK": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "PFCWD": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "QUEUE": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "PORT": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "PORT_PHY": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "20000"
+    },
+    "ACL": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    },
+    "POLICER": {
+      "FLEX_COUNTER_STATUS": "enable",
+      "POLL_INTERVAL": "1000"
+    }
+  },
+  "DNS": {
+    "server": {
+      "ip": [
+        "9.128.49.48",
+        "9.128.49.49",
+        "9.54.85.132"
+      ]
+    }
+  },
+  "SFLOW_SESSION": {
+    "Eth400GE27": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE28": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE25": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE26": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE6": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE5": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE4": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE3": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE24": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE2": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE1": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE23": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE20": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE22": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE21": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE32": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE30": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth400GE31": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE9": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE8": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE7": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE17": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE16": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE19": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE18": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE13": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE12": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE15": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE14": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth200GE11": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    },
+    "Eth400GE29": {
+      "sample_rate": "32768",
+      "admin_state": "up",
+      "sample_stage": "outbound"
+    },
+    "Eth200GE10": {
+      "sample_rate": "262144",
+      "admin_state": "up",
+      "sample_stage": "inbound"
+    }
+  },
+  "SFLOW": {
+    "global": {
+      "agent_id": "Loopback0",
+      "admin_state": "up",
+      "max_datagram_size": "1000",
+      "cpu_rate_limit": "10000"
+    }
+  },
+  "SFLOW_COLLECTOR": {
+    "1": {
+      "collector_ip": "30.46.231.93",
+      "collector_port": "12339"
+    }
+  },
+  "BGP_GLOBALCONFIG": {
+    "bgpGlobal": {
+      "routeId": "22.156.39.15",
+      "advertise_delay_value": "120"
+    }
+  },
+  "BGP_NETWORKS_IPV4": {
+    "22.215.246.64/26": {
+      "subnet": "22.215.246.64/26",
+      "routemap": "SetComm-1/1"
+    },
+    "22.141.134.164/32": {
+      "subnet": "22.141.134.164/32",
+      "routemap": "SetComm-1/4"
+    },
+    "22.247.246.0/24": {
+      "subnet": "22.247.246.0/24",
+      "routemap": "SetComm-1/1"
+    },
+    "22.215.242.64/26": {
+      "subnet": "22.215.242.64/26",
+      "routemap": "SetComm-1/1"
+    }
+  },
+  "BGP_REDISTRIBUTES_IPV4": {
+    "kernel": {
+      "protocol": "kernel",
+      "routemap": [
+        "From-Direct"
+      ]
+    }
+  },
+  "BGP_REDISTRIBUTES_IPV6": {
+    "kernel": {
+      "protocol": "kernel",
+      "routemap": [
+        "From-Direct-IPv6"
+      ]
+    }
+  },
+  "BGP_CONFIG_IPV4": {
+    "bgp_ipv4": {
+      "ebgp_balance": "64"
+    }
+  },
+  "BGP_CONFIG_IPV6": {
+    "bgp_ipv6": {
+      "ebgp_balance": "64"
+    }
+  },
+  "BGP_DISTANCE_IPV4": {
+    "bgp_ipv4": {
+      "ebgpdistance": "10",
+      "ibgpdistance": "100",
+      "localdistance": "100"
+    }
+  },
+  "BGP_DISTANCE_IPV6": {
+    "bgp_ipv6": {
+      "ebgpdistance": "10",
+      "ibgpdistance": "100",
+      "localdistance": "100"
+    }
+  },
+  "BGP_NEIGHBOR_IPV6": {
+    "Core-IPv6": {
+      "routemapout": [
+        "To-Core-IPv6"
+      ],
+      "routemapin": [
+        "From-Core-IPv6"
+      ],
+      "active": "activate"
+    }
+  },
+  "BGP_NEIGHBOR_IPV4": {
+    "Core": {
+      "routemapout": [
+        "To-Core"
+      ],
+      "routemapin": [
+        "From-Core"
+      ],
+      "active": "activate"
+    },
+    "Core-IPv6": {
+      "active": "no-activate"
+    }
+  },
+  "BGP_PEER_RANGE": {
+    "Core-IPv6": {
+      "name": "Core-IPv6",
+      "password": "hellotencent",
+      "remote_as": "103"
+    },
+    "Core": {
+      "name": "Core",
+      "password": "hellotencent",
+      "remote_as": "103"
+    }
+  },
+  "DSCP_TO_TC_MAP": {
+    "global-dscp2tc-profile": {
+      "0": "3",
+      "1": "1",
+      "2": "1",
+      "3": "1",
+      "4": "1",
+      "5": "1",
+      "6": "0",
+      "7": "0",
+      "8": "1",
+      "9": "1",
+      "10": "1",
+      "11": "1",
+      "12": "1",
+      "13": "1",
+      "14": "1",
+      "15": "1",
+      "16": "2",
+      "17": "2",
+      "18": "2",
+      "19": "2",
+      "20": "2",
+      "21": "0",
+      "22": "0",
+      "23": "2",
+      "24": "1",
+      "25": "2",
+      "26": "3",
+      "27": "3",
+      "28": "3",
+      "29": "1",
+      "30": "3",
+      "31": "3",
+      "32": "4",
+      "33": "4",
+      "34": "4",
+      "35": "4",
+      "36": "4",
+      "37": "4",
+      "38": "4",
+      "39": "4",
+      "40": "5",
+      "41": "5",
+      "42": "5",
+      "43": "5",
+      "44": "5",
+      "45": "5",
+      "46": "5",
+      "47": "5",
+      "48": "6",
+      "49": "6",
+      "50": "6",
+      "51": "6",
+      "52": "6",
+      "53": "6",
+      "54": "6",
+      "55": "6",
+      "56": "7",
+      "57": "7",
+      "58": "7",
+      "59": "7",
+      "60": "7",
+      "61": "7",
+      "62": "7",
+      "63": "7"
+    }
+  },
+  "TC_TO_QUEUE_MAP": {
+    "global-tc2queue-profile": {
+      "0": "0",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7"
+    }
+  },
+  "PORT_QOS_MAP": {
+    "Eth400GE27": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE28": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE25": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE26": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE6": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE5": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE4": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE3": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE24": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE2": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE23": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE1": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE20": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE22": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE21": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE32": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE30": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE31": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE9": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE8": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE7": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE17": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE16": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE19": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE18": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE13": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE12": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE15": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE14": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth400GE29": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE11": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    },
+    "Eth200GE10": {
+      "dscp_to_tc_map": "global-dscp2tc-profile",
+      "tc_to_queue_map": "global-tc2queue-profile",
+      "pfc_enable": "5"
+    }
+  },
+  "QUEUE": {
+    "Eth400GE27|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE28|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE25|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE26|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE6|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE5|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE4|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE3|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE24|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE2|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE23|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE1|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE20|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE22|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE21|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE32|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE30|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE31|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE9|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE8|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE7|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE17|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE16|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE19|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE18|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE13|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE12|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE15|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE14|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE29|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE11|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth200GE10|5": {
+      "wred_profile": "200GE_queue_5",
+      "scheduler": "scheduler.DWRR.50"
+    },
+    "Eth400GE27|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE27|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE27|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE27|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE27|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE27|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE27|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE28|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE28|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE28|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE28|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE28|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE28|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE28|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE25|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE25|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE25|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE25|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE25|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE25|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE25|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE26|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE26|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE26|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE26|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE26|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE26|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE26|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE6|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE6|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE6|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE6|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE6|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE6|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE6|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE5|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE5|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE5|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE5|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE5|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE5|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE5|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE4|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE4|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE4|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE4|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE4|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE4|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE4|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE3|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE3|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE3|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE3|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE3|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE3|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE3|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE24|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE24|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE24|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE24|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE24|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE24|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE24|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE2|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE2|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE2|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE2|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE2|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE2|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE2|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE23|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE23|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE23|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE23|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE23|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE23|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE23|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE1|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE1|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE1|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE1|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE1|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE1|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE1|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE20|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE20|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE20|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE20|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE20|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE20|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE20|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE22|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE22|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE22|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE22|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE22|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE22|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE22|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE21|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE21|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE21|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE21|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE21|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE21|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE21|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE32|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE32|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE32|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE32|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE32|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE32|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE32|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE30|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE30|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE30|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE30|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE30|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE30|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE30|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE31|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE31|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE31|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE31|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE31|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE31|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE31|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE9|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE9|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE9|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE9|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE9|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE9|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE9|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE8|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE8|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE8|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE8|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE8|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE8|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE8|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE7|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE7|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE7|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE7|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE7|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE7|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE7|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE17|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE17|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE17|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE17|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE17|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE17|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE17|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE16|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE16|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE16|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE16|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE16|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE16|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE16|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE19|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE19|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE19|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE19|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE19|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE19|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE19|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE18|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE18|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE18|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE18|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE18|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE18|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE18|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE13|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE13|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE13|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE13|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE13|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE13|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE13|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE12|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE12|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE12|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE12|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE12|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE12|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE12|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE15|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE15|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE15|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE15|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE15|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE15|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE15|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE14|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE14|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE14|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE14|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE14|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE14|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE14|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE29|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE29|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth400GE29|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth400GE29|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth400GE29|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth400GE29|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth400GE29|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE11|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE11|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE11|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE11|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE11|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE11|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE11|0": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE10|6": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE10|7": {
+      "scheduler": "scheduler.DWRR.0"
+    },
+    "Eth200GE10|1": {
+      "scheduler": "scheduler.DWRR.1"
+    },
+    "Eth200GE10|2": {
+      "scheduler": "scheduler.DWRR.3"
+    },
+    "Eth200GE10|3": {
+      "scheduler": "scheduler.DWRR.25"
+    },
+    "Eth200GE10|4": {
+      "scheduler": "scheduler.DWRR.20"
+    },
+    "Eth200GE10|0": {
+      "scheduler": "scheduler.DWRR.1"
+    }
+  },
+  "PFC_WD_TABLE": {
+    "Eth400GE27": {
+      "pri_enable": "5"
+    },
+    "Eth400GE28": {
+      "pri_enable": "5"
+    },
+    "Eth400GE25": {
+      "pri_enable": "5"
+    },
+    "Eth400GE26": {
+      "pri_enable": "5"
+    },
+    "Eth200GE6": {
+      "pri_enable": "5"
+    },
+    "Eth200GE5": {
+      "pri_enable": "5"
+    },
+    "Eth200GE4": {
+      "pri_enable": "5"
+    },
+    "Eth200GE3": {
+      "pri_enable": "5"
+    },
+    "Eth200GE24": {
+      "pri_enable": "5"
+    },
+    "Eth200GE2": {
+      "pri_enable": "5"
+    },
+    "Eth200GE23": {
+      "pri_enable": "5"
+    },
+    "Eth200GE1": {
+      "pri_enable": "5"
+    },
+    "Eth200GE20": {
+      "pri_enable": "5"
+    },
+    "Eth200GE22": {
+      "pri_enable": "5"
+    },
+    "Eth200GE21": {
+      "pri_enable": "5"
+    },
+    "Eth400GE32": {
+      "pri_enable": "5"
+    },
+    "Eth400GE30": {
+      "pri_enable": "5"
+    },
+    "Eth400GE31": {
+      "pri_enable": "5"
+    },
+    "Eth200GE9": {
+      "pri_enable": "5"
+    },
+    "Eth200GE8": {
+      "pri_enable": "5"
+    },
+    "Eth200GE7": {
+      "pri_enable": "5"
+    },
+    "Eth200GE17": {
+      "pri_enable": "5"
+    },
+    "Eth200GE16": {
+      "pri_enable": "5"
+    },
+    "Eth200GE19": {
+      "pri_enable": "5"
+    },
+    "Eth200GE18": {
+      "pri_enable": "5"
+    },
+    "Eth200GE13": {
+      "pri_enable": "5"
+    },
+    "Eth200GE12": {
+      "pri_enable": "5"
+    },
+    "Eth200GE15": {
+      "pri_enable": "5"
+    },
+    "Eth200GE14": {
+      "pri_enable": "5"
+    },
+    "Eth400GE29": {
+      "pri_enable": "5"
+    },
+    "Eth200GE11": {
+      "pri_enable": "5"
+    },
+    "Eth200GE10": {
+      "pri_enable": "5"
+    },
+    "GLOBAL": {
+      "poll_interval": "10",
+      "action": "forward",
+      "restoration_time5": "10",
+      "detection_time5": "10"
+    }
+  },
+  "PFC_WARNING_CONFIG_TABLE": {
+    "CONFIG": {
+      "poll_time": "10",
+      "speed_threshold": "1000",
+      "suppression_time": "30",
+      "suppression_num": "5"
+    }
+  },
+  "SCHEDULER": {
+    "scheduler.DWRR.0": {
+      "type": "DWRR",
+      "weight": "0"
+    },
+    "scheduler.DWRR.1": {
+      "type": "DWRR",
+      "weight": "1"
+    },
+    "scheduler.DWRR.3": {
+      "type": "DWRR",
+      "weight": "3"
+    },
+    "scheduler.DWRR.20": {
+      "type": "DWRR",
+      "weight": "20"
+    },
+    "scheduler.DWRR.25": {
+      "type": "DWRR",
+      "weight": "25"
+    },
+    "scheduler.DWRR.50": {
+      "type": "DWRR",
+      "weight": "50"
+    }
+  },
+  "WRED_PROFILE": {
+    "100GE_queue_5": {
+      "ecn": "ecn_all",
+      "red_min_threshold": "1000",
+      "red_max_threshold": "5000",
+      "red_drop_probability": "20",
+      "wred_red_enable": "true",
+      "yellow_min_threshold": "1000",
+      "yellow_max_threshold": "5000",
+      "yellow_drop_probability": "20",
+      "wred_yellow_enable": "true",
+      "green_min_threshold": "1000",
+      "green_max_threshold": "5000",
+      "green_drop_probability": "20",
+      "wred_green_enable": "true"
+    },
+    "200GE_queue_5": {
+      "ecn": "ecn_all",
+      "red_min_threshold": "1500",
+      "red_max_threshold": "7000",
+      "red_drop_probability": "20",
+      "wred_red_enable": "true",
+      "yellow_min_threshold": "1500",
+      "yellow_max_threshold": "7000",
+      "yellow_drop_probability": "20",
+      "wred_yellow_enable": "true",
+      "green_min_threshold": "1500",
+      "green_max_threshold": "7000",
+      "green_drop_probability": "20",
+      "wred_green_enable": "true"
+    }
+  },
+  "BGP_COMMS": {
+    "10|permit|1:1": {
+      "comm_number": "1:1",
+      "list_number": "10",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "10|permit|1:2": {
+      "comm_number": "1:2",
+      "list_number": "10",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "10|permit|1:4": {
+      "comm_number": "1:4",
+      "list_number": "10",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "10|permit|1:65019": {
+      "comm_number": "1:65019",
+      "list_number": "10",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "20|permit|1:1": {
+      "comm_number": "1:1",
+      "list_number": "20",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "20|permit|1:2": {
+      "comm_number": "1:2",
+      "list_number": "20",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "20|permit|1:4": {
+      "comm_number": "1:4",
+      "list_number": "20",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "20|permit|1:65020": {
+      "comm_number": "1:65020",
+      "list_number": "20",
+      "opt_type": "permit",
+      "mode": "standard"
+    },
+    "20|permit|2:1": {
+      "comm_number": "2:1",
+      "list_number": "20",
+      "opt_type": "permit",
+      "mode": "standard"
+    }
+  },
+  "BGP_ROUTEMAPS": {
+    "SetComm-1/1-IPv6|5": {
+      "applycost": "1000",
+      "comm_range": "1:1",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/1-IPv6"
+    },
+    "From-Direct|10": {
+      "applycost": "1000",
+      "comm_range": "1:65019",
+      "opttype": "permit",
+      "seqnumber": "10",
+      "name": "From-Direct"
+    },
+    "From-Direct-IPv6|10": {
+      "applycost": "1000",
+      "comm_range": "1:65019",
+      "opttype": "permit",
+      "seqnumber": "10",
+      "name": "From-Direct-IPv6"
+    },
+    "SetComm-1/2-IPv6|5": {
+      "applycost": "1000",
+      "comm_range": "1:2",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/2-IPv6"
+    },
+    "SetComm-1/2|5": {
+      "applycost": "1000",
+      "comm_range": "1:2",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/2"
+    },
+    "SetComm-1/4-IPv6|5": {
+      "applycost": "1000",
+      "comm_range": "1:4",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/4-IPv6"
+    },
+    "SetComm-1/1|5": {
+      "applycost": "1000",
+      "comm_range": "1:1",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/1"
+    },
+    "SetComm-1/4|5": {
+      "applycost": "1000",
+      "comm_range": "1:4",
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "SetComm-1/4"
+    },
+    "From-Direct-IPv6|5": {
+      "opttype": "deny",
+      "seqnumber": "5",
+      "name": "From-Direct-IPv6",
+      "prefix_name": "LOOPBACK0-IPv6"
+    },
+    "From-Core-IPv6|5": {
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "From-Core-IPv6",
+      "matchcommunity": "20"
+    },
+    "To-Core-IPv6|5": {
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "To-Core-IPv6",
+      "matchcommunity": "10"
+    },
+    "From-Core|5": {
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "From-Core",
+      "matchcommunity": "20"
+    },
+    "To-Core|5": {
+      "opttype": "permit",
+      "seqnumber": "5",
+      "name": "To-Core",
+      "matchcommunity": "10"
+    }
+  },
+  "BUFFER_NOTIFICATION": {
+    "BUFFER_POOL": {
+      "pool_share_th": "100000"
+    },
+    "Eth400GE27|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE28|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE25|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE26|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE6|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE5|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE4|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE3|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE24|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE2|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE1|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE23|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE20|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE22|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE21|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE32|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE30|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE31|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE9|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE8|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE7|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE17|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE16|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE19|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE18|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE13|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE12|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE15|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE14|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth400GE29|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE11|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Eth200GE10|5": {
+      "queue_share_th": "100000",
+      "pg_shared_th": "7000",
+      "pg_hdrm_th": "12000"
+    },
+    "Suppress": {
+      "time": "30",
+      "number": "5"
+    }
+  },
+  "BUFFER_POOL": {
+    "ingress_lossy_pool": {
+      "mode": "dynamic",
+      "size": "46110000",
+      "type": "ingress",
+      "xoff": "31800000"
+    }
+  },
+  "BUFFER_QUEUE": {
+    "Eth400GE27|5": {
+      "profile": "egress_profile_Eth400GE27_5"
+    },
+    "Eth400GE28|5": {
+      "profile": "egress_profile_Eth400GE28_5"
+    },
+    "Eth400GE25|5": {
+      "profile": "egress_profile_Eth400GE25_5"
+    },
+    "Eth400GE26|5": {
+      "profile": "egress_profile_Eth400GE26_5"
+    },
+    "Eth200GE6|5": {
+      "profile": "egress_profile_Eth200GE6_5"
+    },
+    "Eth200GE5|5": {
+      "profile": "egress_profile_Eth200GE5_5"
+    },
+    "Eth200GE4|5": {
+      "profile": "egress_profile_Eth200GE4_5"
+    },
+    "Eth200GE3|5": {
+      "profile": "egress_profile_Eth200GE3_5"
+    },
+    "Eth200GE24|5": {
+      "profile": "egress_profile_Eth200GE24_5"
+    },
+    "Eth200GE2|5": {
+      "profile": "egress_profile_Eth200GE2_5"
+    },
+    "Eth200GE1|5": {
+      "profile": "egress_profile_Eth200GE1_5"
+    },
+    "Eth200GE23|5": {
+      "profile": "egress_profile_Eth200GE23_5"
+    },
+    "Eth200GE20|5": {
+      "profile": "egress_profile_Eth200GE20_5"
+    },
+    "Eth200GE22|5": {
+      "profile": "egress_profile_Eth200GE22_5"
+    },
+    "Eth200GE21|5": {
+      "profile": "egress_profile_Eth200GE21_5"
+    },
+    "Eth400GE32|5": {
+      "profile": "egress_profile_Eth400GE32_5"
+    },
+    "Eth400GE30|5": {
+      "profile": "egress_profile_Eth400GE30_5"
+    },
+    "Eth400GE31|5": {
+      "profile": "egress_profile_Eth400GE31_5"
+    },
+    "Eth200GE9|5": {
+      "profile": "egress_profile_Eth200GE9_5"
+    },
+    "Eth200GE8|5": {
+      "profile": "egress_profile_Eth200GE8_5"
+    },
+    "Eth200GE7|5": {
+      "profile": "egress_profile_Eth200GE7_5"
+    },
+    "Eth200GE17|5": {
+      "profile": "egress_profile_Eth200GE17_5"
+    },
+    "Eth200GE16|5": {
+      "profile": "egress_profile_Eth200GE16_5"
+    },
+    "Eth200GE19|5": {
+      "profile": "egress_profile_Eth200GE19_5"
+    },
+    "Eth200GE18|5": {
+      "profile": "egress_profile_Eth200GE18_5"
+    },
+    "Eth200GE13|5": {
+      "profile": "egress_profile_Eth200GE13_5"
+    },
+    "Eth200GE12|5": {
+      "profile": "egress_profile_Eth200GE12_5"
+    },
+    "Eth200GE15|5": {
+      "profile": "egress_profile_Eth200GE15_5"
+    },
+    "Eth200GE14|5": {
+      "profile": "egress_profile_Eth200GE14_5"
+    },
+    "Eth400GE29|5": {
+      "profile": "egress_profile_Eth400GE29_5"
+    },
+    "Eth200GE11|5": {
+      "profile": "egress_profile_Eth200GE11_5"
+    },
+    "Eth200GE10|5": {
+      "profile": "egress_profile_Eth200GE10_5"
+    }
+  },
+  "BUFFER_PROFILE": {
+    "egress_profile_Eth400GE27_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE28_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE25_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE26_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE6_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE5_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE4_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE3_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE24_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE2_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE1_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE23_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE20_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE22_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE21_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE32_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE30_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE31_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE9_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE8_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE7_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE17_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE16_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE19_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE18_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE13_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE12_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE15_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE14_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth400GE29_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE11_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "egress_profile_Eth200GE10_5": {
+      "dynamic_th": "3",
+      "pool": "egress_lossy_pool",
+      "size": "3180"
+    },
+    "ingress_profile_Eth400GE27_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE28_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE25_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE26_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE6_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE5_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE4_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE3_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE24_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE2_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE1_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE23_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE20_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE22_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE21_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE32_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE30_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE31_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE9_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE8_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE7_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE17_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE16_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE19_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE18_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE13_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE12_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE15_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE14_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth400GE29_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE11_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    },
+    "ingress_profile_Eth200GE10_5": {
+      "dynamic_th": "-3",
+      "pool": "ingress_lossy_pool",
+      "xon_offset": "2544",
+      "size": "0",
+      "xoff": "6360000"
+    }
+  },
+  "BUFFER_PG": {
+    "Eth400GE27|5": {
+      "profile": "ingress_profile_Eth400GE27_5"
+    },
+    "Eth400GE28|5": {
+      "profile": "ingress_profile_Eth400GE28_5"
+    },
+    "Eth400GE25|5": {
+      "profile": "ingress_profile_Eth400GE25_5"
+    },
+    "Eth400GE26|5": {
+      "profile": "ingress_profile_Eth400GE26_5"
+    },
+    "Eth200GE6|5": {
+      "profile": "ingress_profile_Eth200GE6_5"
+    },
+    "Eth200GE5|5": {
+      "profile": "ingress_profile_Eth200GE5_5"
+    },
+    "Eth200GE4|5": {
+      "profile": "ingress_profile_Eth200GE4_5"
+    },
+    "Eth200GE3|5": {
+      "profile": "ingress_profile_Eth200GE3_5"
+    },
+    "Eth200GE24|5": {
+      "profile": "ingress_profile_Eth200GE24_5"
+    },
+    "Eth200GE2|5": {
+      "profile": "ingress_profile_Eth200GE2_5"
+    },
+    "Eth200GE1|5": {
+      "profile": "ingress_profile_Eth200GE1_5"
+    },
+    "Eth200GE23|5": {
+      "profile": "ingress_profile_Eth200GE23_5"
+    },
+    "Eth200GE20|5": {
+      "profile": "ingress_profile_Eth200GE20_5"
+    },
+    "Eth200GE22|5": {
+      "profile": "ingress_profile_Eth200GE22_5"
+    },
+    "Eth200GE21|5": {
+      "profile": "ingress_profile_Eth200GE21_5"
+    },
+    "Eth400GE32|5": {
+      "profile": "ingress_profile_Eth400GE32_5"
+    },
+    "Eth400GE30|5": {
+      "profile": "ingress_profile_Eth400GE30_5"
+    },
+    "Eth400GE31|5": {
+      "profile": "ingress_profile_Eth400GE31_5"
+    },
+    "Eth200GE9|5": {
+      "profile": "ingress_profile_Eth200GE9_5"
+    },
+    "Eth200GE8|5": {
+      "profile": "ingress_profile_Eth200GE8_5"
+    },
+    "Eth200GE7|5": {
+      "profile": "ingress_profile_Eth200GE7_5"
+    },
+    "Eth200GE17|5": {
+      "profile": "ingress_profile_Eth200GE17_5"
+    },
+    "Eth200GE16|5": {
+      "profile": "ingress_profile_Eth200GE16_5"
+    },
+    "Eth200GE19|5": {
+      "profile": "ingress_profile_Eth200GE19_5"
+    },
+    "Eth200GE18|5": {
+      "profile": "ingress_profile_Eth200GE18_5"
+    },
+    "Eth200GE13|5": {
+      "profile": "ingress_profile_Eth200GE13_5"
+    },
+    "Eth200GE12|5": {
+      "profile": "ingress_profile_Eth200GE12_5"
+    },
+    "Eth200GE15|5": {
+      "profile": "ingress_profile_Eth200GE15_5"
+    },
+    "Eth200GE14|5": {
+      "profile": "ingress_profile_Eth200GE14_5"
+    },
+    "Eth400GE29|5": {
+      "profile": "ingress_profile_Eth400GE29_5"
+    },
+    "Eth200GE11|5": {
+      "profile": "ingress_profile_Eth200GE11_5"
+    },
+    "Eth200GE10|5": {
+      "profile": "ingress_profile_Eth200GE10_5"
+    }
+  },
+  "YANG_VALIDATION": {
+    "config": {
+      "enable": "True",
+      "intercept": "True"
+    }
+  }
+}

@@ -201,11 +201,37 @@ Put files under `audit/`. For each assigned rule group:
 Never edit files outside your own `audit/` file names, `docs/` notes, and the shared
 task description. The Lead owns `translator/` code and `outputs/`.
 
-## 6. Known open questions (Lead)
+## 6. Known open questions (Lead) — resolved for v1.0
 
-1. Is `1000` in ACL yang_key a literal entry id or a synthetic "default rule"?
-2. Exact precedence when several same-specificity rules hit one leaf.
-3. Whether `$INTERFACE$` should bind for `interfaces/interface/<name>` even when the
-   rule uses literal names (`eth0`, `BMC`).
-4. Whether `VLAN` `description`/`vlanid` come from `interfaces/interface/VlanN` (the
-   doc's `network-instances/.../vlans` subtree has its own `config/name`).
+1. `1000` in ACL yang_keys is a literal entry id; the document contains entry
+   `1000` in all three ACL sets, and the literal `SNMP-Filter`/`SSH-Filter` rows
+   rename it to `DEFAULT_RULE`. Rows 0/1 read the list key's `sequence-id`, rows
+   2/4 read `config//sequence-id`; both leaves exist.
+2. Same-specificity conflicts only happen where two rows are byte-identical
+   duplicates (206/207, 259/264, 278/283); they are idempotent.
+3. `$INTERFACE$` is bound implicitly for `interfaces/interface/<name>` leaves, but
+   no rule that fires on this document depends on it (`eth0`/`BMC`/`VlanN`
+   suppression rows are literal; the `BMC//INTERFACE//...` key component is a
+   literal key name).
+4. `VLAN|Vlan2|vlanid/description/mac/...` come from `interfaces/interface/Vlan2`
+   (rows 119-130); the `network-instances/.../vlans` subtree is only used as an
+   `ockey` source (`gw_ip`, `dhcp_servers`).
+
+## 7. As-built corrections (authoritative detail: `docs/dsl-semantics.md` §9)
+
+1. Specificity is `(#segments with literal text, literal characters)`; a
+   fully-literal-segment count would let generic `$INTERFACE$` rows tie with
+   `Bridge-Aggregation$INTERFACEID$` / `Vlan$INTERFACEID$` / `Loopback$INTERFACEID$`
+   rows and create bogus `PORT` entries.
+2. Leaf values that are JSON arrays are flattened as one leaf (their comma-joined
+   text drives template substitution; the raw list feeds `list_value` /
+   `list_combination`); they are not indexed into separate leaves. Otherwise rows
+   400 (BGP import-policy) and 649 (community-member) never fire.
+3. A multi-item candidate under a single-branch selector is a *fallback chain of
+   references* (row 612), not a JSON list; the engine takes the first candidate.
+   JSON list values come from candidates nested one level deeper (rows 58/698) or
+   from the list ops.
+4. Key segments are identifiers: `$VAR$` and `{|ockey=...}` are substituted, bare
+   tokens (`INTERFACE` in `BMC//INTERFACE//defgw`, the field `ip` in
+   `DNS//server//ip`) stay literal.
+

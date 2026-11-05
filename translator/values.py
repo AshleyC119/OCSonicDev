@@ -46,7 +46,14 @@ _TRANSFORM_STATIC = {
     "ocvalue": "_ocvalue",
     "value_list": "_value_list_item",
     "VALUE_LIST": "_value_list_item",
+    # row 68 writes the BMC gateway as the type token ``ip``: the value is an
+    # address that is copied verbatim (the alternative reading would emit the
+    # literal string "ip" as a gateway).
+    "ip": "_value",
 }
+
+#: lone selector tokens that act as a type marker rather than a value to match
+PASS_THROUGH_TOKENS = {"ip"}
 
 
 class ValueEngine:
@@ -149,8 +156,7 @@ class ValueEngine:
             return str(int(found.group(1)) - _as_int(ctx.get("_value")))
         found = _LOG2_ORIGINAL.match(text)
         if found:
-            value = _as_int(ctx.get("_value"))
-            return str(int(math.log2(value))) if value > 0 else "0"
+            return _log2(ctx.get("_value"))
 
         # foreign key reference / bracketed expression
         bracket = _BRACKET.match(text)
@@ -198,6 +204,28 @@ class ValueEngine:
                 self.warnings.append(message)
         return text
 
+    # ------------------------------------------------------------------
+    # key segments
+    # ------------------------------------------------------------------
+    def render_segment(self, template: str, ctx: dict[str, Any]) -> str:
+        """Render one ``//`` segment of a sonic_key template.
+
+        Key segments are identifiers, not values: only ``$VAR$`` placeholders
+        and the inline ``{|ockey=path}`` suffix are substituted.  Bare tokens
+        are literal key names — ``BMC//INTERFACE//defgw`` keeps ``INTERFACE``,
+        and a field literally named ``ip`` (``DNS//server//ip``) stays ``ip``.
+        """
+        text = template
+        if "{|ockey=" in text:
+            def replace(match: "re.Match[str]") -> str:
+                looked = self.lookup(match.group("path"), ctx)
+                return "" if not looked else "|" + looked
+
+            text = _INLINE_OCKEY.sub(replace, text)
+            if not text:
+                return ""
+        return VAR_RE.sub(lambda m: self._resolve(m.group(1), ctx), text)
+
     def _is_variable(self, part: str, ctx: dict[str, Any]) -> bool:
         if part in ctx:
             return True
@@ -233,6 +261,29 @@ def _as_int(value: Any) -> int:
             return 0
 
 
+def _as_number(value: Any) -> float:
+    """Parse an integer, decimal or ``a/b`` fraction as a float."""
+    text = str(value).strip()
+    if "/" in text:
+        numerator, _, denominator = text.partition("/")
+        try:
+            return float(numerator) / float(denominator)
+        except (TypeError, ValueError, ZeroDivisionError):
+            return 0.0
+    try:
+        return float(text)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _log2(value: Any) -> str:
+    """``log2(original)`` for byte counts *and* buffer fractions (1/8 -> -3)."""
+    number = _as_number(value)
+    if number <= 0:
+        return "0"
+    return str(int(round(math.log2(number))))
+
+
 def resolve_candidate(candidates: list[Any], index: int) -> Any:
     if not candidates:
         return OMIT
@@ -257,6 +308,9 @@ def selector_index(selector: Selector, ctx: dict[str, Any], engine: ValueEngine)
         value = str(value)
         if value in options:
             return options.index(value)
+        # a lone type token (e.g. ``[['ip']]``) means "copy the addressed value"
+        if len(options) == 1 and options[0] in PASS_THROUGH_TOKENS:
+            return 0
         return None
     if selector.kind == "ockey":
         looked = engine.lookup(selector.path or "", ctx)

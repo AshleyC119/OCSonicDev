@@ -1,0 +1,257 @@
+{
+  "groups": {
+    "system//monitor-link": {
+      "rules": 9,
+      "fire": 5,
+      "emissions": 160
+    },
+    "system//aaa": {
+      "rules": 7,
+      "fire": 6,
+      "emissions": 8
+    },
+    "system//breakout": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//config": {
+      "rules": 10,
+      "fire": 6,
+      "emissions": 5
+    },
+    "system//arp": {
+      "rules": 1,
+      "fire": 1,
+      "emissions": 1
+    },
+    "system//nd": {
+      "rules": 2,
+      "fire": 2,
+      "emissions": 2
+    },
+    "system//grpc": {
+      "rules": 7,
+      "fire": 4,
+      "emissions": 4
+    },
+    "system//gnoi": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//hash": {
+      "rules": 29,
+      "fire": 3,
+      "emissions": 3
+    },
+    "system//logging": {
+      "rules": 2,
+      "fire": 2,
+      "emissions": 2
+    },
+    "system//ntp": {
+      "rules": 1,
+      "fire": 1,
+      "emissions": 1
+    },
+    "system//snmp": {
+      "rules": 2,
+      "fire": 1,
+      "emissions": 2
+    },
+    "system//counter": {
+      "rules": 38,
+      "fire": 24,
+      "emissions": 22
+    },
+    "system//overlay": {
+      "rules": 51,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//dns": {
+      "rules": 1,
+      "fire": 1,
+      "emissions": 1
+    },
+    "system//mirrors": {
+      "rules": 7,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//mod": {
+      "rules": 3,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//fcr": {
+      "rules": 5,
+      "fire": 0,
+      "emissions": 0
+    },
+    "system//sampling": {
+      "rules": 9,
+      "fire": 9,
+      "emissions": 102
+    },
+    "telemetry-system//global": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "telemetry-system//destination-groups": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "telemetry-system//subscriptions": {
+      "rules": 8,
+      "fire": 0,
+      "emissions": 0
+    },
+    "components//component": {
+      "rules": 25,
+      "fire": 15,
+      "emissions": 423
+    },
+    "SYSTEM_PORT//SYSTEM_PORT_LIST": {
+      "rules": 6,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BUFFER_POOL//BUFFER_POOL_LIST": {
+      "rules": 4,
+      "fire": 0,
+      "emissions": 0
+    },
+    "DEVICE_METADATA//localhost": {
+      "rules": 21,
+      "fire": 0,
+      "emissions": 0
+    },
+    "YANG_VALIDATION//config": {
+      "rules": 2,
+      "fire": 2,
+      "emissions": 2
+    },
+    "LLDP_GLOBAL//global": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "NTP//global": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "SNMP//snmp": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "TACPLUS//global": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "SYSLOG_SERVER//syslog_server": {
+      "rules": 2,
+      "fire": 0,
+      "emissions": 0
+    },
+    "TELEMETRY//gnmi": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BUFFER_PROFILE//BUFFER_PROFILE_LIST": {
+      "rules": 7,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BUFFER_QUEUE//BUFFER_QUEUE_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BGP_VRF//BGP_VRF_LIST": {
+      "rules": 4,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "PBR_NHG//PBR_NHG_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    },
+    "PBR_RULE//PBR_RULE_LIST": {
+      "rules": 9,
+      "fire": 0,
+      "emissions": 0
+    },
+    "BUFFER_PG//BUFFER_PG_LIST": {
+      "rules": 1,
+      "fire": 0,
+      "emissions": 0
+    }
+  },
+  "totals": {
+    "rules": 288,
+    "fire": 82,
+    "emissions": 738
+  },
+  "dead_rule_groups": [
+    "telemetry-system//global",
+    "telemetry-system//destination-groups",
+    "telemetry-system//subscriptions",
+    "SYSTEM_PORT//SYSTEM_PORT_LIST",
+    "BUFFER_POOL//BUFFER_POOL_LIST",
+    "DEVICE_METADATA//localhost",
+    "LLDP_GLOBAL//global",
+    "NTP//global",
+    "SNMP//snmp",
+    "TACPLUS//global",
+    "SYSLOG_SERVER//syslog_server",
+    "TELEMETRY//gnmi",
+    "BUFFER_PROFILE//BUFFER_PROFILE_LIST",
+    "BUFFER_QUEUE//BUFFER_QUEUE_LIST",
+    "BGP_VRF//BGP_VRF_LIST",
+    "BGP_VRF_LEAKING_IPV4//BGP_VRF_LEAKING_IPV4_LIST",
+    "BGP_VRF_LEAKING_IPV6//BGP_VRF_LEAKING_IPV6_LIST",
+    "PBR_NHG//PBR_NHG_LIST",
+    "PBR_NHG_MEMBER//PBR_NHG_MEMBER_INTF_LIST",
+    "PBR_NHG_MEMBER//PBR_NHG_MEMBER_LIST",
+    "PBR_RULE//PBR_RULE_LIST",
+    "BUFFER_PG//BUFFER_PG_LIST"
+  ],
+  "open_questions": [
+    "compute log2 on a fractional value: ingress limit-threshold '1/8' must give dynamic_th '-3'; engine currently emits '0' (int-parse fallback). 32 lines.",
+    "'[TABLE|KEY]' reference notation resolved to bare key names for the buffer rows (676-681); confirm the same rule for qos rows 610-617 (qualified vs bare may differ per SONiC field).",
+    "Specificity resolution for monitor-link 188/194 and 189/195: engine currently agrees with the audit (no PORT|Bridge-Aggregation* entries); do not regress to strict fully-literal-segment counting (would add 80 lines).",
+    "compute integral results formatted as integer strings ('3','-3'); engine matches, contract silent.",
+    "SYSLOG_SERVER|syslog_server|level=info (row 255 overwrites row 254 'notice') - order dependent, field is a keyless aggregate.",
+    "Duplicate rows 206/207, 259/264, 278/283 are idempotent; 202 fires twice with same passkey; all collapse to one line.",
+    "No CSV rule covers roots stp, bfd, default (100% uncovered); 75 uppercase-spine rows are dead on this document."
+  ]
+}

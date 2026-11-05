@@ -44,6 +44,33 @@ class MaterialsTest(unittest.TestCase):
         self.assertIn("PORT", config)
         self.assertGreater(len(config), 20)
 
+    def test_output_is_json_clean_and_deterministic(self):
+        first, _ = translate(RULES, OC)
+        second, _ = translate(RULES, OC)
+        self.assertEqual(
+            json.dumps(first, sort_keys=True), json.dumps(second, sort_keys=True)
+        )
+
+        def check(value):
+            if isinstance(value, dict):
+                for key, item in value.items():
+                    self.assertIsInstance(key, str)
+                    check(item)
+            elif isinstance(value, list):
+                for item in value:
+                    check(item)
+            else:
+                self.assertIsInstance(value, str)
+
+        check(first)
+        # every table/key/field must be a JSON object with string keys
+        for table, keys in first.items():
+            self.assertIsInstance(keys, dict, table)
+            for key, fields in keys.items():
+                self.assertIsInstance(key, str, table)
+                if not isinstance(fields, dict):
+                    self.assertEqual(fields, {}, f"{table}|{key}")
+
 
 class PatternMatchingTest(unittest.TestCase):
     def test_specific_rule_shadows_generic_one(self):
@@ -259,6 +286,52 @@ class EmptyDictTest(unittest.TestCase):
             config["LOOPBACK_INTERFACE"]["Loopback0|1.1.1.1/32"]["type"], "primary"
         )
         self.assertEqual(config["LOOPBACK"]["Loopback0"]["admin_status"], "up")
+
+
+class FieldNameTest(unittest.TestCase):
+    """Field names must never be value-substituted (``DNS|server|ip`` stays ip)."""
+
+    def test_dns_field_named_ip(self):
+        doc = {
+            "system": {
+                "dns": {"servers": {"server": {"1.1.1.1": {"address": "1.1.1.1"}}}}
+            }
+        }
+        config, _ = run_translation(doc)
+        self.assertEqual(config["DNS"]["server"]["ip"], ["1.1.1.1"])
+
+    def test_bmc_gateway_ip_is_copied_verbatim(self):
+        doc = {
+            "interfaces": {
+                "interface": {
+                    "BMC": {
+                        "name": "BMC",
+                        "config": {"enabled": "true"},
+                        "bmc": {"config": {"gateway-ip": "10.1.2.3"}},
+                        "subinterfaces": {
+                            "subinterface": {
+                                "0": {
+                                    "ipv4": {
+                                        "addresses": {
+                                            "address": {
+                                                "10.1.2.9": {
+                                                    "ip": "10.1.2.9",
+                                                    "config": {"prefix-length": "24"},
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                    }
+                }
+            }
+        }
+        config, _ = run_translation(doc)
+        # the BMC rows use a literal key name "INTERFACE" (no $VAR$ placeholder)
+        self.assertEqual(config["BMC"]["INTERFACE"]["defgw"], "10.1.2.3")
+        self.assertEqual(config["BMC"]["INTERFACE"]["ipmask"], "10.1.2.9/24")
 
 
 if __name__ == "__main__":

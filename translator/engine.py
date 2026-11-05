@@ -243,8 +243,7 @@ class Translator:
     def _split_target(
         self, template: str, ctx: dict[str, Any]
     ) -> Optional[tuple[str, str, Optional[str]]]:
-        segments = [self.values.render(part, ctx) for part in split_path(template)]
-        segments = [segment for segment in segments if segment != "" or True]
+        segments = [self.values.render_segment(part, ctx) for part in split_path(template)]
         if not segments or segments[0] in ("", "NONE"):
             return None
         table = segments[0]

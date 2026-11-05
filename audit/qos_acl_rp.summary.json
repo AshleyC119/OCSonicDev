@@ -1,0 +1,114 @@
+{
+  "groups": {
+    "acl//acl-sets": {"rules": 68, "fire_emit": 29, "fire_no_emit": 28, "no_match": 11, "emissions": 151},
+    "qos//global": {"rules": 11, "fire_emit": 8, "fire_no_emit": 0, "no_match": 3, "emissions": 8},
+    "qos//wred-policies": {"rules": 10, "fire_emit": 10, "fire_no_emit": 0, "no_match": 0, "emissions": 26},
+    "qos//scheduler-policies": {"rules": 6, "fire_emit": 4, "fire_no_emit": 0, "no_match": 2, "emissions": 84},
+    "qos//interfaces": {"rules": 6, "fire_emit": 5, "fire_no_emit": 0, "no_match": 1, "emissions": 416},
+    "qos//car-policies": {"rules": 4, "fire_emit": 0, "fire_no_emit": 0, "no_match": 4, "emissions": 0},
+    "qos//ebst-policies": {"rules": 2, "fire_emit": 0, "fire_no_emit": 0, "no_match": 2, "emissions": 0},
+    "routing-policy//defined-sets": {"rules": 7, "fire_emit": 1, "fire_no_emit": 0, "no_match": 6, "emissions": 36},
+    "routing-policy//policy-definitions": {"rules": 16, "fire_emit": 6, "fire_no_emit": 0, "no_match": 10, "emissions": 60},
+    "lacp//interfaces": {"rules": 8, "fire_emit": 4, "fire_no_emit": 0, "no_match": 4, "emissions": 64},
+    "lldp//interfaces": {"rules": 1, "fire_emit": 1, "fire_no_emit": 0, "no_match": 0, "emissions": 32},
+    "int//interfaces": {"rules": 2, "fire_emit": 1, "fire_no_emit": 0, "no_match": 1, "emissions": 8},
+    "mqc-acl//acl-sets": {"rules": 4, "fire_emit": 0, "fire_no_emit": 0, "no_match": 4, "emissions": 0},
+    "vxlan//evpn": {"rules": 1, "fire_emit": 0, "fire_no_emit": 0, "no_match": 1, "emissions": 0},
+    "vxlan//tunnels": {"rules": 1, "fire_emit": 0, "fire_no_emit": 0, "no_match": 1, "emissions": 0}
+  },
+  "totals": {
+    "rules": 147,
+    "fire_emit": 69,
+    "fire_no_emit": 28,
+    "no_match": 50,
+    "expected_lines": 885,
+    "sonic_tables": 15
+  },
+  "tables": {
+    "ACL_RULE": 143,
+    "ACL_TABLE": 16,
+    "BGP_COMMS": 36,
+    "BGP_ROUTEMAPS": 60,
+    "DSCP_TO_TC_MAP": 64,
+    "PFC_WARNING_CONFIG_TABLE": 4,
+    "PFC_WD_TABLE": 36,
+    "PORT": 32,
+    "PORTCHANNEL": 48,
+    "PORTCHANNEL_MEMBER": 16,
+    "PORT_QOS_MAP": 96,
+    "QUEUE": 288,
+    "SCHEDULER": 12,
+    "TC_TO_QUEUE_MAP": 8,
+    "WRED_PROFILE": 26
+  },
+  "table_keys": {
+    "ACL_RULE": 51,
+    "ACL_TABLE": 4,
+    "BGP_COMMS": 9,
+    "BGP_ROUTEMAPS": 13,
+    "DSCP_TO_TC_MAP": 1,
+    "PFC_WARNING_CONFIG_TABLE": 1,
+    "PFC_WD_TABLE": 33,
+    "PORT": 32,
+    "PORTCHANNEL": 16,
+    "PORTCHANNEL_MEMBER": 16,
+    "PORT_QOS_MAP": 32,
+    "QUEUE": 256,
+    "SCHEDULER": 6,
+    "TC_TO_QUEUE_MAP": 1,
+    "WRED_PROFILE": 2
+  },
+  "acl_default_rule": {
+    "entry_1000_is_literal_oc_entry": true,
+    "default_rule_emitted": true,
+    "acl_rule_RULE_1000_emitted": false,
+    "default_rule_fields": {
+      "SNMP|DEFAULT_RULE": {"PRIORITY": "1", "PACKET_ACTION": "DROP", "ETHER_TYPE": "2048", "IN_PORTS": "ALL"},
+      "SSH|DEFAULT_RULE": {"PRIORITY": "1", "PACKET_ACTION": "DROP", "ETHER_TYPE": "2048", "IN_PORTS": "ALL"},
+      "2000_IVLAN|DEFAULT_RULE": {"PRIORITY": "1", "PACKET_ACTION": "DROP", "ETHER_TYPE": "2048", "OUT_VLANID": "Vlan2"}
+    },
+    "evidence": "acl-entry 1000 exists in all three acl-sets with config/sequence-id 1000 and forwarding-action deny; the literal-1000 rules outrank the $ACL-ENTRY$ rules at every leaf of the entry, so the entry maps only to DEFAULT_RULE"
+  },
+  "acl_set_key_binding": {
+    "acl_set_oc_key": "\"<name> <type>\" (e.g. \"2000_IVLAN ACL_IPV4\", \"SNMP-Filter ACL_CTRL\")",
+    "ACL-SET": "name part (2000_IVLAN / SNMP-Filter / SSH-Filter)",
+    "TYPE": "type part (ACL_IPV4 / ACL_CTRL)",
+    "sonic_key_prefix": "name only, never the full \"name type\" string; literal rows supply SNMP/SSH, generic rows supply 2000_IVLAN"
+  },
+  "uncovered_oc_paths_highlights": [
+    "acl//interfaces//interface/Vlan-interface2/ingress-acl-sets/... (no rule anywhere; referenced set TPC-Filter ACL_IPV4 is not defined under acl//acl-sets)",
+    "qos//queues (entire root queue table: name, wred/config/enable, config/name)",
+    "qos//interfaces queue name, interface-id, config/interface-id, scheduler-policy config/name (ockey source only, never emitted)",
+    "qos//scheduler-policies policy name/config/name, dscp-tc sequence + conditions/ipv4/config/dscp, tc-queue sequence, DWRR sequence",
+    "qos//wred-policies config/name and config/weight",
+    "lacp//config/* (system-number, system-id-mac, system-priority) and lacp interface config/s-mlag-group",
+    "lldp//config/enabled and lldp interface config/{name,enabled,management-address}",
+    "routing-policy prefix-set prefixes have no config/sequence-id leaf, so BGP_IPPREFIXLIST cannot be produced (rows 666/667 dead)",
+    "acl-set direct name / type / name,type leaves and acl-entry direct sequence-id (except entry 1000 of SNMP/SSH)"
+  ],
+  "open_questions": [
+    "A1: int//interfaces rows 698/699 emit ACL_TABLE|IFA_INGRESS|ports = [\"PORTS\"]; 'PORTS' appears nowhere else in the 769 rows. Literal reading gives an invalid SONiC port list; most likely it means the 32 collected interface names (list or comma string). Unresolved.",
+    "A2: ACL_TABLE|SNMP and |SSH have no 'stage' under per-leaf specificity (literal rows 58/59 suppress generic row 60 on the same leaf config/name). If the reference has stage: add stage=INGRESS for both (2 lines).",
+    "A3: ACL_TABLE|SNMP|ports and |SSH|ports = [\"\"]. Alternative intent: [] (empty list) or \"\".",
+    "A4: ACL_RULE|IFA_INGRESS|RULE_1001|IN_PORTS is the 32 interfaces comma-joined (string_combination); alternatives: single last value (Eth200GE10) or JSON list.",
+    "A5: ACL_TABLE|2000_IVLAN|ports = [\"VLAN\"] (list_combination collected); the written contract says raw string \"VLAN\".",
+    "A6: PFC_WD_TABLE|GLOBAL field names restoration_time5 / detection_time5 literally include the priority id.",
+    "A7: 2000_IVLAN|DEFAULT_RULE carries OUT_VLANID=Vlan2 because entry 1000 has l2/config/outer-vlan (literal but semantically odd).",
+    "A8: PACKET_ACTION split ACCEPT (literal SNMP/SSH rows) vs FORWARD (generic rows); 33 lines depend on it.",
+    "A9 (cross-group): BGP_IPPREFIXLIST is empty because prefix objects have no config/sequence-id leaf (rules 666/667); if the reference has prefix lists the rule trigger must change to the prefix object."
+  ],
+  "verification": {
+    "independent_reimplementation_lines": 885,
+    "engine_lines_restricted_to_these_rows": 885,
+    "diff_lines_only_in_engine": 0,
+    "diff_lines_only_in_expected": 0,
+    "cross_checks": [
+      "QUEUE|*|scheduler values equal the SCHEDULER keys built by rows 629/630",
+      "QUEUE|*|5|wred_profile values resolve to the 2 WRED_PROFILE keys",
+      "PORT_QOS_MAP map names resolve to DSCP_TO_TC_MAP / TC_TO_QUEUE_MAP keys",
+      "every ACL_RULE key prefix exists in ACL_TABLE"
+    ]
+  },
+  "contract_version": "ENGINE_CONTRACT.md v1 (read 2026-11-05); corrections C1-C9 in audit/qos_acl_rp.notes.md section 2",
+  "files": ["audit/qos_acl_rp.expected.txt", "audit/qos_acl_rp.notes.md", "audit/qos_acl_rp.summary.json"]
+}

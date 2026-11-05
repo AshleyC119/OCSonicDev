@@ -60,15 +60,20 @@ For every flattened leaf, all rules whose pattern matches are candidates, except
 rules whose `spine` names a table the document does not contain (those simply never
 match). Precedence:
 
-1. The candidate set is the one with the largest number of literal (non-placeholder)
-   segments. This makes literal rules such as
+1. The candidate set is the one with the highest specificity, measured as
+   `(total literal characters across the pattern segments, -number of $VAR$
+   placeholders, segment count)`.  Counting literal characters (not fully literal
+   segments) is what makes `Bridge-Aggregation$INTERFACEID$` beat `$INTERFACE$`
+   and `Vlan$INTERFACEID$` beat `$INTERFACE$` — both are *mixed* segments.
+   This makes literal rules such as
    `acl//acl-sets//acl-set//SNMP-Filter ACL_CTRL//...` override generic `$ACL-SET$ $TYPE$`
    rules, and lets a rule suppress a broader rule.
 2. A rule whose `yang_value` is `[['NONE']]` is a *suppression* rule: it fires, emits
    nothing, and blocks lower-specificity rules for the same leaf (e.g. `eth0`/`BMC`/
    `Vlan$N$`/`GigabitEthernet0` must not become a `PORT` entry).
 3. Among the remaining rules at top specificity, apply all in CSV order; a field
-   written twice keeps the later value (the engine records a warning).
+   written twice keeps the later value (the engine records a warning).  Re-writing
+   an unchanged value does not duplicate the emission.
 
 ## 3. Value DSL
 
@@ -104,32 +109,52 @@ the looked-up value; `ockey_default` is the fallback branch. Examples:
 
 ### 3.2 list handling
 
-- `list_combination` with a `$VALUE_LIST$` placeholder in sonic_key ⇒ one emitted
-  entry per element of the expanded list (e.g. `trunk-vlans` `2,10-12` ⇒ vlan 2, 10,
-  11, 12), with `$VALUE_LIST$` bound to each element.
-- `list_combination` without `$VALUE_LIST$` (sonic candidate `value`) ⇒ emit the raw
-  string as one value.
-- `list_value` ⇒ the value is a list; emit a JSON list when the candidate holds the
-  list as-is.
+- `list_combination` with a `$VALUE_LIST$` placeholder in sonic_key ⇒ the leaf value
+  is itself a list (or a vlan range string such as `2,10-12`); the rule expands once
+  per element and `$VALUE_LIST$` is bound to that element.
+- `list_combination` **without** `$VALUE_LIST$` ⇒ the directive *accumulates*: every
+  matched leaf contributes its substituted candidate to a JSON list on the target
+  field, in (rule, document) order. This is required by
+  `system//dns//servers//server//$SERVER$//address` → `DNS|server|ip` (three
+  addresses) and `system//logging//...//config//host` → `SYSLOG_SERVER|...|servers`
+  (four servers); a literal reading would keep only the last value.
+- `string_combination` is the comma-joined variant of the same accumulation
+  (`PFC_WD_TABLE|if|pri_enable`, `PORT_QOS_MAP|if|pfc_enable`,
+  `ACL_RULE|IFA_INGRESS|RULE_1001|IN_PORTS`).
+- `list_value` ⇒ the value is a list; emit it as a JSON list.
+- `list_2_string` ⇒ join the list elements with commas.
 
 ### 3.3 sonic_value candidates
 
-`sonic_value` is a list of candidate lists aligned with the selector branches. A
-candidate is a list of items:
+`sonic_value` is a list aligned with `sonic_key`.  For a **multi-target** row each
+element carries one extra wrapper (`[[['a','b']], [['c']]]` ⇒ candidates `['a','b']`
+and `['c']`); single-target rows do not wrap (`[['ACCEPT','DROP']]`).  A candidate is
+a string, or a list of items for a multi-valued field (`services`, `ports`, ...).
 
 - items containing placeholders (`$VAR$`, or a bare variable name from the provider
   vocabulary such as `INTERFACE`, `INTERFACEID`, `ADDRESS`, `SUBINTERFACE`, `GROUP`,
   `NEIGHBOR`, `AREA`, `VALUE`, `VALUE_LIST`) are substituted;
-- concatenation is written with `+` (`PortChannel+INTERFACEID`, `ADDRESS+/+value`),
-  bare `value`/`ocvalue` mean the leaf value / looked-up ockey value;
+- concatenation is written with `+` (`PortChannel+INTERFACEID`, `ADDRESS+/+value`);
+  `+` inside an otherwise literal token (`tacacs+,local`) is not concatenation;
+- bare `value`/`ocvalue` mean the leaf value / the `ockey` lookup value;
+- `[TABLE|KEY]` is a **foreign-key reference**: emit the referenced KEY with its
+  placeholders substituted (`[BUFFER_PROFILE|egress_profile_+INTERFACE+_+QUEUEID+]`
+  ⇒ `egress_profile_Eth1_5`), not the bracketed text;
+- `{|ockey=path}` inside a sonic_key segment appends `|` + the looked-up value to the
+  key (`STATIC_ROUTES|prefix|nexthop|interface`);
 - candidate `NONE` ⇒ do not emit that field;
 - candidate `empty_dict` ⇒ emit the key with an empty object value `{}`;
-- a candidate with several items ⇒ JSON list value, e.g. `services` → `["SNMP"]`;
+- candidate `ip` in a lone `[['ip']]` selector is a type marker: copy the leaf value
+  (BMC `gateway-ip` ⇒ `defgw`);
 - otherwise ⇒ JSON string.
 
 Transforms used with `compute`: `original` (leaf value as-is), `original//1000`
 (integer division by 1000, e.g. port-speed 200000000 → 200000), `10000-original`
-(e.g. ACL sequence-id 10 → 9990), `original//1000` for hold-time ms → seconds.
+(e.g. ACL sequence-id 10 → 9990), `log2(original)` (byte counts *and* buffer
+fractions: `8` → `3`, `1/8` → `-3`).  Results are integer strings.
+
+**Key segments are identifiers, not values**: field-name segments are never
+value-substituted, so a field literally named `ip` (`DNS//server//ip`) stays `ip`.
 
 ## 4. sonic_key templates → output shape
 

@@ -7,3 +7,5 @@ venv/
 .idea/
 .vscode/
 *.log
+tmp_*.py
+tmp_dump.txt
